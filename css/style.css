@@ -75,7 +75,9 @@ body{
 
     width:1056px;
 
-    height:816px;
+    min-height:816px;
+
+    height:auto;
 
     background:#ffffff;
 
@@ -83,7 +85,7 @@ body{
 
     position:relative;
 
-    overflow:hidden;
+    overflow:visible;
 
     box-shadow:0 20px 45px rgba(0,0,0,.18);
 
@@ -1325,8 +1327,10 @@ p{
 .page06{
 
     position:relative;
+
     min-height:100vh;
-    overflow:hidden;
+
+    overflow:visible;
 
 }
 
