@@ -52,6 +52,8 @@ body{
    PAGE
 ========================================================== */
 
+
+
 .page{
 
     width:1056px;
@@ -793,10 +795,12 @@ p{
 
 }
 
+
 .page03 .side-panel{
-
-    top:-170px;
-
+    width: 300px;
+    position: relative;
+    left: 50px;
+    top: -220px;
 }
 
 .page04 .side-panel{
@@ -1117,11 +1121,24 @@ p{
     color:#111;
 }
 
+.page02 .emphasis-block{
+
+    margin-top:20px;      /* smaller number = moves up */
+    text-align:center;
+
+    position:relative;
+    top:-30px;            /* increase negative value to move higher */
+
+}
+
 .page02 .emphasis-block p{
+
     color:#000;
     font-family:'Cormorant Garamond',serif;
     font-size:2.1rem;
     line-height:1.25;
+    margin:0;
+
 }
 
 .page02 .question-block{
@@ -1165,11 +1182,21 @@ p{
     border-radius:18px;
 }
 
+.register-date{
+
+    position:absolute;
+    top:-650px;
+    left:-260px;
+
+}
+
 /* ---------- PAGE 3 ---------- */
 
 .page03 .page-background{
 
     top:100px;
+    background-position: 68% center !important;
+    background-size: 115% !important;
 
 }
 
@@ -1263,15 +1290,34 @@ p{
     z-index:2;
 
 }
-/* ===========================
-   PAGE 6
-=========================== */
 
 /* ===========================
    PAGE 6
 =========================== */
+
+.page06{
+
+    position:relative;
+    min-height:100vh;
+    overflow:hidden;
+
+}
+
+.page06 .page-background{
+
+    position:absolute;
+    inset:0;
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+}
 
 .page06 .page-overlay{
+
+    position:absolute;
+    inset:0;
 
     background:linear-gradient(
         90deg,
@@ -1283,6 +1329,14 @@ p{
 
 }
 
+.page06 .content-page{
+
+    position:relative;
+    z-index:2;
+    min-height:100vh;
+
+}
+
 .page06 .page-body{
 
     display:grid;
@@ -1290,21 +1344,23 @@ p{
     gap:70px;
 
     padding-bottom:40px;
+
 }
 
 .page06 .main-column{
 
     max-width:600px;
-
     padding-top:0;
 
 }
 
 .page06 .page-title{
+
     max-width:560px;
     font-size:4.25rem;
     line-height:1.02;
     margin-bottom:28px;
+
 }
 
 .page06 .main-column p{
@@ -1336,17 +1392,18 @@ p{
 }
 
 .page06 .side-panel{
+
     width:360px;
     justify-self:end;
-    align-self:end;
 
     position:relative;
-    bottom:410px;      /* raise the card */
+    top:-410px;
+
 }
 
 .page06 .contact-card{
 
-    padding-top:0px;
+    padding-top:0;
 
 }
 
@@ -1355,6 +1412,165 @@ p{
     margin-top:22px;
 
 }
+
+/* ===========================
+   PAGE 7
+=========================== */
+
+.page07 .page-overlay{
+
+    background:linear-gradient(
+        90deg,
+        rgba(255,255,255,.96) 0%,
+        rgba(255,255,255,.92) 34%,
+        rgba(255,255,255,.72) 60%,
+        rgba(255,255,255,.30) 82%,
+        rgba(255,255,255,.05) 100%
+    );
+
+}
+
+.page07 .page-title{
+
+    max-width:700px;
+
+}
+
+.page07 .content-page{
+
+    position:relative;
+
+}
+
+.page07 .schedule-heading{
+
+    margin-top:42px;
+    margin-bottom:20px;
+
+    font-family:'Cormorant Garamond',serif;
+    font-size:2rem;
+    font-weight:500;
+
+}
+
+.page07 .schedule-table{
+
+    margin-bottom:50px;
+
+}
+
+.page07 .schedule-row{
+
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+
+    gap:35px;
+
+    padding:12px 0;
+
+    border-bottom:1px solid rgba(0,0,0,.08);
+
+}
+
+.page07 .time{
+
+    width:120px;
+
+    font-weight:700;
+
+    letter-spacing:.08em;
+
+    text-transform:uppercase;
+
+    color:#444;
+
+}
+
+.page07 .activity{
+
+    color:#222;
+
+}
+
+.page07 .side-panel{
+
+    background:rgba(255,255,255,.92);
+
+}
+
+.page07 .check-item{
+
+    margin-bottom:18px;
+
+}
+
+.page07 .check{
+
+    font-size:1.2rem;
+    font-weight:700;
+
+}
+
+.page07 .check-text{
+
+    font-size:1.05rem;
+
+}
+
+.page07 .emphasis-block{
+
+    margin-top:60px;
+
+    text-align:center;
+
+}
+
+.page07 .emphasis-block p{
+
+    font-family:'Cormorant Garamond',serif;
+    font-size:2.25rem;
+    line-height:1.2;
+
+}
+
+.page07 .bottom-callout .check-list{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:16px 40px;
+
+    margin-top:20px;
+
+}
+
+.page07 .bottom-callout h3{
+
+    margin-bottom:12px;
+
+}
+
+.page07 .bottom-callout{
+
+    position:absolute;
+
+    left:60px;
+    right:60px;
+
+    bottom:35px;
+
+    padding:22px 34px;
+
+    background:rgba(255,255,255,.95);
+
+    border-radius:18px;
+
+    box-shadow:0 14px 36px rgba(0,0,0,.12);
+
+}
+
 
 /* ==========================================================
    PRINT
