@@ -435,7 +435,6 @@ p{
 
 }
 
-
 /* ==========================================================
    INTERIOR PAGE LAYOUT
 ========================================================== */
@@ -455,8 +454,6 @@ p{
 }
 
 .page-eyebrow{
-
-    grid-column:1 / span 2;
 
     font-family:'Inter',sans-serif;
 
@@ -500,19 +497,9 @@ p{
 
 }
 
-.page-body{
+/* ---------- PAGE 3 ---------- */
 
-    display:block;
-
-    margin-top:-12px;
-
-    position:relative;
-
-    top:-24px;
-
-}
-
-.two-column{
+.page03 .two-column{
 
     display:grid;
 
@@ -526,6 +513,201 @@ p{
 
 }
 
+/* ---------- PAGE 4 ---------- */
+
+.page04 .page-body{
+
+    margin-top:0;
+
+}
+
+.page04 .page-body ul{
+
+    margin-top:12px;
+
+}
+
+/* ---------- PAGE 5 ---------- */
+
+.page05 .content-page{
+
+    padding:48px 60px 60px;
+
+}
+
+.page05 .page-title{
+
+    margin-bottom:10px;
+
+}
+
+.page05 .section-divider{
+
+    margin-bottom:12px;
+
+}
+
+.page05 .page-body{
+
+    margin-top:0;
+
+}
+
+/* ==========================================================
+   PAGE 5 — EVENT DETAILS
+========================================================== */
+
+.page05 .info-grid{
+
+    display:grid;
+
+    grid-template-columns:170px 1fr;
+
+    gap:16px 26px;
+
+    margin-bottom:34px;
+
+}
+
+.page05 .info-label{
+
+    font-family:'Inter',sans-serif;
+
+    font-size:.9rem;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    letter-spacing:.08em;
+
+    color:#555;
+
+}
+
+.page05 .info-value{
+
+    font-size:1.05rem;
+
+    line-height:1.6;
+
+    color:#222;
+
+}
+
+.page05 .check-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.page05 .check-item{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:14px;
+
+}
+
+.page05 .check{
+
+    width:28px;
+
+    height:28px;
+
+    border-radius:50%;
+
+    background:#1f6b43;
+
+    color:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-weight:700;
+
+    font-size:1rem;
+
+    flex-shrink:0;
+
+}
+
+.page05 .check-text{
+
+    font-size:1rem;
+
+    line-height:1.6;
+
+}
+
+.page05 .side-panel h3{
+
+    margin-bottom:28px;
+
+}
+
+.page05 .side-panel{
+
+    width:940px;
+
+    margin-left:-20px;
+
+    margin-top:-50px;
+
+}
+
+.page05 .two-column{
+
+    display:grid;
+
+    grid-template-columns:1.35fr 360px;
+
+    gap:56px;
+
+    align-items:start;
+
+}
+
+/* ---------- PAGE 6 ---------- */
+
+.page06 .page-background{
+
+    top:70px;
+
+    background-position:center;
+
+}
+
+.page06 .page-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        90deg,
+        rgba(255,255,255,.96) 0%,
+        rgba(255,255,255,.90) 34%,
+        rgba(255,255,255,.70) 60%,
+        rgba(255,255,255,.20) 82%,
+        rgba(255,255,255,.02) 100%
+    );
+
+    z-index:1;
+
+}
+
+/* ---------- DEFAULT ---------- */
+
 .main-column{
 
     display:block;
@@ -538,9 +720,10 @@ p{
 
     line-height:1.8;
 
-    margin-bottom:-15px;
+    margin-bottom:18px;
 
 }
+
 /* ==========================================================
    QUESTION BLOCK
 ========================================================== */
@@ -594,7 +777,6 @@ p{
 }
 
 
-
 /* ==========================================================
    RIGHT SIDEBAR
 ========================================================== */
@@ -603,7 +785,9 @@ p{
 
     position:relative;
 
-    top:-200px;
+    width:360px;
+
+    margin-left:auto;
 
     background:rgba(255,255,255,.90);
 
@@ -616,6 +800,24 @@ p{
     box-shadow:0 10px 30px rgba(0,0,0,.12);
 
     border:1px solid #e7e7e7;
+
+}
+
+.page03 .side-panel{
+
+    top:-170px;
+
+}
+
+.page04 .side-panel{
+
+    top:40px;
+
+}
+
+.page05 .side-panel{
+
+    top:40px;
 
 }
 
@@ -686,6 +888,7 @@ p{
     color:#111;
 
 }
+
 /* ==========================================================
    LISTS
 ========================================================== */
@@ -829,7 +1032,6 @@ p{
     margin:24px 0;
 
 }
-
 /* ==========================================================
    PAGE BACKGROUNDS
 ========================================================== */
@@ -838,27 +1040,203 @@ p{
 
     position:absolute;
 
-    top:100px;
+    top:0;
 
     right:0;
 
     bottom:0;
 
     left:0;
+
+    background-size:cover;
+
+    background-repeat:no-repeat;
+
+    background-position:center;
+
+    z-index:0;
+
 }
+
 .page-overlay{
 
     position:absolute;
 
     inset:0;
 
-    background:linear-gradient(90deg,
-    rgba(255,255,255,.94) 0%,
-    rgba(255,255,255,.88) 28%,
-    rgba(255,255,255,.62) 55%,
-    rgba(255,255,255,.22) 78%,
-    rgba(255,255,255,.05) 100%
-);
+    background:linear-gradient(
+        90deg,
+        rgba(255,255,255,.95) 0%,
+        rgba(255,255,255,.90) 32%,
+        rgba(255,255,255,.70) 60%,
+        rgba(255,255,255,.22) 82%,
+        rgba(255,255,255,.03) 100%
+    );
+
+    z-index:1;
+
+}
+
+/* ===========================
+   PAGE 2 ONLY
+=========================== */
+
+.page02 .page-overlay{
+
+    background:linear-gradient(
+        90deg,
+        rgba(255,255,255,.985) 0%,
+        rgba(255,255,255,.96) 32%,
+        rgba(255,255,255,.82) 52%,
+        rgba(255,255,255,.45) 72%,
+        rgba(255,255,255,.10) 100%
+    );
+
+}
+
+.page02 .page-title{
+    color:#111;
+}
+
+.page02 .page-eyebrow{
+    color:#444;
+}
+
+.page02 .main-column p{
+    color:#1f1f1f;
+}
+
+.page02 .question-block{
+
+    margin:40px 0;
+
+    padding-left:24px;
+
+    border-left:4px solid #222;
+
+}
+
+.page02 .quote p{
+    color:#222;
+}
+
+.page02 .question-block{
+    border-left:3px solid #222;
+}
+
+.page02 .section-divider{
+    background:#222;
+}
+
+.page02 .side-panel{
+
+    background:rgba(255,255,255,.92);
+
+    padding:38px;
+
+    border-radius:18px;
+
+    box-shadow:0 18px 45px rgba(0,0,0,.10);
+
+}
+
+.page02 .emphasis-block{
+
+    margin-top:48px;
+
+    text-align:center;
+
+}
+
+.page02 .emphasis-block p{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2.1rem;
+
+    line-height:1.25;
+
+}
+
+
+/* ---------- PAGE 3 ---------- */
+
+.page03 .page-background{
+
+    top:100px;
+
+}
+
+.page03 .page-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        90deg,
+        rgba(255,255,255,.94) 0%,
+        rgba(255,255,255,.88) 28%,
+        rgba(255,255,255,.62) 55%,
+        rgba(255,255,255,.22) 78%,
+        rgba(255,255,255,.05) 100%
+    );
+
+    z-index:1;
+
+}
+
+/* ---------- PAGE 4 ---------- */
+
+.page04 .page-background{
+
+    top:90px;
+
+}
+
+.page04 .page-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        90deg,
+        rgba(255,255,255,.95) 0%,
+        rgba(255,255,255,.90) 32%,
+        rgba(255,255,255,.68) 58%,
+        rgba(255,255,255,.22) 80%,
+        rgba(255,255,255,.05) 100%
+    );
+
+    z-index:1;
+
+}
+
+/* ---------- PAGE 5 ---------- */
+
+.page05 .page-background{
+
+    top:70px;
+
+    background-position:80% center;
+
+}
+
+.page05 .page-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        90deg,
+        rgba(255,255,255,.96) 0%,
+        rgba(255,255,255,.90) 34%,
+        rgba(255,255,255,.70) 60%,
+        rgba(255,255,255,.22) 82%,
+        rgba(255,255,255,.03) 100%
+    );
 
     z-index:1;
 
@@ -871,7 +1249,6 @@ p{
     z-index:2;
 
 }
-
 
 /* ==========================================================
    PRINT
