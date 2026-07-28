@@ -19,34 +19,6 @@ Future Ready | Black Hills STEAM Showcase
 
 </head>
 
-<script>
-
-function openRegistration(){
-
-    document.getElementById("registrationModal").style.display="block";
-
-}
-
-function closeRegistration(){
-
-    document.getElementById("registrationModal").style.display="none";
-
-}
-
-window.onclick=function(event){
-
-    const modal=document.getElementById("registrationModal");
-
-    if(event.target===modal){
-
-        modal.style.display="none";
-
-    }
-
-}
-
-</script>
-
 <body>
 
 
@@ -59,7 +31,9 @@ window.onclick=function(event){
 
     <div class="modal-window">
 
-        <button class="close-modal" onclick="closeRegistration()">
+        <button
+            class="close-modal"
+            onclick="closeRegistration()">
 
             ×
 
@@ -73,134 +47,26 @@ window.onclick=function(event){
 
         <p>
 
-            Thank you for helping inspire the next generation of
-            Black Hills innovators.
+            Thank you for your interest in participating in the
+            <strong>Future Ready Black Hills STEAM Showcase.</strong>
 
         </p>
 
-        <form id="partnerForm">
+        <div class="registration-frame">
 
-    <h3>Organization Information</h3>
+            <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSfX1K-JCa8NU_IR0VYqVr1iUmbNBZHx91Oq87saz3wG_KZNcA/viewform?embedded=true"
+                width="100%"
+                height="3017"
+                frameborder="0"
+                marginheight="0"
+                marginwidth="0">
 
-    <label>Organization Name *</label>
-    <input type="text" name="organization" required>
+                Loading...
 
-    <label>Organization Type *</label>
-    <select name="organizationType" required>
+            </iframe>
 
-        <option value="">Select Organization Type</option>
-
-        <option>Business</option>
-        <option>Healthcare</option>
-        <option>Military</option>
-        <option>College / University</option>
-        <option>Government Agency</option>
-        <option>Trade Organization</option>
-        <option>Nonprofit</option>
-        <option>Community Organization</option>
-        <option>STEM Organization</option>
-        <option>Other</option>
-
-    </select>
-
-    <label>Organization Website</label>
-    <input type="url" name="website">
-
-    <hr>
-
-    <h3>Primary Contact</h3>
-
-    <label>Contact Name *</label>
-    <input type="text" name="contactName" required>
-
-    <label>Job Title</label>
-    <input type="text" name="jobTitle">
-
-    <label>Email Address *</label>
-    <input type="email" name="email" required>
-
-    <label>Phone Number *</label>
-    <input type="tel" name="phone" required>
-
-    <hr>
-
-    <h3>Showcase Booth</h3>
-
-    <label>Booth Title *</label>
-    <input type="text" name="boothTitle" required>
-
-    <label>Describe Your Booth *</label>
-    <textarea
-        name="boothDescription"
-        rows="5"
-        required></textarea>
-
-    <label>Approximate Booth Size</label>
-    <select name="boothSize">
-
-        <option>6 ft Table</option>
-        <option>8 ft Table</option>
-        <option>Needs Extra Space</option>
-
-    </select>
-
-    <hr>
-
-    <h3>Booth Requirements</h3>
-
-    <label>Electrical Access Needed?</label>
-    <select name="power">
-
-        <option>No</option>
-        <option>Yes</option>
-
-    </select>
-
-    <label>Wi-Fi Needed?</label>
-    <select name="wifi">
-
-        <option>No</option>
-        <option>Yes</option>
-
-    </select>
-
-    <label>Student Volunteers Requested?</label>
-    <select name="volunteers">
-
-        <option>No</option>
-        <option>Yes</option>
-
-    </select>
-
-    <label>Number of Representatives Attending</label>
-    <select name="staff">
-
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4+</option>
-
-    </select>
-
-    <hr>
-
-    <h3>Additional Information</h3>
-
-    <label>Additional Notes</label>
-
-    <textarea
-        name="notes"
-        rows="4"></textarea>
-
-    <button
-        class="submit-registration"
-        type="submit">
-
-        Register Organization →
-
-    </button>
-
-</form>
+        </div>
 
     </div>
 
@@ -1267,6 +1133,38 @@ window.onclick=function(event){
 </div>
 
 </section>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+    window.openRegistration = function(){
+
+        document.getElementById("registrationModal").style.display = "block";
+
+    };
+
+    window.closeRegistration = function(){
+
+        document.getElementById("registrationModal").style.display = "none";
+
+    };
+
+    window.onclick = function(event){
+
+        const modal = document.getElementById("registrationModal");
+
+        if(event.target === modal){
+
+            closeRegistration();
+
+        }
+
+    };
+
+});
+
+</script>
 
 </body>
 </html>
