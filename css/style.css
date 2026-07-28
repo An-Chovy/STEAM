@@ -14,6 +14,23 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&display=swap');
 
+/* ===========================================
+   GLOBAL WEBSITE SETTINGS
+=========================================== */
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    margin:0;
+    overflow-x:hidden;
+
+}
+
 
 /* ==========================================================
    RESET
@@ -1624,6 +1641,71 @@ p{
 }
 
 
+/* ===========================================
+   FLOATING WEBSITE NAVIGATION
+=========================================== */
+
+.floating-nav{
+
+    position:fixed;
+
+    top:50%;
+
+    right:35px;
+
+    transform:translateY(-50%);
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+    z-index:9999;
+
+}
+
+.floating-nav a{
+
+    color:#ffffff;
+
+    text-decoration:none;
+
+    font-family:'Montserrat',sans-serif;
+
+    font-size:.82rem;
+
+    letter-spacing:.12em;
+
+    text-transform:uppercase;
+
+    padding:8px 12px;
+
+    border-radius:25px;
+
+    background:rgba(0,0,0,.35);
+
+    backdrop-filter:blur(8px);
+
+    transition:.25s;
+
+}
+
+.floating-nav a:hover{
+
+    background:#B38B2D;
+
+    color:#fff;
+
+    transform:translateX(-6px);
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
 
 /* ==========================================================
    END OF STYLESHEET
