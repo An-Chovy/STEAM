@@ -31,9 +31,7 @@ Future Ready | Black Hills STEAM Showcase
 
     <div class="modal-window">
 
-        <button
-            class="close-modal"
-            onclick="closeRegistration()">
+        <button class="close-modal" onclick="closeRegistration()">
 
             ×
 
@@ -52,21 +50,313 @@ Future Ready | Black Hills STEAM Showcase
 
         </p>
 
-        <div class="registration-frame">
+        <p>
 
-            <iframe
-                src="https://docs.google.com/forms/d/e/1FAIpQLSfX1K-JCa8NU_IR0VYqVr1iUmbNBZHx91Oq87saz3wG_KZNcA/viewform?embedded=true"
-                width="100%"
-                height="3017"
-                frameborder="0"
-                marginheight="0"
-                marginwidth="0">
+            Businesses, healthcare providers, military organizations,
+            colleges, nonprofits, government agencies, skilled trades,
+            and community organizations are invited to inspire the next
+            generation through hands-on experiences and career exploration.
 
-                Loading...
+        </p>
 
-            </iframe>
+           <form    id="partnerForm">
 
-        </div>
+            <h3>
+
+                Organization Information
+
+            </h3>
+
+            <label>
+
+                Organization Name *
+
+            </label>
+
+            <input
+                type="text"
+                name="Organization Name"
+                required>
+
+            <label>
+
+                Organization Type *
+
+            </label>
+
+            <select
+                name="Organization Type"
+                required>
+
+                <option value="">Select One</option>
+
+                <option>Business</option>
+
+                <option>Healthcare</option>
+
+                <option>Military</option>
+
+                <option>College / University</option>
+
+                <option>Government</option>
+
+                <option>Skilled Trades</option>
+
+                <option>Nonprofit</option>
+
+                <option>Other</option>
+
+            </select>
+
+            <label>
+
+                Website
+
+            </label>
+
+            <input
+                type="url"
+                name="Website">
+
+            <hr>
+
+            <h3>
+
+                Primary Contact
+
+            </h3>
+
+            <label>
+
+                Contact Name *
+
+            </label>
+
+            <input
+                type="text"
+                name="Contact Name"
+                required>
+
+            <label>
+
+                Job Title
+
+            </label>
+
+            <input
+                type="text"
+                name="Job Title">
+
+            <label>
+
+                Email *
+
+            </label>
+
+            <input
+                type="email"
+                name="Email"
+                required>
+
+            <label>
+
+                Phone *
+
+            </label>
+
+            <input
+                type="tel"
+                name="Phone"
+                required>
+
+                            <hr>
+
+            <h3>
+
+                Booth Information
+
+            </h3>
+
+            <label>
+
+                Booth Title *
+
+            </label>
+
+            <input
+                type="text"
+                name="Booth Title"
+                required>
+
+            <label>
+
+                Booth Description *
+
+            </label>
+
+            <textarea
+                name="Booth Description"
+                rows="5"
+                required></textarea>
+
+            <label>
+
+                Booth Size
+
+            </label>
+
+            <select
+                name="Booth Size">
+
+                <option>Standard 10' x 10'</option>
+
+                <option>Large Display</option>
+
+                <option>Outdoor Equipment</option>
+
+                <option>Unsure</option>
+
+            </select>
+
+            <label>
+
+                Electrical Power Needed?
+
+            </label>
+
+            <select
+                name="Power Needed">
+
+                <option>No</option>
+
+                <option>Yes - Standard Outlet</option>
+
+                <option>Yes - High Power Equipment</option>
+
+            </select>
+
+            <label>
+
+                Wi-Fi Needed?
+
+            </label>
+
+            <select
+                name="Wi-Fi Needed">
+
+                <option>No</option>
+
+                <option>Yes</option>
+
+            </select>
+
+            <label>
+
+                Number of Volunteers Attending
+
+            </label>
+
+            <input
+                type="number"
+                name="Volunteers"
+                min="0">
+
+            <label>
+
+                Number of Staff Attending
+
+            </label>
+
+            <input
+                type="number"
+                name="Staff"
+                min="0">
+
+            <label>
+
+                Additional Notes
+
+            </label>
+
+            <textarea
+                name="Additional Notes"
+                rows="4"></textarea>
+
+            <button
+                class="submit-registration"
+                type="submit">
+
+                Register Organization
+
+            </button>
+
+        </form>
+
+        <div id="registrationSuccess" style="display:none; text-align:center; padding:50px 20px;">
+
+    <div style="font-size:60px; margin-bottom:20px;">
+
+        ✅
+
+    </div>
+
+    <h2>
+
+        Registration Complete!
+
+    </h2>
+
+    <p>
+
+        Thank you for registering as a Future Ready Community Partner.
+
+    </p>
+
+    <p>
+
+        Kevin will review your registration and contact you soon with
+        event details and booth information.
+
+    </p>
+
+    <button
+        class="submit-registration"
+        style="max-width:280px; margin:40px auto 0;"
+        onclick="closeRegistration()">
+
+        Close
+
+    </button>
+
+</div>
+
+        <hr>
+
+        <h3>
+
+            Questions?
+
+        </h3>
+
+        <p>
+
+            <strong>Kevin Militello</strong><br>
+
+            Future Ready Event Coordinator<br>
+
+            Douglas Middle School<br><br>
+
+            📧 kevin.militello@k12.sd.us<br>
+
+            📞 605-923-0050
+
+        </p>
+
+        <p style="font-style:italic; color:#666;">
+
+            Thank you for investing in the future workforce of the Black Hills.
+
+        </p>
 
     </div>
 
@@ -1138,9 +1428,15 @@ Future Ready | Black Hills STEAM Showcase
 
 document.addEventListener("DOMContentLoaded", function(){
 
+    const FORM_ENDPOINT = "https://formspree.io/f/xlgqzvbj";
+
     window.openRegistration = function(){
 
         document.getElementById("registrationModal").style.display = "block";
+
+        document.getElementById("partnerForm").style.display = "block";
+
+        document.getElementById("registrationSuccess").style.display = "none";
 
     };
 
@@ -1161,6 +1457,70 @@ document.addEventListener("DOMContentLoaded", function(){
         }
 
     };
+
+    const form = document.getElementById("partnerForm");
+
+    if(form){
+
+        form.addEventListener("submit", async function(e){
+
+            e.preventDefault();
+
+            const submitButton = form.querySelector("button[type='submit']");
+
+            submitButton.disabled = true;
+
+            submitButton.innerHTML = "Submitting...";
+
+            const formData = new FormData(form);
+
+            try{
+
+                const response = await fetch(FORM_ENDPOINT,{
+
+                    method:"POST",
+
+                    body:formData,
+
+                    headers:{
+                        "Accept":"application/json"
+                    }
+
+                });
+
+                if(response.ok){
+
+                    form.reset();
+
+                    form.style.display = "none";
+
+                    document.getElementById("registrationSuccess").style.display = "block";
+
+                }
+
+                else{
+
+                    alert("There was a problem submitting your registration. Please try again.");
+
+                }
+
+            }
+
+            catch(error){
+
+                console.error(error);
+
+                alert("Unable to submit your registration.");
+
+            }
+
+            submitButton.disabled = false;
+
+            submitButton.innerHTML = "Register Organization";
+
+        });
+
+    }
 
 });
 
