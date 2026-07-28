@@ -1707,6 +1707,278 @@ html{
 
 }
 
+/* ===========================================
+   REGISTRATION FORM
+=========================================== */
+
+.registration-area{
+
+    margin-top:40px;
+
+    max-width:760px;
+
+}
+
+.form-row{
+
+    margin-bottom:24px;
+
+}
+
+.form-row label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    color:#fff;
+
+    font-weight:700;
+
+    font-family:'Montserrat',sans-serif;
+
+}
+
+.form-row input,
+.form-row textarea,
+.form-row select{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-size:1rem;
+
+    font-family:'Montserrat',sans-serif;
+
+    box-sizing:border-box;
+
+}
+
+.form-row textarea{
+
+    resize:vertical;
+
+}
+
+.register-button{
+
+    background:#B38B2D;
+
+    color:white;
+
+    border:none;
+
+    padding:18px 36px;
+
+    border-radius:8px;
+
+    font-size:1rem;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.register-button:hover{
+
+    background:#C89B2E;
+
+}
+
+/* ===========================================
+   REGISTRATION MODAL
+=========================================== */
+
+.modal{
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.72);
+
+    z-index:9999;
+
+    overflow-y:auto;
+
+    padding:60px 20px;
+
+}
+
+.modal-window{
+
+    background:#ffffff;
+
+    max-width:760px;
+
+    margin:auto;
+
+    border-radius:18px;
+
+    padding:45px;
+
+    position:relative;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.35);
+
+}
+
+.modal-window h2{
+
+    margin-top:0;
+
+    color:#1f1f1f;
+
+    font-size:2rem;
+
+    font-family:'Cormorant Garamond',serif;
+
+}
+
+.modal-window p{
+
+    color:#555;
+
+    line-height:1.7;
+
+    margin-bottom:30px;
+
+}
+
+.close-modal{
+
+    position:absolute;
+
+    top:18px;
+
+    right:20px;
+
+    background:none;
+
+    border:none;
+
+    font-size:2rem;
+
+    cursor:pointer;
+
+    color:#666;
+
+}
+
+.close-modal:hover{
+
+    color:#000;
+
+}
+
+.modal label{
+
+    display:block;
+
+    margin:20px 0 8px;
+
+    font-weight:700;
+
+    color:#333;
+
+}
+
+.modal input,
+.modal select,
+.modal textarea{
+
+    width:100%;
+
+    padding:14px;
+
+    border:1px solid #d7d7d7;
+
+    border-radius:8px;
+
+    font-size:1rem;
+
+    box-sizing:border-box;
+
+    font-family:inherit;
+
+}
+
+.modal textarea{
+
+    resize:vertical;
+
+}
+
+.submit-registration{
+
+    margin-top:30px;
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#B38B2D;
+
+    color:#fff;
+
+    font-size:1rem;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.submit-registration:hover{
+
+    background:#C89B2E;
+
+    transform:translateY(-2px);
+
+}
+
+.modal h3{
+
+    margin-top:35px;
+
+    margin-bottom:15px;
+
+    color:#1f1f1f;
+
+    font-size:1.4rem;
+
+    font-family:'Cormorant Garamond',serif;
+
+}
+
+.modal hr{
+
+    margin:35px 0;
+
+    border:none;
+
+    border-top:1px solid #ddd;
+
+}
+
+
+
 /* ==========================================================
    END OF STYLESHEET
 ========================================================== */

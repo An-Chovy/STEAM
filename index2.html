@@ -19,7 +19,192 @@ Future Ready | Black Hills STEAM Showcase
 
 </head>
 
+<script>
+
+function openRegistration(){
+
+    document.getElementById("registrationModal").style.display="block";
+
+}
+
+function closeRegistration(){
+
+    document.getElementById("registrationModal").style.display="none";
+
+}
+
+window.onclick=function(event){
+
+    const modal=document.getElementById("registrationModal");
+
+    if(event.target===modal){
+
+        modal.style.display="none";
+
+    }
+
+}
+
+</script>
+
 <body>
+
+
+    
+<!-- ===========================================
+     REGISTRATION MODAL
+=========================================== -->
+
+<div id="registrationModal" class="modal">
+
+    <div class="modal-window">
+
+        <button class="close-modal" onclick="closeRegistration()">
+
+            ×
+
+        </button>
+
+        <h2>
+
+            Become a Community Partner
+
+        </h2>
+
+        <p>
+
+            Thank you for helping inspire the next generation of
+            Black Hills innovators.
+
+        </p>
+
+        <form id="partnerForm">
+
+    <h3>Organization Information</h3>
+
+    <label>Organization Name *</label>
+    <input type="text" name="organization" required>
+
+    <label>Organization Type *</label>
+    <select name="organizationType" required>
+
+        <option value="">Select Organization Type</option>
+
+        <option>Business</option>
+        <option>Healthcare</option>
+        <option>Military</option>
+        <option>College / University</option>
+        <option>Government Agency</option>
+        <option>Trade Organization</option>
+        <option>Nonprofit</option>
+        <option>Community Organization</option>
+        <option>STEM Organization</option>
+        <option>Other</option>
+
+    </select>
+
+    <label>Organization Website</label>
+    <input type="url" name="website">
+
+    <hr>
+
+    <h3>Primary Contact</h3>
+
+    <label>Contact Name *</label>
+    <input type="text" name="contactName" required>
+
+    <label>Job Title</label>
+    <input type="text" name="jobTitle">
+
+    <label>Email Address *</label>
+    <input type="email" name="email" required>
+
+    <label>Phone Number *</label>
+    <input type="tel" name="phone" required>
+
+    <hr>
+
+    <h3>Showcase Booth</h3>
+
+    <label>Booth Title *</label>
+    <input type="text" name="boothTitle" required>
+
+    <label>Describe Your Booth *</label>
+    <textarea
+        name="boothDescription"
+        rows="5"
+        required></textarea>
+
+    <label>Approximate Booth Size</label>
+    <select name="boothSize">
+
+        <option>6 ft Table</option>
+        <option>8 ft Table</option>
+        <option>Needs Extra Space</option>
+
+    </select>
+
+    <hr>
+
+    <h3>Booth Requirements</h3>
+
+    <label>Electrical Access Needed?</label>
+    <select name="power">
+
+        <option>No</option>
+        <option>Yes</option>
+
+    </select>
+
+    <label>Wi-Fi Needed?</label>
+    <select name="wifi">
+
+        <option>No</option>
+        <option>Yes</option>
+
+    </select>
+
+    <label>Student Volunteers Requested?</label>
+    <select name="volunteers">
+
+        <option>No</option>
+        <option>Yes</option>
+
+    </select>
+
+    <label>Number of Representatives Attending</label>
+    <select name="staff">
+
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4+</option>
+
+    </select>
+
+    <hr>
+
+    <h3>Additional Information</h3>
+
+    <label>Additional Notes</label>
+
+    <textarea
+        name="notes"
+        rows="4"></textarea>
+
+    <button
+        class="submit-registration"
+        type="submit">
+
+        Register Organization →
+
+    </button>
+
+</form>
+
+    </div>
+
+</div>
 
 <!-- ===========================================
      WEBSITE NAVIGATION
@@ -39,8 +224,9 @@ Future Ready | Black Hills STEAM Showcase
 
     <a href="#support">Support</a>
 
-    <a href="#register">Register</a>
+    <a href="#signup">Info</a>
 
+    <a href="#partner-registration">Register</a>
 
 </nav>
 
@@ -910,7 +1096,7 @@ Future Ready | Black Hills STEAM Showcase
      PAGE 6
 ====================================================== -->
 
-<section id="register">
+<section id="signup">
 
 <div class="page page06">
 
@@ -1027,11 +1213,29 @@ Future Ready | Black Hills STEAM Showcase
 
                     </p>
 
-                    <div class="qr-placeholder">
+                    <p>
 
-                        QR CODE
+    <strong>Community Partner Registration</strong>
 
-                    </div>
+</p>
+
+
+<p>
+
+    Registration takes less than five minutes.
+
+</p>
+
+<button
+    class="register-button"
+    onclick="openRegistration()">
+
+    Register Your Organization →
+
+</button>
+
+    </form>
+                    
 
                 </div>
 
@@ -1054,6 +1258,11 @@ Future Ready | Black Hills STEAM Showcase
         </div>
 
     </section>
+
+    </div>
+
+
+</section>
 
 </div>
 
