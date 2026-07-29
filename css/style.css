@@ -2033,6 +2033,110 @@ html{
 
 }
 
+
 /* ==========================================================
    END OF STYLESHEET
 ========================================================== */
+
+/* ==========================================================
+   MOBILE VERSION
+   (does NOT affect desktop)
+========================================================== */
+
+@media screen and (max-width:900px){
+
+    body{
+        padding:0;
+    }
+
+    .page,
+    .cover{
+        width:100%;
+        min-height:auto;
+        margin:0;
+        box-shadow:none;
+    }
+
+    .content-page{
+        padding:30px 20px;
+    }
+
+    .page-title{
+        font-size:2.6rem;
+        line-height:1.05;
+    }
+
+    .page-eyebrow{
+        font-size:.7rem;
+    }
+
+    p,
+    li{
+        font-size:1rem;
+        line-height:1.7;
+    }
+
+}
+
+@media screen and (max-width:900px){
+
+    .cover-content{
+
+        display:block;
+
+        padding:35px 20px;
+
+    }
+
+    .hero-title h1{
+
+        font-size:4rem;
+
+        line-height:.9;
+
+    }
+
+    .hero-title h2{
+
+        font-size:1.7rem;
+
+    }
+
+    .hero-subtitle{
+
+        font-size:1rem;
+
+    }
+
+    .event-panel{
+
+        width:100%;
+
+        margin-top:35px;
+
+    }
+
+}
+
+@media screen and (max-width:900px){
+
+    .two-column{
+
+        display:block;
+
+    }
+
+    .side-panel{
+
+        width:100% !important;
+
+        margin:35px 0 0 0 !important;
+
+        left:0 !important;
+        right:0 !important;
+        top:0 !important;
+
+    }
+
+}
+
