@@ -2035,7 +2035,11 @@ html{
 ========================================================== */
 
 @media screen and (max-width:900px){
-
+    html,
+    body{
+    max-width:100%;
+    overflow-x:hidden;
+}
     body{
         padding:0;
     }
@@ -2729,15 +2733,21 @@ html{
 
     flex-direction:row;
 
-    justify-content:space-around;
+    justify-content:space-between;   /* was space-around */
 
     align-items:center;
 
-    padding:12px;
+    padding:8px 6px;                  /* smaller */
+
+    gap:2px;                          /* tighter */
 
     background:rgba(20,20,20,.92);
 
     backdrop-filter:blur(10px);
+
+    overflow-x:auto;                  /* fallback: lets it scroll instead of overflowing the page */
+
+    -webkit-overflow-scrolling:touch;
 
 }
 
@@ -2745,19 +2755,15 @@ html{
 
     background:none;
 
-    padding:6px;
+    padding:6px 4px;
 
-    font-size:.72rem;
+    font-size:.62rem;                 /* smaller so all 7 links fit */
 
-    letter-spacing:.08em;
+    letter-spacing:.04em;
 
-}
+    white-space:nowrap;
 
-.floating-nav a:hover{
-
-    transform:none;
-
-    background:none;
+    flex-shrink:1;
 
 }
 
