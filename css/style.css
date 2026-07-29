@@ -1618,7 +1618,7 @@ p{
     left:60px;
     right:60px;
 
-    bottom:35px;
+    top:520px;   /* Adjust this number */
 
     padding:22px 34px;
 
