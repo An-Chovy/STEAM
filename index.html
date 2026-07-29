@@ -1472,17 +1472,15 @@ document.addEventListener("DOMContentLoaded", function(){
 
     }
 
-});
+// ==========================================
+// Scroll Reveal Animation
+// ==========================================
 
-</script>
+const revealObserver = new IntersectionObserver((entries) => {
 
-<script>
+    entries.forEach(entry => {
 
-const observer = new IntersectionObserver((entries)=>{
-
-    entries.forEach(entry=>{
-
-        if(entry.isIntersecting){
+        if (entry.isIntersecting) {
 
             entry.target.classList.add("visible");
 
@@ -1490,13 +1488,15 @@ const observer = new IntersectionObserver((entries)=>{
 
     });
 
-},{
-    threshold:.15
+}, {
+    threshold: 0.15
 });
 
-document.querySelectorAll(".content-page").forEach(section=>{
+document.querySelectorAll(".content-page").forEach(section => {
 
-    observer.observe(section);
+    revealObserver.observe(section);
+
+});
 
 });
 

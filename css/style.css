@@ -2923,17 +2923,21 @@ html{
 
 }
 
-/* ==========================================
+/* ==========================================================
    SCROLL REVEAL
-========================================== */
+========================================================== */
 
 .content-page{
 
     opacity:0;
 
-    transform:translateY(40px);
+    transform:translateY(35px);
 
-    transition:all .8s ease;
+    transition:
+
+        opacity .8s ease,
+
+        transform .8s ease;
 
 }
 
@@ -2942,6 +2946,133 @@ html{
     opacity:1;
 
     transform:translateY(0);
+
+}
+
+.register-button,
+.submit-registration{
+
+    transition:
+
+        transform .25s ease,
+
+        box-shadow .25s ease,
+
+        background-color .25s ease;
+
+}
+
+.register-button:hover,
+.submit-registration:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 22px rgba(0,0,0,.18);
+
+}
+
+.register-button:active,
+.submit-registration:active{
+
+    transform:scale(.98);
+
+}
+
+/* ==========================================================
+   MOBILE — REGISTRATION MODAL
+========================================================== */
+
+@media screen and (max-width:900px){
+
+.modal{
+
+    padding:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    overflow-y:auto;
+
+}
+
+.modal-window{
+
+    width:100%;
+
+    max-width:none;
+
+    min-height:100vh;
+
+    border-radius:0;
+
+    padding:32px 24px 90px;
+
+    margin:0;
+
+    box-shadow:none;
+
+}
+
+.modal-window h2{
+
+    font-size:2.2rem;
+
+    margin-bottom:18px;
+
+}
+
+.modal-window h3{
+
+    font-size:1.6rem;
+
+    margin-top:34px;
+
+}
+
+.modal-window p{
+
+    font-size:1rem;
+
+    line-height:1.7;
+
+}
+
+.modal input,
+.modal textarea,
+.modal select{
+
+    font-size:16px;      /* prevents iPhone zoom */
+
+    padding:16px;
+
+    border-radius:10px;
+
+}
+
+.submit-registration{
+
+    margin-top:40px;
+
+    padding:18px;
+
+    font-size:1rem;
+
+    border-radius:12px;
+
+}
+
+.close-modal{
+
+    font-size:2.2rem;
+
+    top:18px;
+
+    right:20px;
+
+}
 
 }
 
