@@ -45,8 +45,6 @@ gtag('config', 'G-BR8H2KM88X');
 
 <body>
 
-
-    
 <!-- ===========================================
      REGISTRATION MODAL
 =========================================== -->
@@ -56,45 +54,33 @@ gtag('config', 'G-BR8H2KM88X');
     <div class="modal-window">
 
         <button class="close-modal" onclick="closeRegistration()">
-
             ×
-
         </button>
 
         <h2>
-
             Become a Community Partner
-
         </h2>
 
         <p>
-
             Thank you for your interest in participating in the
             <strong>Future Ready Black Hills STEAM Showcase.</strong>
-
         </p>
 
         <p>
-
             Businesses, healthcare providers, military organizations,
             colleges, nonprofits, government agencies, skilled trades,
             and community organizations are invited to inspire the next
             generation through hands-on experiences and career exploration.
-
         </p>
 
-           <form    id="partnerForm">
+        <form id="partnerForm">
 
             <h3>
-
                 Organization Information
-
             </h3>
 
             <label>
-
                 Organization Name *
-
             </label>
 
             <input
@@ -103,9 +89,7 @@ gtag('config', 'G-BR8H2KM88X');
                 required>
 
             <label>
-
                 Organization Type *
-
             </label>
 
             <select
@@ -115,27 +99,18 @@ gtag('config', 'G-BR8H2KM88X');
                 <option value="">Select One</option>
 
                 <option>Business</option>
-
                 <option>Healthcare</option>
-
                 <option>Military</option>
-
                 <option>College / University</option>
-
                 <option>Government</option>
-
                 <option>Skilled Trades</option>
-
                 <option>Nonprofit</option>
-
                 <option>Other</option>
 
             </select>
 
             <label>
-
                 Website
-
             </label>
 
             <input
@@ -145,202 +120,160 @@ gtag('config', 'G-BR8H2KM88X');
             <hr>
 
             <h3>
-
                 Primary Contact
-
             </h3>
 
             <label>
+    Contact Name *
+</label>
 
-                Contact Name *
+<input
+    type="text"
+    name="Contact Name"
+    required>
 
-            </label>
+<label>
+    Job Title
+</label>
 
-            <input
-                type="text"
-                name="Contact Name"
-                required>
+<input
+    type="text"
+    name="Job Title">
 
-            <label>
+<label>
+    Email *
+</label>
 
-                Job Title
+<input
+    type="email"
+    name="Email"
+    required>
 
-            </label>
+<label>
+    Phone *
+</label>
 
-            <input
-                type="text"
-                name="Job Title">
+<input
+    type="tel"
+    name="Phone"
+    required>
 
-            <label>
+<hr>
 
-                Email *
+<h3>
+    Booth Information
+</h3>
 
-            </label>
+<label>
+    Booth Title *
+</label>
 
-            <input
-                type="email"
-                name="Email"
-                required>
+<input
+    type="text"
+    name="Booth Title"
+    required>
 
-            <label>
+<label>
+    Booth Description *
+</label>
 
-                Phone *
+<textarea
+    name="Booth Description"
+    rows="5"
+    required></textarea>
 
-            </label>
+<label>
+    Booth Size
+</label>
 
-            <input
-                type="tel"
-                name="Phone"
-                required>
+<select
+    name="Booth Size">
 
-                            <hr>
+    <option>Standard 10' x 10'</option>
+    <option>Large Display</option>
+    <option>Outdoor Equipment</option>
+    <option>Unsure</option>
 
-            <h3>
+</select>
 
-                Booth Information
+<label>
+    Electrical Power Needed?
+</label>
 
-            </h3>
+<select
+    name="Power Needed">
 
-            <label>
+    <option>No</option>
+    <option>Yes - Standard Outlet</option>
+    <option>Yes - High Power Equipment</option>
 
-                Booth Title *
+</select>
 
-            </label>
+<label>
+    Wi-Fi Needed?
+</label>
 
-            <input
-                type="text"
-                name="Booth Title"
-                required>
+<select
+    name="Wi-Fi Needed">
 
-            <label>
+    <option>No</option>
+    <option>Yes</option>
 
-                Booth Description *
+</select>
 
-            </label>
+<label>
+    Number of Volunteers Attending
+</label>
 
-            <textarea
-                name="Booth Description"
-                rows="5"
-                required></textarea>
+<input
+    type="number"
+    name="Volunteers"
+    min="0">
 
-            <label>
+<label>
+    Number of Staff Attending
+</label>
 
-                Booth Size
+<input
+    type="number"
+    name="Staff"
+    min="0">
 
-            </label>
+<label>
+    Additional Notes
+</label>
 
-            <select
-                name="Booth Size">
+<textarea
+    name="Additional Notes"
+    rows="4"></textarea>
 
-                <option>Standard 10' x 10'</option>
+<button
+    class="submit-registration"
+    type="submit">
 
-                <option>Large Display</option>
+    Register Organization
 
-                <option>Outdoor Equipment</option>
+</button>
 
-                <option>Unsure</option>
+</form>
 
-            </select>
-
-            <label>
-
-                Electrical Power Needed?
-
-            </label>
-
-            <select
-                name="Power Needed">
-
-                <option>No</option>
-
-                <option>Yes - Standard Outlet</option>
-
-                <option>Yes - High Power Equipment</option>
-
-            </select>
-
-            <label>
-
-                Wi-Fi Needed?
-
-            </label>
-
-            <select
-                name="Wi-Fi Needed">
-
-                <option>No</option>
-
-                <option>Yes</option>
-
-            </select>
-
-            <label>
-
-                Number of Volunteers Attending
-
-            </label>
-
-            <input
-                type="number"
-                name="Volunteers"
-                min="0">
-
-            <label>
-
-                Number of Staff Attending
-
-            </label>
-
-            <input
-                type="number"
-                name="Staff"
-                min="0">
-
-            <label>
-
-                Additional Notes
-
-            </label>
-
-            <textarea
-                name="Additional Notes"
-                rows="4"></textarea>
-
-            <button
-                class="submit-registration"
-                type="submit">
-
-                Register Organization
-
-            </button>
-
-        </form>
-
-        <div id="registrationSuccess" style="display:none; text-align:center; padding:50px 20px;">
+<div id="registrationSuccess" style="display:none; text-align:center; padding:50px 20px;">
 
     <div style="font-size:60px; margin-bottom:20px;">
-
         ✅
-
     </div>
 
     <h2>
-
         Registration Complete!
-
     </h2>
 
     <p>
-
         Thank you for registering as a Future Ready Community Partner.
-
     </p>
 
     <p>
-
         Kevin will review your registration and contact you soon with
         event details and booth information.
-
     </p>
 
     <button
@@ -354,37 +287,227 @@ gtag('config', 'G-BR8H2KM88X');
 
 </div>
 
-        <hr>
+<hr>
 
-        <h3>
+<h3>
+    Questions?
+</h3>
 
-            Questions?
+<p>
 
-        </h3>
+    <strong>Kevin Militello</strong><br>
 
-        <p>
+    Future Ready Event Coordinator<br>
 
-            <strong>Kevin Militello</strong><br>
+    Douglas Middle School<br><br>
 
-            Future Ready Event Coordinator<br>
+    📧 kevin.militello@k12.sd.us<br>
 
-            Douglas Middle School<br><br>
+    📞 605-923-0050
 
-            📧 kevin.militello@k12.sd.us<br>
+</p>
 
-            📞 605-923-0050
+<p style="font-style:italic; color:#666;">
 
-        </p>
+    Thank you for investing in the future workforce of the Black Hills.
 
-        <p style="font-style:italic; color:#666;">
-
-            Thank you for investing in the future workforce of the Black Hills
-
-        </p>
+</p>
 
     </div>
 
 </div>
+
+<!-- ===========================================
+     VOLUNTEER MODAL
+=========================================== -->
+
+<div id="volunteerModal" class="modal">
+
+    <div class="modal-window">
+
+        <button class="close-modal" onclick="closeVolunteer()">
+
+            ×
+
+        </button>
+
+        <h2>
+
+            Volunteer With Us
+
+        </h2>
+
+        <p>
+
+            Not able to host a booth, but still want to help make the
+            <strong>Future Ready Black Hills STEAM Showcase</strong> a success?
+            We'd love to have you.
+
+        </p>
+
+        <p>
+
+            Volunteers help with setup, greeting families, guiding students
+            between stations, and cleanup at the end of the evening.
+
+        </p>
+
+        <form id="volunteerForm">
+
+        <h3>
+
+    Volunteer Information
+
+</h3>
+
+<label>
+
+    Full Name *
+
+</label>
+
+<input
+    type="text"
+    name="Volunteer Name"
+    required>
+
+<label>
+
+    Email *
+
+</label>
+
+<input
+    type="email"
+    name="Email"
+    required>
+
+<label>
+
+    Phone
+
+</label>
+
+<input
+    type="tel"
+    name="Phone">
+
+<label>
+
+    What time(s) can you help? *
+
+</label>
+
+<select
+    name="Availability"
+    required>
+
+    <option value="">Select One</option>
+
+    <option>Setup (4:00–5:00 PM)</option>
+
+    <option>During the Event (5:00–7:00 PM)</option>
+
+    <option>Cleanup (7:00–7:30 PM)</option>
+
+    <option>Anytime / Flexible</option>
+
+</select>
+
+<label>
+
+    Anything we should know?
+
+</label>
+
+<textarea
+    name="Volunteer Notes"
+    rows="4"></textarea>
+
+<button
+    class="submit-registration"
+    type="submit">
+
+    Sign Up to Volunteer
+
+</button>
+
+</form>
+
+<div id="volunteerSuccess" style="display:none; text-align:center; padding:50px 20px;">
+
+    <div style="font-size:60px; margin-bottom:20px;">
+
+        ✅
+
+    </div>
+
+    <h2>
+
+        You're Signed Up!
+
+    </h2>
+
+    <p>
+
+        Thank you for volunteering for the Future Ready Black Hills STEAM Showcase.
+
+    </p>
+
+    <p>
+
+        Our team will follow up with details closer to the event.
+
+    </p>
+
+    <button
+        class="submit-registration"
+        style="max-width:280px; margin:40px auto 0;"
+        onclick="closeVolunteer()">
+
+        Close
+
+    </button>
+
+</div>
+
+<hr>
+
+<h3>
+
+    Questions?
+
+</h3>
+
+<p>
+
+    <strong>Kevin Militello</strong><br>
+
+    Future Ready Event Coordinator<br>
+
+    Douglas Middle School<br><br>
+
+    📧 kevin.militello@k12.sd.us<br>
+
+    📞 605-923-0050
+
+</p>
+
+<p style="font-style:italic; color:#666;">
+
+    Thank you for investing in the future workforce of the Black Hills.
+
+</p>
+
+    </div>
+
+</div>
+
+<!-- ===========================================
+     WEBSITE NAVIGATION
+=========================================== -->
+    
+
 
 <!-- ===========================================
      WEBSITE NAVIGATION
@@ -614,13 +737,15 @@ gtag('config', 'G-BR8H2KM88X');
 
                         <p>Who designs airplanes?</p>
 
+                        <p>How do scientists discover the mysteries of the universe?</p>
+
                         <p>What does it take to become a nurse, an engineer, a welder, a wildlife biologist, or a pilot?</p>
 
                     </div>
 
                     <p>
 
-                        Those questions deserve real conversations with the people who live those careers every day.
+                        Those questions deserve real conversations with the people who live those careers every day.<br><br>
 
                     </p>
 
@@ -636,7 +761,7 @@ gtag('config', 'G-BR8H2KM88X');
 
                         <p>One demonstration.</p>
 
-                        <p>One experience.</p>
+                        <p>One experience.</p><br><br>
 
                         <p>
 
@@ -737,25 +862,25 @@ gtag('config', 'G-BR8H2KM88X');
 
                 <p>
 
-                    Whether your organization mines minerals, researches the universe, cares for patients, builds homes, protects natural resources, develops technology, serves our country, or educates the next generation, your work helps shape the future of our community.
+                    Whether your organization mines minerals, researches the universe, cares for patients, builds homes, protects natural resources, develops technology, serves our country, or educates the next generation, your work helps shape the future of our community.<br><br>
 
                 </p>
 
                 <p>
 
-                    We believe students should meet the people behind those careers.
+                    We believe students should meet the people behind those careers.<br><br>
 
                 </p>
 
                 <p>
 
-                    Not because we expect every student to choose the same path...
+                    Not because we expect every student to choose the same path...<br><br>
 
                 </p>
 
                 <p>
 
-                    But because every student deserves to know what is possible.
+                    But because every student deserves to know what is possible.<br><br>
 
                 </p>
 
@@ -1184,7 +1309,7 @@ gtag('config', 'G-BR8H2KM88X');
 
                 <div class="check-item">
                     <div class="check">✓</div>
-                    <div class="check-text">Student volunteers if needed</div>
+                    <div class="check-text">Setup and breakdown support</div>
                 </div>
 
                 <div class="check-item">
@@ -1213,7 +1338,7 @@ gtag('config', 'G-BR8H2KM88X');
     <div class="page-background"
          style="
             background-image:url('images/backgrounds/page6.jpg');
-            background-size:cover;
+            background-size:67%;
             background-position:center;
             background-repeat:no-repeat;
          ">
@@ -1249,14 +1374,12 @@ gtag('config', 'G-BR8H2KM88X');
 
                 <p>
 
-                    It is an investment in the future workforce of our region.
-
+                    It is an investment in the people who will carry our region forward.
                 </p>
 
                 <p>
 
-                    We hope you will join us as a Founding Community Partner.
-
+                    Help us make the Black Hills Future Ready, one student at a time.
                 </p>
 
                 <div class="emphasis-block">
@@ -1319,8 +1442,9 @@ gtag('config', 'G-BR8H2KM88X');
 
                     <p>
 
-                        🌐 dsd.k12.net
-
+                    <p>
+                        🌐 <a href="https://dsdk12.net" target="_blank" rel="noopener noreferrer">dsdk12.net</a>
+                    </p>
                     </p>
 
                     <p>
@@ -1337,11 +1461,18 @@ gtag('config', 'G-BR8H2KM88X');
 </p>
 
 <button
+    class="volunteer-button"
+    onclick="openVolunteer()">
+
+    I'd Rather Volunteer →
+
+</button>
+
+<button
     class="register-button"
     onclick="openRegistration()">
 
-    Register Your Organization →
-
+    Inspire a Student Today →
 </button>
 
     </form>
@@ -1353,12 +1484,11 @@ gtag('config', 'G-BR8H2KM88X');
 
                     <p>
 
-                        The future of the Black Hills isn't somewhere else.
+                        The next generation of the Black Hills is watching and waiting.
 
                         <br><br>
 
-                        It's sitting in our classrooms.
-
+                        Give them something worth becoming.
                     </p>
 
                 </div>
@@ -1379,34 +1509,94 @@ gtag('config', 'G-BR8H2KM88X');
 document.addEventListener("DOMContentLoaded", function(){
 
     const FORM_ENDPOINT = "https://formspree.io/f/xlgqzvbj";
+    const VOLUNTEER_ENDPOINT = "https://formspree.io/f/xlgqzqye";
 
-    window.openRegistration = function(){
+    // ==========================================================
+    // MODAL HELPERS
+    // ==========================================================
 
-        document.getElementById("registrationModal").style.display = "flex";
+    function hideRegistration(){
+
+        document.getElementById("registrationModal").style.display = "none";
 
         document.getElementById("partnerForm").style.display = "block";
 
+        document.getElementById("registrationSuccess").style.display = "none";
+
+    }
+
+    function hideVolunteer(){
+
+        document.getElementById("volunteerModal").style.display = "none";
+
+        document.getElementById("volunteerForm").style.display = "block";
+
+        document.getElementById("volunteerSuccess").style.display = "none";
+
+    }
+
+    // ==========================================================
+    // REGISTRATION MODAL
+    // ==========================================================
+
+    window.openRegistration = function(){
+
+        hideVolunteer();
+
+        document.getElementById("registrationModal").style.display = "flex";
+        document.getElementById("partnerForm").style.display = "block";
         document.getElementById("registrationSuccess").style.display = "none";
 
     };
 
     window.closeRegistration = function(){
 
-        document.getElementById("registrationModal").style.display = "none";
+        hideRegistration();
 
     };
+
+    // ==========================================================
+    // VOLUNTEER MODAL
+    // ==========================================================
+
+    window.openVolunteer = function(){
+
+        hideRegistration();
+
+        document.getElementById("volunteerModal").style.display = "flex";
+        document.getElementById("volunteerForm").style.display = "block";
+        document.getElementById("volunteerSuccess").style.display = "none";
+
+    };
+
+    window.closeVolunteer = function(){
+
+        hideVolunteer();
+
+    };
+
+    // ==========================================================
+    // CLICK OUTSIDE TO CLOSE
+    // ==========================================================
 
     window.onclick = function(event){
 
-        const modal = document.getElementById("registrationModal");
+        const regModal = document.getElementById("registrationModal");
+        const volModal = document.getElementById("volunteerModal");
 
-        if(event.target === modal){
+        if(event.target === regModal){
+            hideRegistration();
+        }
 
-            closeRegistration();
-
+        if(event.target === volModal){
+            hideVolunteer();
         }
 
     };
+
+    // ==========================================================
+    // ORGANIZATION FORM
+    // ==========================================================
 
     const form = document.getElementById("partnerForm");
 
@@ -1417,9 +1607,7 @@ document.addEventListener("DOMContentLoaded", function(){
             e.preventDefault();
 
             const submitButton = form.querySelector("button[type='submit']");
-
             submitButton.disabled = true;
-
             submitButton.innerHTML = "Submitting...";
 
             const formData = new FormData(form);
@@ -1427,15 +1615,11 @@ document.addEventListener("DOMContentLoaded", function(){
             try{
 
                 const response = await fetch(FORM_ENDPOINT,{
-
                     method:"POST",
-
                     body:formData,
-
                     headers:{
                         "Accept":"application/json"
                     }
-
                 });
 
                 if(response.ok){
@@ -1446,17 +1630,13 @@ document.addEventListener("DOMContentLoaded", function(){
 
                     document.getElementById("registrationSuccess").style.display = "block";
 
-                }
-
-                else{
+                }else{
 
                     alert("There was a problem submitting your registration. Please try again.");
 
                 }
 
-            }
-
-            catch(error){
+            }catch(error){
 
                 console.error(error);
 
@@ -1465,38 +1645,94 @@ document.addEventListener("DOMContentLoaded", function(){
             }
 
             submitButton.disabled = false;
-
             submitButton.innerHTML = "Register Organization";
 
         });
 
     }
 
-// ==========================================
-// Scroll Reveal Animation
-// ==========================================
+    // ==========================================================
+    // VOLUNTEER FORM
+    // ==========================================================
 
-const revealObserver = new IntersectionObserver((entries) => {
+    const volunteerForm = document.getElementById("volunteerForm");
 
-    entries.forEach(entry => {
+    if(volunteerForm){
 
-        if (entry.isIntersecting) {
+        volunteerForm.addEventListener("submit", async function(e){
 
-            entry.target.classList.add("visible");
+            e.preventDefault();
 
-        }
+            const submitButton = volunteerForm.querySelector("button[type='submit']");
+            submitButton.disabled = true;
+            submitButton.innerHTML = "Submitting...";
 
+            const formData = new FormData(volunteerForm);
+
+            try{
+
+                const response = await fetch(VOLUNTEER_ENDPOINT,{
+                    method:"POST",
+                    body:formData,
+                    headers:{
+                        "Accept":"application/json"
+                    }
+                });
+
+                if(response.ok){
+
+                    volunteerForm.reset();
+
+                    volunteerForm.style.display = "none";
+
+                    document.getElementById("volunteerSuccess").style.display = "block";
+
+                }else{
+
+                    alert("There was a problem submitting your volunteer signup. Please try again.");
+
+                }
+
+            }catch(error){
+
+                console.error(error);
+
+                alert("Unable to submit your volunteer signup.");
+
+            }
+
+            submitButton.disabled = false;
+            submitButton.innerHTML = "Sign Up to Volunteer";
+
+        });
+
+    }
+
+    // ==========================================================
+    // SCROLL REVEAL
+    // ==========================================================
+
+    const revealObserver = new IntersectionObserver((entries)=>{
+
+        entries.forEach(entry=>{
+
+            if(entry.isIntersecting){
+
+                entry.target.classList.add("visible");
+
+            }
+
+        });
+
+    },{
+        threshold:.15
     });
 
-}, {
-    threshold: 0.15
-});
+    document.querySelectorAll(".content-page").forEach(section=>{
 
-document.querySelectorAll(".content-page").forEach(section => {
+        revealObserver.observe(section);
 
-    revealObserver.observe(section);
-
-});
+    });
 
 });
 

@@ -444,13 +444,16 @@ p{
 
     padding-bottom:6px;
 
+    margin-top:190px;
+
+
 }
 
 .cover-tagline{
 
     font-family:'Inter',sans-serif;
 
-    font-size:.95rem;
+    font-size:2.95rem;
 
     font-weight:600;
 
@@ -1016,6 +1019,19 @@ p{
    CONTACT
 ========================================================== */
 
+.contact-card a{
+
+    color:inherit;
+    text-decoration:underline;
+
+}
+
+.contact-card a:hover{
+
+    color:#B38B2D;
+
+}
+
 .contact-card{
 
     margin-top:40px;
@@ -1408,7 +1424,7 @@ p{
 
 .page06 .main-column{
 
-    max-width:600px;
+    max-width:900px;
     padding-top:0;
 
 }
@@ -1424,7 +1440,7 @@ p{
 
 .page06 .main-column p{
 
-    font-size:1.15rem;
+    font-size:1.75rem;
     line-height:1.9;
     margin-bottom:26px;
 
@@ -1439,14 +1455,14 @@ p{
 
 .page06 .emphasis-block p:first-child{
 
-    font-size:2rem;
+    font-size:6rem;
     margin-bottom:6px;
 
 }
 
 .page06 .emphasis-block p:last-child{
 
-    font-size:2.25rem;
+    font-size:6.25rem;
 
 }
 
@@ -1791,8 +1807,25 @@ html{
 
 }
 
+/* ==========================================
+   BUTTONS — SHARED BEHAVIOR
+========================================== */
+
 .register-button,
-.submit-registration{
+.submit-registration,
+.volunteer-button{
+
+    appearance:none;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+
+    border:none;
+    border-radius:8px;
+    padding:18px 36px;
+    font-size:1rem;
+    font-weight:700;
+    font-family:'Montserrat',sans-serif;
+    cursor:pointer;
 
     transition:
         transform .25s ease,
@@ -1802,30 +1835,22 @@ html{
 }
 
 .register-button:hover,
-.submit-registration:hover{
+.submit-registration:hover,
+.volunteer-button:hover{
 
     transform:translateY(-3px);
-
     box-shadow:0 12px 24px rgba(0,0,0,.18);
 
 }
 
-.register-button{
+/* ==========================================
+   BUTTONS — INDIVIDUAL STYLES
+========================================== */
 
-    appearance:none;
-    -webkit-appearance:none;
-    -moz-appearance:none;
+.register-button{
 
     background:#B38B2D;
     color:#ffffff;
-    border:none;
-    padding:18px 36px;
-    border-radius:8px;
-    font-size:1rem;
-    font-weight:700;
-    font-family:'Montserrat',sans-serif;
-    cursor:pointer;
-    transition:.25s;
 
 }
 
@@ -1835,6 +1860,22 @@ html{
 
 }
 
+.volunteer-button{
+
+    background:transparent;
+    color:#B38B2D;
+    border:2px solid #B38B2D;
+    padding:16px 34px;
+    margin-top:14px;
+
+}
+
+.volunteer-button:hover{
+
+    background:#B38B2D;
+    color:#ffffff;
+
+}
 /* ===========================================
    REGISTRATION MODAL
 =========================================== */
@@ -2980,21 +3021,34 @@ html{
 
 }
 
+/* ==========================================
+   MOBILE BUTTONS
+========================================== */
+
+@media screen and (max-width:900px){
+
 .register-button,
-.submit-registration{
+.submit-registration,
+.volunteer-button{
+
+    width:100%;
+
+    font-size:1rem;
+
+    padding:18px;
+
+    border-radius:12px;
 
     transition:
-
         transform .25s ease,
-
         box-shadow .25s ease,
-
         background-color .25s ease;
 
 }
 
 .register-button:hover,
-.submit-registration:hover{
+.submit-registration:hover,
+.volunteer-button:hover{
 
     transform:translateY(-3px);
 
@@ -3003,9 +3057,12 @@ html{
 }
 
 .register-button:active,
-.submit-registration:active{
+.submit-registration:active,
+.volunteer-button:active{
 
     transform:scale(.98);
+
+}
 
 }
 
