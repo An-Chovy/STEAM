@@ -1791,31 +1791,22 @@ html{
 
 }
 
-.register-button{
+.register-button,
+.submit-registration{
 
-    background:#B38B2D;
-
-    color:white;
-
-    border:none;
-
-    padding:18px 36px;
-
-    border-radius:8px;
-
-    font-size:1rem;
-
-    font-weight:700;
-
-    cursor:pointer;
-
-    transition:.25s;
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        background .25s ease;
 
 }
 
-.register-button:hover{
+.register-button:hover,
+.submit-registration:hover{
 
-    background:#C89B2E;
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 24px rgba(0,0,0,.18);
 
 }
 
@@ -2137,6 +2128,820 @@ html{
         top:0 !important;
 
     }
+
+}
+
+/* ==========================================
+   MOBILE HERO REFINEMENT
+========================================== */
+
+@media screen and (max-width:900px){
+
+.cover{
+
+    min-height:100vh;
+
+}
+
+.cover-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    padding:32px 24px 100px;
+
+}
+
+.cover-school{
+
+    margin-bottom:30px;
+
+}
+
+.hero-title{
+
+    max-width:100%;
+
+}
+
+.hero-title h1{
+
+    font-size:4.25rem;
+
+    line-height:.92;
+
+    margin-bottom:18px;
+
+}
+
+.title-line{
+
+    width:90px;
+
+    margin-bottom:18px;
+
+}
+
+.hero-title h2{
+
+    font-size:1.8rem;
+
+    margin-bottom:14px;
+
+}
+
+.hero-subtitle{
+
+    font-size:1rem;
+
+    line-height:1.6;
+
+}
+
+.event-panel{
+
+    width:100%;
+
+    margin-top:36px;
+
+}
+
+.cover-footer{
+
+    padding-bottom:0;
+
+}
+
+.cover-tagline{
+
+    font-size:.75rem;
+
+    text-align:center;
+
+}
+
+}
+
+/* ==========================================
+   MOBILE EVENT CARD
+========================================== */
+
+@media screen and (max-width:900px){
+
+.event-panel{
+
+    border-radius:16px;
+
+    padding:28px;
+
+}
+
+.event-row{
+
+    padding:8px 0;
+
+}
+
+.label{
+
+    font-size:.68rem;
+
+}
+
+.value{
+
+    font-size:1rem;
+
+}
+
+}
+
+/* ==========================================
+   MOBILE PAGE 2
+========================================== */
+
+@media screen and (max-width:900px){
+
+.page02 .content-page{
+
+    margin-top:0;
+    padding:35px 24px;
+
+}
+
+.page02 .main-column{
+
+    padding:0;
+
+    background:none;
+
+    backdrop-filter:none;
+
+    border-radius:0;
+
+}
+
+.page02 .page-title{
+
+    font-size:2.6rem;
+
+    max-width:100%;
+
+}
+
+.page02 .question-block{
+
+    margin:28px 0;
+
+    padding-left:18px;
+
+}
+
+.page02 .question-block p{
+
+    font-size:1rem;
+
+}
+
+.page02 .emphasis-block{
+
+    margin-top:30px;
+
+    top:0;
+
+}
+
+.page02 .emphasis-block p{
+
+    font-size:2rem;
+
+    line-height:1.25;
+
+}
+
+}
+
+/* ==========================================
+   MOBILE PAGE 3
+========================================== */
+
+@media screen and (max-width:900px){
+
+.page03 .page-background{
+
+    background-position:center;
+
+    background-size:cover !important;
+
+    top:0;
+
+}
+
+.page03 .page-title{
+
+    font-size:2.6rem;
+
+}
+
+.page03 .main-column{
+
+    padding:0;
+
+}
+
+.page03 .side-panel{
+
+    position:relative;
+
+    width:100%;
+
+    left:0;
+
+    top:30px;
+
+    margin:0;
+
+}
+
+.page03 .quote{
+
+    margin-top:20px;
+
+}
+
+}
+
+/* ==========================================
+   MOBILE PAGE 4
+========================================== */
+
+@media screen and (max-width:900px){
+
+.page04 .content-page{
+
+    padding:35px 24px;
+
+}
+
+.page04 .page-title{
+
+    font-size:2.6rem;
+
+}
+
+.page04 .page-body{
+
+    position:relative;
+    z-index:2;
+
+}
+
+.page04 .page-body ul{
+
+    margin:22px 0 30px 18px;
+
+}
+
+.page04 .page-body li{
+
+    margin-bottom:10px;
+
+    line-height:1.6;
+
+}
+
+.page04 .emphasis-block{
+
+    margin-top:35px;
+
+}
+
+.page04 .emphasis-block p{
+
+    font-size:2.3rem;
+
+    line-height:1.15;
+
+}
+
+}
+
+/* ==========================================
+   MOBILE PAGE 5
+========================================== */
+
+@media screen and (max-width:900px){
+
+.page05 .content-page{
+
+    padding:35px 24px;
+
+}
+
+.page05 .page-title{
+
+    font-size:2.6rem;
+
+}
+
+.page05 .info-grid{
+
+    display:block;
+
+}
+
+.page05 .info-label{
+
+    margin-top:18px;
+
+    margin-bottom:4px;
+
+}
+
+.page05 .info-value{
+
+    margin-bottom:14px;
+
+}
+
+.page05 .check-list{
+
+    display:block;
+
+}
+
+.page05 .check-item{
+
+    margin-bottom:16px;
+
+}
+
+.page05 .side-panel{
+
+    width:100% !important;
+
+    margin-top:35px;
+
+}
+
+}
+
+/* ==========================================
+   MOBILE PAGE 7
+========================================== */
+
+@media screen and (max-width:900px){
+
+.page07 .content-page{
+
+    padding:35px 24px;
+
+}
+
+.page07 .page-title{
+
+    font-size:2.6rem;
+
+}
+
+.page07 .bottom-callout{
+
+    padding:24px;
+
+    margin-top:40px;
+
+}
+
+.page07 .bottom-callout .check-list{
+
+    display:block;
+
+}
+
+.page07 .bottom-callout .check-item{
+
+    margin-bottom:18px;
+
+}
+
+.page07 .check-text{
+
+    font-size:1rem;
+
+    line-height:1.6;
+
+}
+
+}
+
+/* ==========================================================
+   MOBILE — PAGE 6
+   REGISTER
+========================================================== */
+
+@media screen and (max-width:900px){
+
+.page06 .content-page{
+
+    padding:40px 24px 60px;
+
+}
+
+.page06 .page-title{
+
+    font-size:2.4rem;
+    line-height:1.1;
+    max-width:100%;
+    text-align:center;
+    margin-bottom:25px;
+
+}
+
+.page06 .page-body{
+
+    display:block;
+
+}
+
+.page06 .main-column{
+
+    max-width:100%;
+    padding:0;
+
+}
+
+.page06 .main-column p{
+
+    font-size:1rem;
+    line-height:1.8;
+    text-align:left;
+
+}
+
+.page06 .emphasis-block{
+
+    margin:35px 0;
+
+}
+
+.page06 .emphasis-block p:first-child{
+
+    font-size:1.6rem;
+
+}
+
+.page06 .emphasis-block p:last-child{
+
+    font-size:1.9rem;
+
+}
+
+.page06 .side-panel{
+
+    position:static;
+
+    width:100%;
+
+    margin:40px 0 0;
+
+}
+
+.page06 .contact-card{
+
+    text-align:center;
+
+}
+
+.page06 .register-button{
+
+    width:100%;
+
+}
+
+}
+
+/* ==========================================================
+   MOBILE — PAGE 7
+   WE'VE GOT THE DETAILS COVERED
+========================================================== */
+
+@media screen and (max-width:900px){
+
+.page07 .content-page{
+
+    padding:40px 24px 60px;
+
+}
+
+.page07 .page-title{
+
+    font-size:2.4rem;
+
+    line-height:1.1;
+
+    margin-bottom:22px;
+
+}
+
+.page07 .main-column{
+
+    max-width:100%;
+
+}
+
+.page07 .main-column p{
+
+    font-size:1rem;
+
+    line-height:1.8;
+
+}
+
+.page07 .bottom-callout{
+
+    margin-top:36px;
+
+    padding:28px 22px;
+
+    border-radius:18px;
+
+}
+
+.page07 .bottom-callout h3{
+
+    text-align:center;
+
+    margin-bottom:22px;
+
+}
+
+.page07 .bottom-callout .check-list{
+
+    display:block;
+
+}
+
+.page07 .bottom-callout .check-item{
+
+    margin-bottom:18px;
+
+}
+
+.page07 .check{
+
+    width:26px;
+
+    height:26px;
+
+    font-size:.9rem;
+
+}
+
+.page07 .check-text{
+
+    font-size:1rem;
+
+    line-height:1.65;
+
+}
+
+}
+
+
+
+/* ==========================================
+   MOBILE NAVIGATION
+========================================== */
+
+@media screen and (max-width:900px){
+
+.floating-nav{
+
+    top:auto;
+    bottom:0;
+    left:0;
+    right:0;
+
+    transform:none;
+
+    flex-direction:row;
+
+    justify-content:space-around;
+
+    align-items:center;
+
+    padding:12px;
+
+    background:rgba(20,20,20,.92);
+
+    backdrop-filter:blur(10px);
+
+}
+
+.floating-nav a{
+
+    background:none;
+
+    padding:6px;
+
+    font-size:.72rem;
+
+    letter-spacing:.08em;
+
+}
+
+.floating-nav a:hover{
+
+    transform:none;
+
+    background:none;
+
+}
+
+}
+
+/* ==========================================
+   MOBILE BACKGROUNDS
+========================================== */
+
+@media screen and (max-width:900px){
+
+.page-background{
+
+    background-position:center center !important;
+
+    background-size:cover !important;
+
+}
+
+.cover-image img{
+
+    object-position:center;
+
+}
+
+}
+
+/* ==========================================
+   MOBILE BUTTONS
+========================================== */
+
+@media screen and (max-width:900px){
+
+.register-button,
+.submit-registration{
+
+    width:100%;
+
+    font-size:1rem;
+
+    padding:18px;
+
+    border-radius:12px;
+
+}
+
+}
+
+/* ==========================================
+   MOBILE READING
+========================================== */
+
+@media screen and (max-width:900px){
+
+.page-body,
+.main-column{
+
+    max-width:650px;
+
+    margin:auto;
+
+}
+
+}
+
+/* ==========================================
+   MOBILE TYPOGRAPHY SYSTEM
+========================================== */
+
+@media screen and (max-width:900px){
+
+.page-title{
+
+    font-size:2.45rem !important;
+
+    line-height:1.05;
+
+    margin-bottom:20px;
+
+}
+
+.page-eyebrow{
+
+    font-size:.72rem;
+
+    letter-spacing:.22em;
+
+}
+
+.page-body p{
+
+    font-size:1.02rem;
+
+    line-height:1.8;
+
+    margin-bottom:20px;
+
+}
+
+.question-block p{
+
+    font-size:1rem;
+
+}
+
+.side-panel h3{
+
+    font-size:1.8rem;
+
+}
+
+.quote p{
+
+    font-size:1.5rem;
+
+    line-height:1.4;
+
+}
+
+}
+
+/* ==========================================
+   MOBILE SPACING SYSTEM
+========================================== */
+
+@media screen and (max-width:900px){
+
+.content-page{
+
+    padding:42px 24px;
+
+}
+
+.section-divider{
+
+    margin-bottom:26px;
+
+}
+
+.page-body{
+
+    margin-top:18px;
+
+}
+
+.question-block{
+
+    margin:28px 0;
+
+}
+
+.side-panel{
+
+    margin-top:36px;
+
+}
+
+.emphasis-block{
+
+    margin-top:36px;
+
+}
+
+}
+
+/* ==========================================
+   SCROLL REVEAL
+========================================== */
+
+.content-page{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:all .8s ease;
+
+}
+
+.content-page.visible{
+
+    opacity:1;
+
+    transform:translateY(0);
 
 }
 

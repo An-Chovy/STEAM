@@ -1476,6 +1476,32 @@ document.addEventListener("DOMContentLoaded", function(){
 
 </script>
 
+<script>
+
+const observer = new IntersectionObserver((entries)=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+            entry.target.classList.add("visible");
+
+        }
+
+    });
+
+},{
+    threshold:.15
+});
+
+document.querySelectorAll(".content-page").forEach(section=>{
+
+    observer.observe(section);
+
+});
+
+</script>
+
 </body>
 </html>
 
