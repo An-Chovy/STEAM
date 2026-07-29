@@ -1278,6 +1278,28 @@ p{
 
 }
 
+.page04 .emphasis-block{
+
+    margin-top:-284px;
+
+    text-align:center;
+
+}
+
+.page04 .emphasis-block p{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:4.1rem;
+
+    line-height:1.15;
+
+    color:#111;
+
+    margin-bottom:2px;
+
+}
+
 .page04 .page-title,
 .page04 .page-body,
 .page04 .page-body p,
