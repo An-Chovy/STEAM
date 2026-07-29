@@ -1810,6 +1810,31 @@ html{
 
 }
 
+.register-button{
+
+    appearance:none;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+
+    background:#B38B2D;
+    color:#ffffff;
+    border:none;
+    padding:18px 36px;
+    border-radius:8px;
+    font-size:1rem;
+    font-weight:700;
+    font-family:'Montserrat',sans-serif;
+    cursor:pointer;
+    transition:.25s;
+
+}
+
+.register-button:hover{
+
+    background:#C89B2E;
+
+}
+
 /* ===========================================
    REGISTRATION MODAL
 =========================================== */
