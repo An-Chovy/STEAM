@@ -1029,24 +1029,25 @@ footer{
    QUOTE / BLOCKQUOTE
 ========================================================== */
 
-blockquote{
+blockquote {
+    border-left: 6px solid var(--red);
+    padding: 24px 32px;
+    
+    /* 1. Set a maximum width (adjust pixel/percentage value as needed) */
+    max-width: 350px; 
+    
+    /* 2. Choose alignment: */
+    /* Option A: Centered on the page */
+    margin: 36px auto 36px 0;
+    
+    /* Option B: Left-aligned (keep original top/bottom spacing, auto right margin) */
+    /* margin: 36px auto 36px 0; */
 
-    border-left:6px solid var(--red);
-
-    padding:24px 32px;
-
-    margin:36px 0;
-
-    font-size:1.4rem;
-
-    font-style:italic;
-
-    color:var(--navy);
-
-    background:var(--offwhite);
-
-    border-radius:0 16px 16px 0;
-
+    font-size: 2.4rem;
+    font-style: italic;
+    color: var(--navy);
+    background: var(--offwhite);
+    border-radius: 0 16px 16px 0;
 }
 
 /* ==========================================================
@@ -2128,4 +2129,79 @@ p{
     font-size: 0.8rem;
     white-space: nowrap; /* Keeps "Become a Partner" or "Partner" on 1 line */
   }
+}
+
+#The-Why p {
+  /* Add your specific paragraph styles here */
+  font-size: 1.40rem;
+  line-height: 1.6;
+  color: var(--navy);
+  max-width: 1080px;
+}
+
+.hero-tagline {
+    display: inline-block;
+    background: var(--red);
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+}
+
+/* --- HERO SECTION TWO-COLUMN LAYOUT FIX --- */
+.hero-flyer {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Splits hero evenly into 2 side-by-side columns */
+    gap: 40px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.hero-main {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Fix text contrast & overlapping */
+.hero-title {
+    color: #ffffff !important;
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 10px 0;
+}
+
+.hero-subtitle {
+    color: #e2e8f0 !important; /* Makes description text bright & crisp */
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Ensure tiles stay on the right column */
+.hero-tiles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+/* Mobile responsive fix */
+@media (max-width: 850px) {
+    .hero-flyer {
+        grid-template-columns: 1fr; /* Stacks vertically on small screens */
+    }
 }

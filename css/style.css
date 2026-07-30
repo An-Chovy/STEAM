@@ -343,7 +343,13 @@ p{
 
     box-shadow:0 20px 45px rgba(0,0,0,.25);
 
+    position: relative;
+
+    right: 260px;
+
+    top: -60px;
 }
+
 
 .presented{
 
@@ -426,6 +432,10 @@ p{
     color:#222;
 
 }
+
+
+
+
 /* ==========================================================
    COVER — FOOTER
 ========================================================== */
@@ -884,6 +894,8 @@ p{
     line-height:1.8;
 
     margin-bottom:18px;
+
+    right: 20px;
 
 }
 
@@ -1693,7 +1705,7 @@ p{
 
     top:50%;
 
-    right:35px;
+    right:-22px;
 
     transform:translateY(-50%);
 
@@ -1721,7 +1733,7 @@ p{
 
     text-transform:uppercase;
 
-    padding:8px 12px;
+    padding:8px 8px;
 
     border-radius:25px;
 
@@ -1730,6 +1742,7 @@ p{
     backdrop-filter:blur(8px);
 
     transition:.25s;
+
 
 }
 
@@ -2428,7 +2441,7 @@ html{
 
     width:100%;
 
-    left:0;
+    left:20px !important;
 
     top:30px;
 
