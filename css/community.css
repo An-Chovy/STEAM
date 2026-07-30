@@ -2090,3 +2090,42 @@ p{
   object-fit: cover;
   object-position: 50% 63%;
 }
+
+/* ==================================================
+   MOBILE NAVIGATION FIXES
+================================================== */
+@media (max-width: 768px) {
+
+  /* 1. Reduce side padding from 50px to 15px to free up 70px of screen space */
+  .top-nav {
+    padding: 12px 15px;
+  }
+
+  /* 2. Scale down the brand title slightly so it fits small screens */
+  .brand-title {
+    font-size: 1.05rem;
+    letter-spacing: 1px;
+    white-space: nowrap; /* Prevents brand title from wrapping */
+  }
+
+  .brand-subtitle {
+    font-size: 0.72rem;
+    white-space: nowrap;
+  }
+
+  /* 3. Reduce gap between nav items from 30px to 10px-12px */
+  .top-nav nav {
+    gap: 10px;
+  }
+
+  .top-nav nav a {
+    font-size: 0.85rem;
+  }
+
+  /* 4. Prevent "Partner" button text from splitting to 2 lines & trim padding */
+  .partner-link {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+    white-space: nowrap; /* Keeps "Become a Partner" or "Partner" on 1 line */
+  }
+}
