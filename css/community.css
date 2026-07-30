@@ -1,0 +1,1515 @@
+/* ==========================================================
+   FUTURE READY
+   COMMUNITY PAGE
+   RED / WHITE / BLUE — DOUGLAS SCHOOL DISTRICT COLORS
+   "FUN + MOVABLE" REDESIGN
+========================================================== */
+
+:root{
+
+    --navy:#14213d;
+    --navy-light:#26375c;
+    --red:#e0313f;
+    --red-dark:#b8202c;
+    --white:#ffffff;
+    --offwhite:#f4f6f9;
+    --ink:#1d1d1d;
+
+}
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:"Segoe UI",Arial,sans-serif;
+
+    color:var(--ink);
+
+    background:var(--white);
+
+    line-height:1.7;
+
+    overflow-x:hidden;   /* lets rotated/shifted elements breathe without causing scroll issues */
+
+}
+
+img{
+
+    width:100%;
+
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+/* ==========================================================
+   SECTION STRUCTURE
+   Sections stretch full width; .section-inner keeps content readable
+========================================================== */
+
+section{
+
+    position:relative;
+
+    width:100%;
+
+    padding:110px 40px;
+
+    overflow:hidden;
+
+}
+
+.section-inner{
+
+    max-width:1300px;
+
+    margin:0 auto;
+
+    position:relative;
+
+}
+
+section:not(.community-hero):not(.community-final):nth-child(even){
+
+    background:var(--offwhite);
+
+}
+
+/* ==========================================================
+   HERO SECTION
+========================================================== */
+
+.community-hero{
+
+    position:relative;
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:120px 60px;
+
+    background-image:url("../images/backgrounds/community-hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    overflow:hidden;
+
+}
+
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+
+        90deg,
+
+        rgba(20,33,61,.90) 0%,
+
+        rgba(20,33,61,.72) 45%,
+
+        rgba(20,33,61,.28) 100%
+
+    );
+
+}
+
+.hero-flyer{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+
+    max-width:1300px;
+
+    display:grid;
+
+    grid-template-columns:1.3fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.hero-main{
+
+    color:white;
+
+}
+
+.hero-eyebrow{
+
+    color:var(--red);
+
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+    font-size:.9rem;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+}
+
+.hero-main h1{
+
+    color:white;
+
+    font-size:4.6rem;
+
+    line-height:.95;
+
+    margin-bottom:8px;
+
+    font-weight:800;
+
+}
+
+.hero-main h2{
+
+    color:white;
+
+    font-size:1.75rem;
+
+    font-weight:300;
+
+    margin-bottom:0;
+
+}
+
+.hero-divider{
+
+    width:120px;
+
+    height:4px;
+
+    background:var(--red);
+
+    margin:30px 0;
+
+    border-radius:4px;
+
+}
+
+/* ---------- Event Box: WHEN / WHERE / WHAT ---------- */
+
+.hero-event-box{
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    border-radius:16px;
+
+    padding:28px 32px;
+
+    margin-bottom:34px;
+
+}
+
+.hero-event-row{
+
+    display:grid;
+
+    grid-template-columns:100px 1fr;
+
+    gap:16px;
+
+    padding:14px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.15);
+
+}
+
+.hero-event-row:last-child{
+
+    border-bottom:none;
+
+}
+
+.hero-event-label{
+
+    color:var(--red);
+
+    font-weight:800;
+
+    font-size:.85rem;
+
+    letter-spacing:1.5px;
+
+    align-self:start;
+
+    padding-top:2px;
+
+}
+
+.hero-event-value{
+
+    color:white;
+
+    font-size:1.15rem;
+
+    font-weight:600;
+
+    line-height:1.4;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+/* ---------- 2x3 Tile Grid ---------- */
+
+.hero-tiles{
+
+    display:grid;
+
+    grid-template-columns:repeat(2, 1fr);
+
+    grid-template-rows:repeat(3, 1fr);
+
+    gap:16px;
+
+}
+
+.hero-tile{
+
+    background:rgba(255,255,255,.95);
+
+    border-radius:16px;
+
+    padding:24px 16px;
+
+    text-align:center;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    font-size:2rem;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.20);
+
+    transition:.25s;
+
+}
+
+.hero-tile span{
+
+    font-size:.78rem;
+
+    font-weight:800;
+
+    letter-spacing:.5px;
+
+    color:var(--navy);
+
+}
+
+.hero-tile:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.28);
+
+}
+
+.hero-tile:nth-child(3n+1){
+
+    background:var(--red);
+
+}
+
+.hero-tile:nth-child(3n+1) span{
+
+    color:white;
+
+}
+
+.button-primary{
+
+    background:var(--red);
+
+    color:#ffffff;
+
+    padding:18px 34px;
+
+    border-radius:50px;
+
+    font-weight:700;
+
+    transition:.25s;
+
+    box-shadow:0 10px 24px rgba(224,49,63,.35);
+
+}
+
+.button-primary:hover{
+
+    background:white;
+
+    color:var(--red);
+
+    transform:translateY(-4px) scale(1.03);
+
+}
+
+.button-secondary{
+
+    background:transparent;
+
+    color:white;
+
+    border:2px solid white;
+
+    padding:18px 34px;
+
+    border-radius:50px;
+
+    font-weight:700;
+
+    transition:.25s;
+
+}
+
+.button-secondary:hover{
+
+    background:white;
+
+    color:var(--navy);
+
+    transform:translateY(-4px) scale(1.03);
+
+}
+
+/* ==================================================
+   TOP NAVIGATION
+================================================== */
+
+.top-nav{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 50px;
+
+    background:rgba(20,33,61,.92);
+
+    backdrop-filter:blur(10px);
+
+    z-index:1000;
+
+}
+
+.nav-brand{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.brand-title{
+
+    color:#ffffff;
+
+    font-size:1.35rem;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+}
+
+.brand-subtitle{
+
+    color:var(--red);
+
+    font-size:.82rem;
+
+    letter-spacing:1px;
+
+    margin-top:2px;
+
+}
+
+.top-nav nav{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:30px;
+
+}
+
+.top-nav nav a{
+
+    color:white;
+
+    font-weight:500;
+
+    transition:.25s;
+
+}
+
+.top-nav nav a:hover{
+
+    color:var(--red);
+
+}
+
+.partner-link{
+
+    background:var(--red);
+
+    color:#ffffff !important;
+
+    padding:10px 20px;
+
+    border-radius:30px;
+
+    font-weight:700;
+
+    transition:.25s;
+
+}
+
+.partner-link:hover{
+
+    background:white;
+
+    color:var(--navy) !important;
+
+    transform:scale(1.05);
+
+}
+
+/* ==========================================================
+   HEADINGS + TEXT
+========================================================== */
+
+h1{
+
+    font-size:3.6rem;
+
+    line-height:1.05;
+
+    color:var(--navy);
+
+    margin-bottom:20px;
+
+    font-weight:800;
+
+}
+
+h2{
+
+    font-size:2.4rem;
+
+    color:var(--navy);
+
+    margin-bottom:24px;
+
+    font-weight:700;
+
+}
+
+p{
+
+    margin-bottom:22px;
+
+    font-size:1.15rem;
+
+    line-height:1.85;
+
+    color:#303030;
+
+}
+
+.eyebrow{
+
+    color:var(--red);
+
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+    font-size:.85rem;
+
+    font-weight:700;
+
+    margin-bottom:14px;
+
+}
+
+.section-divider{
+
+    width:140px;
+
+    height:5px;
+
+    background:var(--red);
+
+    margin:35px 0 45px;
+
+    border-radius:3px;
+
+}
+
+.section-header{
+
+    max-width:800px;
+
+    margin-bottom:60px;
+
+}
+
+.section-intro{
+
+    max-width:800px;
+
+}
+
+.gold,
+.highlight{
+
+    color:var(--red);
+
+    font-weight:700;
+
+}
+
+footer{
+
+    background:var(--navy);
+
+    color:white;
+
+    text-align:center;
+
+    padding:50px;
+
+}
+
+/* ==========================================================
+   FLEXIBLE TWO-COLUMN LAYOUT
+   Use this to sit text + image (or any two blocks) side by side.
+   Add "reverse" to flip which side the image is on.
+========================================================== */
+
+.split-layout{
+
+    display:grid;
+
+    grid-template-columns:1.2fr 1fr;
+
+    gap:60px;
+
+    align-items:center;
+
+}
+
+.split-layout.reverse{
+
+    grid-template-columns:1fr 1.2fr;
+
+}
+
+.split-layout.reverse > *:first-child{
+
+    order:2;
+
+}
+
+.split-layout.reverse > *:last-child{
+
+    order:1;
+
+}
+
+@media screen and (max-width:900px){
+
+    .split-layout,
+    .split-layout.reverse{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .split-layout.reverse > *:first-child,
+    .split-layout.reverse > *:last-child{
+
+        order:initial;
+
+    }
+
+}
+
+/* ==========================================================
+   SECTION IMAGE SPOTS
+========================================================== */
+
+.section-image{
+
+    width:100%;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    box-shadow:0 20px 55px rgba(0,0,0,.14);
+
+}
+
+.section-image img{
+
+    width:100%;
+
+    height:420px;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+@media screen and (max-width:900px){
+
+    .section-image img{
+
+        height:240px;
+
+    }
+
+}
+
+/* ==========================================================
+   HIGHLIGHT BOX
+========================================================== */
+
+.highlight-box{
+
+    background:var(--navy);
+
+    color:white;
+
+    padding:34px;
+
+    border-radius:20px;
+
+    margin-top:30px;
+
+    box-shadow:0 18px 40px rgba(20,33,61,.25);
+
+}
+
+.highlight-box h3{
+
+    color:var(--red);
+
+    margin-bottom:16px;
+
+    font-size:1.5rem;
+
+}
+
+.highlight-box p{
+
+    color:white;
+
+    margin-bottom:10px;
+
+    font-size:1.05rem;
+
+}
+
+/* ==========================================================
+   CARD GRIDS
+   (community-grid / experience-grid / partner-grid)
+========================================================== */
+
+.community-grid,
+.experience-grid,
+.partner-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+
+    gap:34px;
+
+    margin-top:20px;
+
+}
+
+.community-card,
+.experience-card,
+.partner-box{
+
+    position:relative;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:36px;
+
+    box-shadow:0 16px 40px rgba(0,0,0,.08);
+
+    border:1px solid rgba(0,0,0,.05);
+
+    transition:.3s ease;
+
+    text-align:left;
+
+    overflow:hidden;
+
+}
+
+/* thin color bar across the top of every card — CSS only, no images */
+
+.community-card::before,
+.experience-card::before,
+.partner-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    height:6px;
+
+    background:linear-gradient(90deg, var(--red), var(--navy));
+
+}
+
+.community-card:hover,
+.experience-card:hover,
+.partner-box:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 26px 60px rgba(0,0,0,.14);
+
+}
+
+.experience-icon{
+
+    font-size:2.6rem;
+
+    margin-bottom:14px;
+
+}
+
+.partner-box{
+
+    font-size:2.4rem;
+
+    text-align:center;
+
+}
+
+.community-card h3,
+.experience-card h3,
+.partner-box h3{
+
+    color:var(--navy);
+
+    margin-bottom:12px;
+
+    font-size:1.35rem;
+
+}
+
+/* ==========================================================
+   QUOTE / BLOCKQUOTE
+========================================================== */
+
+blockquote{
+
+    border-left:6px solid var(--red);
+
+    padding:24px 32px;
+
+    margin:36px 0;
+
+    font-size:1.4rem;
+
+    font-style:italic;
+
+    color:var(--navy);
+
+    background:var(--offwhite);
+
+    border-radius:0 16px 16px 0;
+
+}
+
+/* ==========================================================
+   FINAL SECTION
+========================================================== */
+
+.community-final{
+
+    background:var(--navy);
+
+    color:white;
+
+    text-align:center;
+
+}
+
+.community-final h2{
+
+    color:white;
+
+}
+
+.community-final p{
+
+    color:rgba(255,255,255,.85);
+
+    max-width:700px;
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+}
+
+.community-highlight{
+
+    background:rgba(255,255,255,.10);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    border-radius:20px;
+
+    padding:30px;
+
+    margin:40px auto;
+
+    max-width:500px;
+
+}
+
+.community-highlight p{
+
+    color:white;
+
+}
+
+.community-button{
+
+    display:inline-block;
+
+    background:var(--red);
+
+    color:white;
+
+    padding:20px 40px;
+
+    border-radius:50px;
+
+    font-weight:700;
+
+    font-size:1.1rem;
+
+    transition:.25s;
+
+    box-shadow:0 14px 34px rgba(224,49,63,.4);
+
+}
+
+.community-button:hover{
+
+    background:white;
+
+    color:var(--red);
+
+    transform:translateY(-4px) scale(1.04);
+
+}
+
+.coming-soon{
+
+    text-align:center;
+
+    font-style:italic;
+
+    color:#666;
+
+    margin-top:30px;
+
+}
+
+/* ==========================================================
+   DECORATIVE SHAPES — PURE CSS, NO IMAGES
+   Drop these <div> elements anywhere as visual accents.
+   They are empty divs styled entirely with CSS.
+========================================================== */
+
+/* Soft organic blob — background accent shape */
+
+.shape-blob{
+
+    position:absolute;
+
+    width:340px;
+
+    height:340px;
+
+    background:var(--red);
+
+    opacity:.08;
+
+    border-radius:62% 38% 55% 45% / 45% 55% 45% 55%;
+
+    z-index:0;
+
+    pointer-events:none;
+
+}
+
+.shape-blob.navy{
+
+    background:var(--navy);
+
+}
+
+/* Solid circle accent */
+
+.shape-circle{
+
+    position:absolute;
+
+    width:120px;
+
+    height:120px;
+
+    border-radius:50%;
+
+    background:var(--red);
+
+    opacity:.10;
+
+    z-index:0;
+
+    pointer-events:none;
+
+}
+
+.shape-circle.navy{
+
+    background:var(--navy);
+
+}
+
+.shape-circle.outline{
+
+    background:none;
+
+    border:6px solid var(--red);
+
+    opacity:.25;
+
+}
+
+/* Rounded square / soft block accent */
+
+.shape-block{
+
+    position:absolute;
+
+    width:160px;
+
+    height:160px;
+
+    border-radius:32px;
+
+    background:var(--navy);
+
+    opacity:.08;
+
+    z-index:0;
+
+    pointer-events:none;
+
+}
+
+.shape-block.red{
+
+    background:var(--red);
+
+}
+
+/* Zigzag divider between sections — pure CSS, no image */
+
+.zigzag-divider{
+
+    width:100%;
+
+    height:24px;
+
+    background:
+
+        linear-gradient(135deg, var(--offwhite) 25%, transparent 25%) -12px 0,
+
+        linear-gradient(225deg, var(--offwhite) 25%, transparent 25%) -12px 0,
+
+        linear-gradient(315deg, var(--offwhite) 25%, transparent 25%),
+
+        linear-gradient(45deg, var(--offwhite) 25%, transparent 25%);
+
+    background-size:24px 24px;
+
+    background-color:var(--navy);
+
+}
+
+/* Dotted accent row — simple, clean, no imagery */
+
+.dot-row{
+
+    display:flex;
+
+    gap:10px;
+
+    margin:20px 0;
+
+}
+
+.dot-row span{
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:var(--red);
+
+    display:inline-block;
+
+}
+
+.dot-row span:nth-child(2){ background:var(--navy); }
+.dot-row span:nth-child(3){ background:var(--red); opacity:.5; }
+
+/* ==========================================================
+   MOVABLE UTILITY CLASSES
+   Add any of these to a box's class list to nudge it around.
+   Combine multiple classes freely, e.g.:
+   class="community-card shift-up-20 rotate-2 shift-right-30"
+========================================================== */
+
+/* ---------- Nudge Up/Down ---------- */
+
+.shift-up-10{ transform:translateY(-10px); }
+.shift-up-20{ transform:translateY(-20px); }
+.shift-up-40{ transform:translateY(-40px); }
+.shift-up-60{ transform:translateY(-60px); }
+
+.shift-down-10{ transform:translateY(10px); }
+.shift-down-20{ transform:translateY(20px); }
+.shift-down-40{ transform:translateY(40px); }
+.shift-down-60{ transform:translateY(60px); }
+
+/* ---------- Nudge Left/Right ---------- */
+
+.shift-left-10{ transform:translateX(-10px); }
+.shift-left-20{ transform:translateX(-20px); }
+.shift-left-40{ transform:translateX(-40px); }
+.shift-left-60{ transform:translateX(-60px); }
+
+.shift-right-10{ transform:translateX(10px); }
+.shift-right-20{ transform:translateX(20px); }
+.shift-right-40{ transform:translateX(40px); }
+.shift-right-60{ transform:translateX(60px); }
+
+/* ---------- Rotation ---------- */
+
+.rotate-1{ transform:rotate(1deg); }
+.rotate-2{ transform:rotate(2deg); }
+.rotate-3{ transform:rotate(3deg); }
+.rotate-5{ transform:rotate(5deg); }
+
+.rotate-neg-1{ transform:rotate(-1deg); }
+.rotate-neg-2{ transform:rotate(-2deg); }
+.rotate-neg-3{ transform:rotate(-3deg); }
+.rotate-neg-5{ transform:rotate(-5deg); }
+
+/* ---------- Size ---------- */
+
+.size-small{ max-width:320px; }
+.size-medium{ max-width:480px; }
+.size-large{ max-width:640px; }
+.size-full{ max-width:100%; }
+
+/* ---------- Alignment within a section ---------- */
+
+.align-left{ margin-right:auto; margin-left:0; }
+.align-center{ margin-left:auto; margin-right:auto; }
+.align-right{ margin-left:auto; margin-right:0; }
+
+/* ---------- Free positioning (advanced) ----------
+   Use ONLY if you want an element pulled completely out of
+   normal flow to sit at an exact spot. Parent needs
+   position:relative (section-inner already has this).
+   Adjust top/left/right/bottom values as needed.
+--------------------------------------------------- */
+
+.float-box{
+
+    position:absolute;
+
+}
+
+.top-0{ top:0; }
+.top-20{ top:20px; }
+.top-50{ top:50px; }
+.top-100{ top:100px; }
+
+.bottom-0{ bottom:0; }
+.bottom-20{ bottom:20px; }
+.bottom-50{ bottom:50px; }
+
+.left-0{ left:0; }
+.left-20{ left:20px; }
+.left-50{ left:50px; }
+
+.right-0{ right:0; }
+.right-20{ right:20px; }
+.right-50{ right:50px; }
+
+/* ==========================================================
+   MOBILE
+   Resets rotation/floating tricks so everything is
+   simple, stacked, and easy to read on small screens.
+========================================================== */
+
+@media screen and (max-width:900px){
+
+/* ---------- Navigation ---------- */
+
+.top-nav{
+
+    flex-direction:column;
+
+    align-items:center;
+
+    padding:18px;
+
+    gap:18px;
+
+}
+
+.nav-brand{
+
+    text-align:center;
+
+}
+
+.brand-title{
+
+    font-size:1.2rem;
+
+}
+
+.brand-subtitle{
+
+    font-size:.75rem;
+
+}
+
+.top-nav nav{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:14px;
+
+    width:100%;
+
+}
+
+.top-nav nav a{
+
+    font-size:.95rem;
+
+}
+
+.partner-link{
+
+    width:100%;
+
+    max-width:320px;
+
+    text-align:center;
+
+}
+
+/* ---------- General ---------- */
+
+section{
+
+    padding:70px 24px;
+
+}
+
+h1{
+
+    font-size:2.5rem;
+
+    text-align:center;
+
+    line-height:1.05;
+
+}
+
+h2{
+
+    font-size:1.75rem;
+
+    text-align:center;
+
+}
+
+.section-header{
+
+    text-align:center;
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+}
+
+.section-divider{
+
+    margin:25px auto 35px;
+
+}
+
+p{
+
+    font-size:1rem;
+
+    line-height:1.75;
+
+}
+
+/* ---------- Hero ---------- */
+
+.community-hero{
+
+    min-height:auto;
+
+    padding:120px 24px 80px;
+
+    text-align:center;
+
+    background-position:center;
+
+}
+
+.hero-flyer{
+
+    grid-template-columns:1fr;
+
+    gap:40px;
+
+    text-align:center;
+
+}
+
+.hero-eyebrow{
+
+    font-size:.8rem;
+
+    letter-spacing:2px;
+
+}
+
+.hero-main h1{
+
+    font-size:3rem;
+
+}
+
+.hero-main h2{
+
+    font-size:1.4rem;
+
+}
+
+.hero-divider{
+
+    margin:24px auto;
+
+}
+
+.hero-event-box{
+
+    width:100%;
+
+    padding:22px;
+
+    text-align:left;
+
+}
+
+.hero-event-row{
+
+    grid-template-columns:80px 1fr;
+
+}
+
+.hero-event-value{
+
+    font-size:1rem;
+
+}
+
+.hero-buttons{
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.button-primary,
+.button-secondary{
+
+    width:100%;
+
+    max-width:340px;
+
+    text-align:center;
+
+}
+
+.hero-tiles{
+
+    grid-template-columns:repeat(2, 1fr);
+
+    grid-template-rows:auto;
+
+}
+
+.hero-tile{
+
+    padding:18px 10px;
+
+    font-size:1.6rem;
+
+}
+
+/* ---------- Cards: remove tilt/rotation on mobile for readability ---------- */
+
+.community-card,
+.experience-card,
+.partner-box{
+
+    padding:28px;
+
+    transform:none !important;
+
+}
+
+/* ---------- Neutralize all movable utility classes on mobile ---------- */
+
+.shift-up-10, .shift-up-20, .shift-up-40, .shift-up-60,
+.shift-down-10, .shift-down-20, .shift-down-40, .shift-down-60,
+.shift-left-10, .shift-left-20, .shift-left-40, .shift-left-60,
+.shift-right-10, .shift-right-20, .shift-right-40, .shift-right-60,
+.rotate-1, .rotate-2, .rotate-3, .rotate-5,
+.rotate-neg-1, .rotate-neg-2, .rotate-neg-3, .rotate-neg-5{
+
+    transform:none;
+
+}
+
+.float-box{
+
+    position:relative;
+
+    top:auto;
+    left:auto;
+    right:auto;
+    bottom:auto;
+
+    margin:20px auto;
+
+}
+
+}
