@@ -2184,9 +2184,19 @@ html{
 
     .event-panel{
 
+        position:static;
+
         width:100%;
 
-        margin-top:35px;
+        max-width:100%;
+
+        right:auto;
+
+        top:auto;
+
+        left:auto;
+
+        margin:35px auto 0;
 
     }
 
