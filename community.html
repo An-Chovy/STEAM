@@ -256,6 +256,7 @@ gtag('config', 'G-BR8H2KM88X');
         <a href="#The-Why">The Why</a>
         <a href="#experience">Experience</a>
         <a href="#partners">Partners</a>
+        <a href="https://dsdk12.net" target="_blank" rel="noopener">District</a>
     </nav>
 </header>
 
@@ -285,15 +286,15 @@ gtag('config', 'G-BR8H2KM88X');
             </div>
 
             <div class="hero-event-box" style="margin-top: 15px;">
-                <div class="hero-event-row">
-                    <span class="hero-event-label">WHEN:</span>
-                    <span class="hero-event-value">Thursday, August 27, 2026 · 5:00–7:00 PM</span>
-                </div>
-                <div class="hero-event-row">
-                    <span class="hero-event-label">WHERE:</span>
-                    <span class="hero-event-value">Douglas Middle School</span>
-                </div>
-            </div>
+    <div class="hero-event-row">
+        <span class="hero-event-label">WHEN:</span>
+        <span class="hero-event-value">Thursday, August 27, 2026 · 5:00–7:00 PM</span>
+    </div>
+    <div class="hero-event-row">
+        <span class="hero-event-label">WHERE:</span>
+        <span class="hero-event-value address-link" onclick="document.getElementById('directionsModal').style.display='flex'">Douglas Middle School</span>
+    </div>
+</div>
         </div>
 
         <!-- RIGHT COLUMN: FEATURE TILES -->
@@ -513,7 +514,11 @@ gtag('config', 'G-BR8H2KM88X');
             <p><strong>Thursday, August 27, 2026</strong></p>
             <p>Douglas Middle School<br>5:00–7:00 PM</p>
         </div>
+    
     </div>
+    <button class="directions-button" onclick="document.getElementById('directionsModal').style.display='flex'">
+    Get Directions
+</button>
 </section>
 
 <!-- ===========================================
@@ -532,6 +537,30 @@ gtag('config', 'G-BR8H2KM88X');
         </button>
     </div>
 </section>
+
+<div class="modal" id="directionsModal">
+    <div class="modal-window directions-window">
+        <button class="close-modal" onclick="document.getElementById('directionsModal').style.display='none'">&times;</button>
+
+        <p class="directions-eyebrow">Black Hills STEAM Showcase</p>
+        <h2>Getting There</h2>
+        <div class="directions-divider"></div>
+
+        <div class="directions-info">
+            <p class="directions-label">Venue</p>
+            <p class="directions-venue">Douglas Middle School</p>
+
+            <p class="directions-label">Address</p>
+            <p class="directions-address">691 Tower Rd<br>Box Elder, SD 57719</p>
+        </div>
+
+        <a class="directions-cta"
+           href="https://www.google.com/maps/dir/?api=1&destination=691+Tower+Rd,+Box+Elder,+SD+57719"
+           target="_blank" rel="noopener">
+            Open in Google Maps
+        </a>
+    </div>
+</div>
 
 <script>
 document.addEventListener("DOMContentLoaded", function(){
