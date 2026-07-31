@@ -1670,9 +1670,9 @@ p{
 
     display:grid;
 
-    grid-template-columns:repeat(auto-fill, minmax(260px, 1fr));
+    grid-template-columns:repeat(auto-fill, minmax(320px, 1fr));
 
-    gap:28px;
+    gap:32px;
 
     margin:50px 0;
 
@@ -1688,7 +1688,7 @@ p{
 
     border-radius:20px;
 
-    padding:30px 25px;
+    padding:40px 32px;
 
     text-align:center;
 
