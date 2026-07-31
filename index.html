@@ -533,7 +533,7 @@ gtag('config', 'G-BR8H2KM88X');
 
                     </span>
 
-                    <span class="value">
+                    <span class="value address-link" onclick="document.getElementById('directionsModal').style.display='flex'">
 
                         Douglas Middle School
 
@@ -990,15 +990,15 @@ gtag('config', 'G-BR8H2KM88X');
                 </div>
 
                 <div class="info-label">Location</div>
-                <div class="info-value">
+                <div class="info-value address-link" onclick="document.getElementById('directionsModal').style.display='flex'">
 
-                    Douglas Middle School<br>
+    Douglas Middle School<br>
 
-                    691 Tower Road<br>
+    691 Tower Road<br>
 
-                    Box Elder, SD 57719
+    Box Elder, SD 57719
 
-                </div>
+</div>
 
                 <div class="info-label">Setup</div>
                 <div class="info-value">
@@ -1028,6 +1028,10 @@ gtag('config', 'G-BR8H2KM88X');
                 Our goal is to remove barriers so organizations of every size can be involved.
 
             </p>
+
+            <button class="directions-button" onclick="document.getElementById('directionsModal').style.display='flex'">
+                Get Directions
+            </button>
 
         </div>
 
@@ -1428,6 +1432,7 @@ document.addEventListener("DOMContentLoaded", function() {
     window.onclick = function(event) {
         if (event.target === document.getElementById("registrationModal")) hideRegistration();
         if (event.target === document.getElementById("volunteerModal")) hideVolunteer();
+        if (event.target === document.getElementById("directionsModal")) document.getElementById("directionsModal").style.display = "none";
     };
 
     // Close modals on Escape key press
@@ -1435,6 +1440,8 @@ document.addEventListener("DOMContentLoaded", function() {
         if (e.key === "Escape") {
             hideRegistration();
             hideVolunteer();
+            const dirModal = document.getElementById("directionsModal");
+            if (dirModal) dirModal.style.display = "none";
         }
     });
 
@@ -1533,7 +1540,35 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
+<div class="modal" id="directionsModal">
+    <div class="modal-window directions-window apple-style">
+        <button class="close-modal" onclick="document.getElementById('directionsModal').style.display='none'">&times;</button>
+
+        <div class="directions-header">
+            <p class="directions-eyebrow">Black Hills STEAM Showcase</p>
+            <h2>Getting There</h2>
+        </div>
+
+        <div class="directions-body">
+
+            <div class="directions-info">
+                <p class="directions-label">Venue</p>
+                <p class="directions-venue">Douglas Middle School</p>
+
+                <p class="directions-label">Address</p>
+                <p class="directions-address">691 Tower Rd<br>Box Elder, SD 57719</p>
+            </div>
+
+            <a class="directions-cta"
+               href="https://www.google.com/maps/dir/?api=1&destination=691+Tower+Rd,+Box+Elder,+SD+57719"
+               target="_blank" rel="noopener">
+                Open in Google Maps
+            </a>
+
+        </div>
+    </div>
+</div>
+
+
 </body>
 </html>
-
-

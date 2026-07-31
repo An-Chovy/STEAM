@@ -3211,3 +3211,270 @@ html{
 
 }
 
+.address-link{
+
+    cursor:pointer;
+    text-decoration:underline;
+    text-decoration-color:#B38B2D;
+    text-underline-offset:4px;
+    transition:color .2s ease;
+
+}
+
+.address-link:hover{
+
+    color:#B38B2D;
+
+}
+
+/* ==========================================================
+   DIRECTIONS MODAL — APPLE PROFESSIONAL STYLE (BOLD)
+========================================================== */
+
+.directions-window.apple-style{
+
+    background:#ffffff;
+    border:none;
+    border-radius:28px;
+
+    box-shadow:
+        0 2px 6px rgba(0,0,0,.08),
+        0 40px 90px rgba(0,0,0,.28);
+
+    padding:0;
+    overflow:hidden;
+
+    max-width:460px;
+
+    text-align:left;
+
+}
+
+.directions-window.apple-style .close-modal{
+
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    background:rgba(255,255,255,.85);
+    color:#1d1d1f;
+    font-size:1.3rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    top:18px;
+    right:18px;
+    z-index:2;
+    transition:background .2s ease;
+
+}
+
+.directions-window.apple-style .close-modal:hover{
+
+    background:#ffffff;
+
+}
+
+/* ---------- HERO HEADER BAND ---------- */
+
+.directions-window.apple-style .directions-header{
+
+    background:linear-gradient(135deg, #1d1d1f 0%, #2c2c2e 100%);
+    padding:38px 32px 30px;
+    position:relative;
+
+}
+
+.directions-window.apple-style .directions-eyebrow{
+
+    font-family:'Inter',sans-serif;
+    font-size:.72rem;
+    font-weight:700;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:#B38B2D;
+    margin-bottom:8px;
+
+}
+
+.directions-window.apple-style h2{
+
+    font-family:'Inter',sans-serif;
+    font-weight:800;
+    font-size:2.1rem;
+    line-height:1.05;
+    color:#ffffff;
+    letter-spacing:-.02em;
+    margin:0;
+
+}
+
+.directions-window.apple-style .directions-divider{
+
+    display:none;
+
+}
+
+/* ---------- BODY ---------- */
+
+.directions-window.apple-style .directions-body{
+
+    padding:30px 32px 32px;
+
+}
+
+.directions-window.apple-style .directions-info{
+
+    background:#f5f5f7;
+    border-radius:18px;
+    padding:22px 22px;
+    margin-bottom:24px;
+    text-align:left;
+
+}
+
+.directions-window.apple-style .directions-label{
+
+    font-family:'Inter',sans-serif;
+    font-size:.68rem;
+    font-weight:700;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:#8a8a8e;
+    margin-top:18px;
+    margin-bottom:4px;
+
+}
+
+.directions-window.apple-style .directions-label:first-child{
+
+    margin-top:0;
+
+}
+
+.directions-window.apple-style .directions-venue{
+
+    font-family:'Inter',sans-serif;
+    font-weight:700;
+    font-size:1.15rem;
+    color:#1d1d1f;
+    margin:0;
+
+}
+
+.directions-window.apple-style .directions-address{
+
+    font-family:'Inter',sans-serif;
+    font-weight:500;
+    font-size:1rem;
+    line-height:1.55;
+    color:#1d1d1f;
+
+}
+
+.directions-window.apple-style .directions-cta{
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    text-decoration:none;
+    width:100%;
+    box-sizing:border-box;
+
+    background:#B38B2D;
+    color:#ffffff;
+
+    border:none;
+    border-radius:14px;
+    padding:17px 34px;
+    font-size:1.02rem;
+    font-weight:700;
+    font-family:'Inter',sans-serif;
+    letter-spacing:-.005em;
+
+    box-shadow:0 10px 24px rgba(179,139,45,.32);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        background .2s ease;
+
+}
+
+.directions-window.apple-style .directions-cta:hover{
+
+    background:#9c781f;
+    transform:translateY(-2px);
+    box-shadow:0 14px 30px rgba(179,139,45,.4);
+
+}
+
+/* ---------- MOBILE (directions modal only) ---------- */
+
+@media screen and (max-width:900px){
+
+    #directionsModal.modal{
+
+        padding:0;
+        align-items:flex-start;
+
+    }
+
+    .directions-window.apple-style{
+
+        width:100%;
+        max-width:none;
+        min-height:100vh;
+        border-radius:0;
+        box-shadow:none;
+
+    }
+
+    .directions-window.apple-style .directions-header{
+
+        padding:64px 24px 26px;
+
+    }
+
+    .directions-window.apple-style h2{
+
+        font-size:1.7rem;
+
+    }
+
+    .directions-window.apple-style .directions-body{
+
+        padding:26px 22px 40px;
+
+    }
+
+    .directions-button{
+
+        width:100%;
+
+    }
+
+}
+
+#invitation .page03 .side-panel{
+
+    left:0;
+    right:60px;
+    width:300px;
+    max-width:calc(100% - 60px);
+
+}
+
+@media screen and (max-width:900px){
+
+    #invitation .page03 .side-panel{
+
+        left:0 !important;
+        right:0;
+        width:100%;
+        max-width:100%;
+        margin:0;
+
+    }
+
+}
