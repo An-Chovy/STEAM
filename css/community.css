@@ -2499,3 +2499,13 @@ p{
     }
 
 }
+
+@media screen and (min-width:901px){
+
+    .wide-section .section-header{
+
+        max-width:1400px;
+
+    }
+
+}

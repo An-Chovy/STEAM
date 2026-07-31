@@ -3231,9 +3231,15 @@ html{
    DIRECTIONS MODAL — APPLE PROFESSIONAL STYLE (BOLD)
 ========================================================== */
 
+#directionsModal.modal{
+
+    background:rgba(20,20,20,.78);
+
+}
+
 .directions-window.apple-style{
 
-    background:#ffffff;
+    background:#f7f6f3;
     border:none;
     border-radius:28px;
 
@@ -3252,17 +3258,17 @@ html{
 
 .directions-window.apple-style .close-modal{
 
-    width:34px;
-    height:34px;
+    width:26px;
+    height:26px;
     border-radius:50%;
     background:rgba(255,255,255,.85);
     color:#1d1d1f;
-    font-size:1.3rem;
+    font-size:1rem;
     display:flex;
     align-items:center;
     justify-content:center;
-    top:18px;
-    right:18px;
+    top:14px;
+    right:14px;
     z-index:2;
     transition:background .2s ease;
 
@@ -3274,37 +3280,30 @@ html{
 
 }
 
-/* ---------- HERO HEADER BAND ---------- */
+/* ---------- TOP BAND — BACKGROUND IMAGE ---------- */
 
-.directions-window.apple-style .directions-header{
+.directions-window.apple-style .directions-topbar{
 
-    background:linear-gradient(135deg, #1d1d1f 0%, #2c2c2e 100%);
-    padding:38px 32px 30px;
-    position:relative;
+    background:
+        linear-gradient(rgba(0,0,0,.15), rgba(0,0,0,.35)),
+        url('../images/backgrounds/cover-photo2.jpg');
 
-}
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
 
-.directions-window.apple-style .directions-eyebrow{
+    padding:26px 32px;
+    min-height:70px;
+
+    display:flex;
+    align-items:center;
 
     font-family:'Inter',sans-serif;
-    font-size:.72rem;
-    font-weight:700;
+    font-size:.75rem;
+    font-weight:800;
     letter-spacing:.16em;
     text-transform:uppercase;
-    color:#B38B2D;
-    margin-bottom:8px;
-
-}
-
-.directions-window.apple-style h2{
-
-    font-family:'Inter',sans-serif;
-    font-weight:800;
-    font-size:2.1rem;
-    line-height:1.05;
     color:#ffffff;
-    letter-spacing:-.02em;
-    margin:0;
 
 }
 
@@ -3318,13 +3317,27 @@ html{
 
 .directions-window.apple-style .directions-body{
 
-    padding:30px 32px 32px;
+    padding:34px 32px 32px;
+
+}
+
+.directions-window.apple-style h2{
+
+    font-family:'Inter',sans-serif;
+    font-weight:800;
+    font-size:2.1rem;
+    line-height:1.05;
+    color:#1d1d1f;
+    letter-spacing:-.02em;
+    text-transform:uppercase;
+    margin-bottom:24px;
 
 }
 
 .directions-window.apple-style .directions-info{
 
-    background:#f5f5f7;
+    background:#ffffff;
+    border:1px solid #eae8e2;
     border-radius:18px;
     padding:22px 22px;
     margin-bottom:24px;
@@ -3430,9 +3443,10 @@ html{
 
     }
 
-    .directions-window.apple-style .directions-header{
+    .directions-window.apple-style .directions-topbar{
 
-        padding:64px 24px 26px;
+        padding:60px 24px 20px;
+        min-height:90px;
 
     }
 
