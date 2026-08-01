@@ -2732,3 +2732,56 @@ the shared sky to remain visible throughout the page.
     color:#ffffff !important;
 
 }
+
+#about-head{
+
+    font-size:3.6rem;
+
+}
+
+
+#about-head1{
+
+    font-size:3.4rem;
+    color:var(--red)!important;
+
+}
+
+
+#about-main{
+
+    font-size:1.6rem;
+
+}
+
+#about-sub{
+
+    font-size:1.2rem;
+
+}
+
+
+#Who-head{
+
+    font-size:3.4rem;
+
+}
+
+#Why-head{
+
+    font-size:3.4rem;
+
+}
+
+#experience-head{
+
+    font-size:3.4rem;
+    width: max-content;
+
+}
+
+#partners-head{
+
+    font-size:3.4rem;
+
+}

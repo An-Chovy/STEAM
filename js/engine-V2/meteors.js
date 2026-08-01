@@ -38,14 +38,14 @@
 
     const METEOR_SETTINGS = {
 
-        phoneMinimumDelay: 10,
-        phoneMaximumDelay: 28,
+        phoneMinimumDelay: 7,
+        phoneMaximumDelay: 20,
 
-        tabletMinimumDelay: 8,
-        tabletMaximumDelay: 23,
+        tabletMinimumDelay: 6,
+        tabletMaximumDelay: 17,
 
-        desktopMinimumDelay: 6,
-        desktopMaximumDelay: 19,
+        desktopMinimumDelay: 4.5,
+        desktopMaximumDelay: 14,
 
         phoneMaximumActive: 1,
         tabletMaximumActive: 2,
@@ -396,10 +396,9 @@
 
             }
 
+            // All meteors are bright white.
             this.color =
-                random.chance(.12)
-                    ? "224,49,63"
-                    : "255,255,255";
+            "255,255,255";
 
             this.radius =
                 this.heroMeteor
@@ -851,15 +850,16 @@
                     METEOR_SETTINGS
                         .desktopMaximumDelay;
 
-            }
+            };
 
             const activity =
-                clamp(
-                    this.universe.activity *
-                    this.universe.meteorFrequency,
-                    .35,
-                    1.8
-                );
+                    clamp(
+                this.universe.activity *
+                this.universe.meteorFrequency *
+                        2.2,
+                        .5,
+                        3.5
+             );
 
             const delay =
                 this.universe.random.range(
