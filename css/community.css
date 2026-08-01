@@ -2543,3 +2543,192 @@ p{
 
 }
 
+/* ==========================================================
+   FUTURE READY V2
+   TRANSLUCENT SECTION BACKGROUNDS
+========================================================== */
+
+/*
+The animated canvases sit behind each section.
+These translucent layers preserve readability while allowing
+the shared sky to remain visible throughout the page.
+*/
+
+.future-ready-v2-section{
+
+    position:relative;
+
+    background-color:#101a32 !important;
+
+}
+
+/* Middle content sections */
+
+.future-ready-v2-section.community-section,
+.future-ready-v2-section.purpose-section,
+.future-ready-v2-section.experience-section{
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(18,31,57,.82),
+            rgba(31,49,79,.72)
+        ) !important;
+
+    color:#ffffff;
+
+}
+
+/* Keep headings and paragraphs readable */
+
+.future-ready-v2-section.community-section h2,
+.future-ready-v2-section.community-section h3,
+.future-ready-v2-section.community-section p,
+
+
+
+
+.future-ready-v2-section.experience-section h2,
+.future-ready-v2-section.experience-section h3,
+.future-ready-v2-section.experience-section p{
+
+    color:#ffffff;
+
+}
+
+.future-ready-v2-section.purpose-section h2,
+.future-ready-v2-section.purpose-section h3,
+.future-ready-v2-section.purpose-section p{
+
+    color:#ffffff !important;
+
+}
+
+/* Preserve the red eyebrow branding */
+
+.future-ready-v2-section .eyebrow{
+
+    color:var(--red);
+
+}
+
+/* Images and cards remain clear above the sky */
+
+.future-ready-v2-section .community-card,
+.future-ready-v2-section .experience-card,
+
+
+/* Restore dark text inside light cards */
+
+.future-ready-v2-section .community-card h3,
+.future-ready-v2-section .community-card p,
+.future-ready-v2-section .experience-card h3,
+.future-ready-v2-section .experience-card p{
+
+    color:var(--ink);
+
+}
+
+/* Images receive a subtle frame against the sky */
+
+.future-ready-v2-section .section-image{
+
+    position:relative;
+
+    background:
+        rgba(255,255,255,.10);
+
+    border:
+        1px solid rgba(255,255,255,.16);
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.22);
+
+}
+
+/* Keep the final section dark and immersive */
+
+.future-ready-v2-section.community-final{
+
+    background:
+        linear-gradient(
+            155deg,
+            rgba(8,17,37,.88),
+            rgba(20,33,61,.82)
+        ) !important;
+
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media screen and (max-width:900px){
+
+    /*
+    Mobile receives a slightly stronger overlay so text stays
+    readable over moving stars and atmosphere.
+    */
+
+    .future-ready-v2-section.community-section,
+    .future-ready-v2-section.purpose-section,
+    .future-ready-v2-section.experience-section{
+
+        background:
+            linear-gradient(
+                155deg,
+                rgba(16,28,52,.90),
+                rgba(29,46,75,.84)
+            ) !important;
+
+    }
+
+    .future-ready-v2-section .community-card,
+    .future-ready-v2-section .experience-card,
+    .future-ready-v2-section .highlight-box{
+
+        backdrop-filter:
+            none;
+
+        -webkit-backdrop-filter:
+            none;
+
+    }
+
+}
+
+/* ==========================================================
+   FIX — RESTORE THE WELCOME BOX
+========================================================== */
+
+.future-ready-v2-section .highlight-box{
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(10,22,45,.92),
+            rgba(22,40,70,.86)
+        ) !important;
+
+    color:#ffffff !important;
+
+    border:
+        1px solid rgba(255,255,255,.16);
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.25);
+
+    backdrop-filter:
+        blur(8px);
+
+    -webkit-backdrop-filter:
+        blur(8px);
+
+}
+
+.future-ready-v2-section .highlight-box h3,
+.future-ready-v2-section .highlight-box p{
+
+    color:#ffffff !important;
+
+}

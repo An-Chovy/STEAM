@@ -1,0 +1,244 @@
+/*
+==========================================================
+ FUTURE READY
+ Whole-Page Experience v2.0
+==========================================================
+*/
+
+/* ==================================================
+   PAGE-WIDE SKY LAYER
+================================================== */
+
+body.experience-page{
+
+    position:relative;
+    background:#e8eef6;
+
+}
+
+/*
+The existing canvas is moved into this fixed layer.
+It remains behind all readable content.
+*/
+
+.page-sky-layer{
+
+    position:fixed;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    overflow:hidden;
+    pointer-events:none;
+
+    z-index:1;
+
+    opacity:1;
+
+    transition:opacity .25s linear;
+
+}
+
+.page-sky-layer .sky-canvas{
+
+    position:absolute;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    pointer-events:none;
+
+}
+
+/* ==================================================
+   CONTENT ABOVE THE SKY
+================================================== */
+
+.top-nav{
+
+    z-index:1000;
+
+}
+
+.community-hero .hero-flyer,
+.section-inner,
+.community-final > *,
+footer > *{
+
+    position:relative;
+    z-index:2;
+
+}
+
+/* Modals always remain above the visual engine. */
+
+.modal{
+
+    z-index:5000;
+
+}
+
+/* ==================================================
+   HERO
+================================================== */
+
+.community-hero{
+
+    position:relative;
+    isolation:isolate;
+
+}
+
+/*
+The canvas now passes over the hero background while
+remaining underneath the hero content.
+*/
+
+.community-hero .hero-overlay{
+
+    z-index:0;
+
+}
+
+.community-hero .hero-flyer{
+
+    z-index:2;
+
+}
+
+/* ==================================================
+   LIGHT SECTION JOURNEY
+================================================== */
+
+body.experience-page > section:not(.community-hero):not(.community-final),
+body.experience-page main > section:not(.community-hero):not(.community-final){
+
+    position:relative;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(245,248,252,.94),
+            rgba(225,234,245,.91)
+        ) !important;
+
+    border-top:
+        1px solid rgba(20,33,61,.06);
+
+}
+
+/* First section begins with a slightly cooler dawn tone. */
+
+.community-hero + section{
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(216,228,242,.94) 0%,
+            rgba(237,243,249,.93) 48%,
+            rgba(247,249,252,.94) 100%
+        ) !important;
+
+}
+
+/* Gentle variation without changing section placement. */
+
+body.experience-page > section:not(.community-hero):not(.community-final):nth-of-type(3n+1),
+body.experience-page main > section:not(.community-hero):not(.community-final):nth-of-type(3n+1){
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(246,248,251,.94),
+            rgba(232,238,247,.91)
+        ) !important;
+
+}
+
+body.experience-page > section:not(.community-hero):not(.community-final):nth-of-type(3n+2),
+body.experience-page main > section:not(.community-hero):not(.community-final):nth-of-type(3n+2){
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(237,243,249,.93),
+            rgba(249,246,244,.94)
+        ) !important;
+
+}
+
+body.experience-page > section:not(.community-hero):not(.community-final):nth-of-type(3n),
+body.experience-page main > section:not(.community-hero):not(.community-final):nth-of-type(3n){
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(229,237,247,.92),
+            rgba(245,248,252,.94)
+        ) !important;
+
+}
+
+/* ==================================================
+   FINAL SECTION
+================================================== */
+
+.community-final{
+
+    position:relative;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(255,255,255,.11),
+            transparent 45%
+        ),
+        linear-gradient(
+            155deg,
+            rgba(20,33,61,.97),
+            rgba(9,19,40,.98)
+        ) !important;
+
+}
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media screen and (max-width:900px){
+
+    .page-sky-layer{
+
+        transition:opacity .18s linear;
+
+    }
+
+    body.experience-page > section:not(.community-hero):not(.community-final),
+    body.experience-page main > section:not(.community-hero):not(.community-final){
+
+        background:
+            linear-gradient(
+                155deg,
+                rgba(241,246,251,.95),
+                rgba(224,234,245,.93)
+            ) !important;
+
+    }
+
+}
+
+/* ==================================================
+   REDUCED MOTION
+================================================== */
+
+@media (prefers-reduced-motion:reduce){
+
+    .page-sky-layer{
+
+        transition:none;
+
+    }
+
+}
