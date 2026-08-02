@@ -38,25 +38,25 @@
 
     const STAR_SETTINGS = {
 
-        worldWidth: 2400,
+    worldWidth: 2400,
 
-        worldHeightPerSection: 2400,
+    worldHeightPerSection: 2400,
 
-        desktopDensity: .00012,
+    desktopDensity: .00014,
 
-        tabletDensity: .00010,
+    tabletDensity: .000135,
 
-        phoneDensity: .000085,
+    phoneDensity: .00013,
 
-        minimumPerSection: 24,
+    minimumPerSection: 48,
 
-        maximumDesktop: 340,
+    maximumDesktop: 420,
 
-        maximumTablet: 230,
+    maximumTablet: 360,
 
-        maximumPhone: 150
+    maximumPhone: 300
 
-    };
+};
 
     // ==================================================
     // STAR
@@ -87,12 +87,12 @@
                 );
 
             this.radius =
-                .3 +
-                this.depth * 2.2;
+                .45 +
+                this.depth * 2.25;
 
             this.baseOpacity =
-                .12 +
-                this.depth * .82;
+                .20 +
+                this.depth * .78;
 
             this.opacity =
                 this.baseOpacity;

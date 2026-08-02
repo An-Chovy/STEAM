@@ -38,24 +38,24 @@
 
     const METEOR_SETTINGS = {
 
-        phoneMinimumDelay: 7,
-        phoneMaximumDelay: 20,
+    phoneMinimumDelay: 3.5,
+    phoneMaximumDelay: 8.5,
 
-        tabletMinimumDelay: 6,
-        tabletMaximumDelay: 17,
+    tabletMinimumDelay: 4,
+    tabletMaximumDelay: 10,
 
-        desktopMinimumDelay: 4.5,
-        desktopMaximumDelay: 14,
+    desktopMinimumDelay: 4.5,
+    desktopMaximumDelay: 12,
 
-        phoneMaximumActive: 1,
-        tabletMaximumActive: 2,
-        desktopMaximumActive: 2,
+    phoneMaximumActive: 2,
+    tabletMaximumActive: 2,
+    desktopMaximumActive: 3,
 
-        maximumSparksPhone: 12,
-        maximumSparksTablet: 20,
-        maximumSparksDesktop: 30
+    maximumSparksPhone: 24,
+    maximumSparksTablet: 26,
+    maximumSparksDesktop: 36
 
-    };
+};
 
     // ==================================================
     // METEOR SPARK
@@ -412,20 +412,20 @@
                     );
 
             this.trailLength =
-                this.heroMeteor
-                    ? random.range(
-                        250,
-                        390
-                    )
-                    : this.device.phone
-                        ? random.range(
-                            90,
-                            165
-                        )
-                        : random.range(
-                            140,
-                            250
-                        );
+    this.heroMeteor
+        ? random.range(
+            280,
+            420
+        )
+        : this.device.phone
+            ? random.range(
+                150,
+                250
+            )
+            : random.range(
+                160,
+                270
+            );
 
             this.age = 0;
 
@@ -646,14 +646,18 @@
                 gradient;
 
             context.lineWidth =
-                this.heroMeteor
-                    ? 3.5
-                    : 2;
+    this.heroMeteor
+        ? 3.8
+        : this.device.phone
+            ? 2.4
+            : 2.1;
 
             context.shadowBlur =
-                this.heroMeteor
-                    ? 24
-                    : 14;
+    this.heroMeteor
+        ? 26
+        : this.device.phone
+            ? 18
+            : 15;
 
             context.shadowColor =
                 `rgba(${this.color},${opacity})`;
