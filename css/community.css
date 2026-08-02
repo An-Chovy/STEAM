@@ -3035,3 +3035,722 @@ the shared sky to remain visible throughout the page.
 
 }
 
+
+/* ==========================================================
+   COMMUNITY MOBILE HERO TILES
+   Animated dimensional glass presentation
+========================================================== */
+
+@media screen and (max-width:900px){
+
+    /* --------------------------------------------------
+       TILE STAGE
+    -------------------------------------------------- */
+
+    .community-hero .hero-tiles{
+
+        position:relative;
+
+        z-index:4;
+
+        width:100%;
+
+        max-width:520px;
+
+        margin:
+            6px auto 0;
+
+        display:grid;
+
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+
+        gap:
+            14px;
+
+        padding:
+            8px;
+
+        perspective:
+            900px;
+
+        transform-style:
+            preserve-3d;
+
+    }
+
+
+    /* Soft glow behind the whole group */
+
+    .community-hero .hero-tiles::before{
+
+        content:"";
+
+        position:absolute;
+
+        inset:
+            8% 4%;
+
+        z-index:-1;
+
+        pointer-events:none;
+
+        border-radius:
+            32px;
+
+        background:
+            radial-gradient(
+                ellipse at center,
+                rgba(83,143,255,.16),
+                rgba(224,49,63,.08) 52%,
+                transparent 76%
+            );
+
+        filter:
+            blur(26px);
+
+        opacity:.82;
+
+        animation:
+            mobileTileStagePulse
+            5.8s
+            ease-in-out
+            infinite;
+
+    }
+
+
+    /* --------------------------------------------------
+       BASE TILE
+    -------------------------------------------------- */
+
+    .community-hero .hero-tile{
+
+        --tile-delay:0ms;
+        --tile-float-distance:-4px;
+        --tile-tilt:0deg;
+
+        position:relative;
+
+        isolation:isolate;
+
+        min-height:
+            clamp(
+                104px,
+                27vw,
+                128px
+            );
+
+        padding:
+            16px 9px;
+
+        overflow:hidden;
+
+        border:
+            1px solid
+            rgba(255,255,255,.31);
+
+        border-radius:
+            18px;
+
+        color:#ffffff;
+
+        background:
+            linear-gradient(
+                145deg,
+                rgba(255,255,255,.20),
+                rgba(255,255,255,.075) 48%,
+                rgba(6,15,35,.12)
+            ) !important;
+
+        -webkit-backdrop-filter:
+            blur(7px)
+            saturate(135%);
+
+        backdrop-filter:
+            blur(7px)
+            saturate(135%);
+
+        box-shadow:
+            inset 0 1px 0
+            rgba(255,255,255,.28),
+
+            inset 0 -1px 0
+            rgba(255,255,255,.07),
+
+            0 10px 22px
+            rgba(0,0,0,.25),
+
+            0 0 16px
+            rgba(114,171,255,.08) !important;
+
+        opacity:0;
+
+        transform:
+            translate3d(
+                0,
+                34px,
+                -70px
+            )
+            rotateX(10deg)
+            rotateZ(
+                var(--tile-tilt)
+            )
+            scale(.84);
+
+        transform-origin:
+            center center;
+
+        will-change:
+            transform,
+            opacity;
+
+        animation:
+            mobileTileBurst
+                .78s
+                cubic-bezier(.18,.88,.26,1.18)
+                var(--tile-delay)
+                forwards,
+
+            mobileTileFloat
+                5.8s
+                ease-in-out
+                calc(
+                    var(--tile-delay) +
+                    900ms
+                )
+                infinite;
+
+    }
+
+
+    /* --------------------------------------------------
+       STAGGERED ENTRANCE
+    -------------------------------------------------- */
+
+    .community-hero .hero-tile:nth-child(1){
+
+        --tile-delay:80ms;
+        --tile-tilt:-1.2deg;
+        --tile-float-distance:-5px;
+
+    }
+
+    .community-hero .hero-tile:nth-child(2){
+
+        --tile-delay:155ms;
+        --tile-tilt:1deg;
+        --tile-float-distance:-3px;
+
+    }
+
+    .community-hero .hero-tile:nth-child(3){
+
+        --tile-delay:230ms;
+        --tile-tilt:.7deg;
+        --tile-float-distance:-6px;
+
+    }
+
+    .community-hero .hero-tile:nth-child(4){
+
+        --tile-delay:305ms;
+        --tile-tilt:-.8deg;
+        --tile-float-distance:-4px;
+
+    }
+
+    .community-hero .hero-tile:nth-child(5){
+
+        --tile-delay:380ms;
+        --tile-tilt:-.6deg;
+        --tile-float-distance:-5px;
+
+    }
+
+    .community-hero .hero-tile:nth-child(6){
+
+        --tile-delay:455ms;
+        --tile-tilt:1.1deg;
+        --tile-float-distance:-3px;
+
+    }
+
+
+    /* --------------------------------------------------
+       COLOR IDENTITIES
+       Transparent enough to show stars underneath
+    -------------------------------------------------- */
+
+    .community-hero
+    .hero-tile:nth-child(3n+1){
+
+        background:
+            linear-gradient(
+                145deg,
+                rgba(224,49,63,.48),
+                rgba(132,22,43,.22) 54%,
+                rgba(35,6,17,.13)
+            ) !important;
+
+        border-color:
+            rgba(255,147,160,.48);
+
+        box-shadow:
+            inset 0 1px 0
+            rgba(255,255,255,.25),
+
+            0 10px 24px
+            rgba(35,5,13,.30),
+
+            0 0 18px
+            rgba(224,49,63,.18) !important;
+
+    }
+
+    .community-hero
+    .hero-tile:nth-child(3n+2){
+
+        background:
+            linear-gradient(
+                145deg,
+                rgba(32,56,104,.55),
+                rgba(10,24,55,.28) 57%,
+                rgba(3,9,24,.16)
+            ) !important;
+
+        border-color:
+            rgba(145,186,255,.37);
+
+        box-shadow:
+            inset 0 1px 0
+            rgba(255,255,255,.22),
+
+            0 10px 24px
+            rgba(0,4,17,.32),
+
+            0 0 18px
+            rgba(91,148,255,.16) !important;
+
+    }
+
+    .community-hero
+    .hero-tile:not(:nth-child(3n+1)):not(:nth-child(3n+2)){
+
+        background:
+            linear-gradient(
+                145deg,
+                rgba(255,255,255,.28),
+                rgba(222,237,255,.12) 52%,
+                rgba(69,101,147,.10)
+            ) !important;
+
+        border-color:
+            rgba(255,255,255,.42);
+
+    }
+
+
+    /* --------------------------------------------------
+       INTERNAL LIGHT AND DEPTH
+    -------------------------------------------------- */
+
+    .community-hero .hero-tile::before{
+
+        content:"";
+
+        position:absolute;
+
+        inset:0;
+
+        z-index:-1;
+
+        pointer-events:none;
+
+        border-radius:inherit;
+
+        background:
+            radial-gradient(
+                circle at 24% 14%,
+                rgba(255,255,255,.28),
+                transparent 34%
+            ),
+
+            linear-gradient(
+                125deg,
+                rgba(255,255,255,.14),
+                transparent 38%,
+                transparent 68%,
+                rgba(255,255,255,.04)
+            );
+
+        opacity:.82;
+
+    }
+
+
+    /* Occasional light sweep */
+
+    .community-hero .hero-tile::after{
+
+        content:"";
+
+        position:absolute;
+
+        top:-35%;
+
+        left:-70%;
+
+        z-index:0;
+
+        width:44%;
+
+        height:170%;
+
+        pointer-events:none;
+
+        background:
+            linear-gradient(
+                90deg,
+                transparent,
+                rgba(255,255,255,.23),
+                transparent
+            );
+
+        transform:
+            rotate(18deg);
+
+        opacity:0;
+
+        animation:
+            mobileTileShimmer
+            7.2s
+            ease-in-out
+            calc(
+                var(--tile-delay) +
+                1.5s
+            )
+            infinite;
+
+    }
+
+
+    /* --------------------------------------------------
+       ICON
+    -------------------------------------------------- */
+
+    .community-hero .hero-tile{
+
+        font-size:
+            clamp(
+                1.55rem,
+                6vw,
+                2rem
+            );
+
+        text-shadow:
+            0 3px 8px
+            rgba(0,0,0,.38),
+
+            0 0 14px
+            rgba(255,255,255,.17);
+
+    }
+
+
+    /* --------------------------------------------------
+       TEXT
+       Fully opaque and readable
+    -------------------------------------------------- */
+
+    .community-hero .hero-tile span{
+
+        position:relative;
+
+        z-index:2;
+
+        color:#ffffff !important;
+
+        font-size:
+            clamp(
+                .66rem,
+                2.8vw,
+                .79rem
+            );
+
+        font-weight:850;
+
+        line-height:1.22;
+
+        letter-spacing:.045em;
+
+        text-wrap:balance;
+
+        text-shadow:
+            0 2px 4px
+            rgba(0,0,0,.96),
+
+            0 0 9px
+            rgba(0,0,0,.60);
+
+    }
+
+
+    /* --------------------------------------------------
+       TAP RESPONSE
+    -------------------------------------------------- */
+
+    .community-hero .hero-tile:active{
+
+        transform:
+            translate3d(
+                0,
+                2px,
+                18px
+            )
+            rotateZ(
+                var(--tile-tilt)
+            )
+            scale(.97);
+
+        transition:
+            transform .12s ease;
+
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE TILE ANIMATIONS
+========================================================== */
+
+@keyframes mobileTileBurst{
+
+    0%{
+
+        opacity:0;
+
+        transform:
+            translate3d(
+                0,
+                40px,
+                -90px
+            )
+            rotateX(13deg)
+            rotateZ(
+                var(--tile-tilt)
+            )
+            scale(.80);
+
+        filter:
+            blur(5px);
+
+    }
+
+    58%{
+
+        opacity:1;
+
+        transform:
+            translate3d(
+                0,
+                -5px,
+                14px
+            )
+            rotateX(-1.4deg)
+            rotateZ(
+                var(--tile-tilt)
+            )
+            scale(1.025);
+
+        filter:
+            blur(0);
+
+    }
+
+    100%{
+
+        opacity:1;
+
+        transform:
+            translate3d(
+                0,
+                0,
+                0
+            )
+            rotateX(0)
+            rotateZ(
+                var(--tile-tilt)
+            )
+            scale(1);
+
+        filter:
+            blur(0);
+
+    }
+
+}
+
+
+@keyframes mobileTileFloat{
+
+    0%,
+    100%{
+
+        opacity:1;
+
+        transform:
+            translate3d(
+                0,
+                0,
+                0
+            )
+            rotateZ(
+                var(--tile-tilt)
+            )
+            scale(1);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:
+            translate3d(
+                0,
+                var(--tile-float-distance),
+                8px
+            )
+            rotateZ(
+                calc(
+                    var(--tile-tilt) *
+                    -.5
+                )
+            )
+            scale(1.012);
+
+    }
+
+}
+
+
+@keyframes mobileTileShimmer{
+
+    0%,
+    68%{
+
+        left:-70%;
+
+        opacity:0;
+
+    }
+
+    73%{
+
+        opacity:.55;
+
+    }
+
+    84%{
+
+        left:135%;
+
+        opacity:0;
+
+    }
+
+    100%{
+
+        left:135%;
+
+        opacity:0;
+
+    }
+
+}
+
+
+@keyframes mobileTileStagePulse{
+
+    0%,
+    100%{
+
+        opacity:.54;
+
+        transform:
+            scale(.96);
+
+    }
+
+    50%{
+
+        opacity:.90;
+
+        transform:
+            scale(1.025);
+
+    }
+
+}
+
+
+/* ==========================================================
+   SMALL PHONES
+========================================================== */
+
+@media screen and (max-width:430px){
+
+    .community-hero .hero-tiles{
+
+        gap:10px;
+
+        padding:4px;
+
+    }
+
+    .community-hero .hero-tile{
+
+        min-height:102px;
+
+        padding:14px 7px;
+
+        border-radius:15px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   ACCESSIBILITY
+========================================================== */
+
+@media (prefers-reduced-motion:reduce){
+
+    .community-hero .hero-tile{
+
+        opacity:1 !important;
+
+        transform:none !important;
+
+        animation:none !important;
+
+        filter:none !important;
+
+    }
+
+    .community-hero .hero-tile::after,
+    .community-hero .hero-tiles::before{
+
+        animation:none !important;
+
+    }
+
+}
+
+
