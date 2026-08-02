@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Explore an interactive Future Ready STEAM world.">
+
+    <title>
+        World | Future Ready Explore
+    </title>
+
+    <!-- ==================================================
+         CSS
+    =================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="css/variables.css">
+
+    <link
+        rel="stylesheet"
+        href="css/base.css">
+
+    <link
+        rel="stylesheet"
+        href="css/navigation.css">
+
+    <link
+        rel="stylesheet"
+        href="css/tiles.css">
+
+    <link
+        rel="stylesheet"
+        href="css/world.css">
+    
+    <link
+        rel="stylesheet"
+        href="css/atmosphere/space.css">
+
+    <link
+        rel="stylesheet"
+        href="css/atmosphere/chemistry.css">
+
+    <link
+        rel="stylesheet"
+        href="css/atmosphere/biology.css">
+
+    <link
+        rel="stylesheet"
+        href="css/atmosphere/earth-science.css">
+
+</head>
+
+<body class="world-page">
+
+    <a
+        class="skip-link"
+        href="#main">
+
+        Skip to Content
+
+    </a>
+
+    <!-- ==================================================
+         HEADER
+    =================================================== -->
+
+    <header class="site-header">
+
+        <div class="container-wide site-nav">
+
+            <a
+                class="nav-brand"
+                href="index.html"
+                aria-label="Future Ready Explore home">
+
+                <span
+                    class="nav-brand-mark"
+                    aria-hidden="true">
+
+                    ✦
+
+                </span>
+
+                <span class="nav-brand-text">
+
+                    <span class="nav-brand-title">
+                        FUTURE READY
+                    </span>
+
+                    <span class="nav-brand-subtitle">
+                        Explore
+                    </span>
+
+                </span>
+
+            </a>
+
+            <nav
+                class="nav-desktop"
+                aria-label="Main navigation">
+
+                <ul class="nav-list">
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="index.html">
+
+                            Home
+
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link nav-link-discover"
+                            href="discover.html">
+
+                            Discover
+
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link nav-link-explore"
+                            href="explore.html">
+
+                            Explore
+
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link nav-link-create"
+                            href="create.html">
+
+                            Create
+
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link nav-link-connect"
+                            href="connect.html">
+
+                            Connect
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+                <div class="nav-actions">
+
+                    <button
+                        class="nav-search-button"
+                        type="button"
+                        aria-label="Search Future Ready Explore">
+
+                        🔎
+
+                    </button>
+
+                    <a
+                        class="nav-passport-button"
+                        href="favorites.html">
+
+                        My Passport
+
+                    </a>
+
+                </div>
+
+            </nav>
+
+            <button
+                class="mobile-menu-button"
+                type="button"
+                aria-label="Open navigation"
+                aria-expanded="false"
+                aria-controls="mobile-navigation">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+    </header>
+
+    <!-- ==================================================
+         MOBILE NAVIGATION
+    =================================================== -->
+
+    <div
+        class="mobile-nav-overlay"
+        data-mobile-nav-overlay>
+
+    </div>
+
+    <nav
+        id="mobile-navigation"
+        class="mobile-nav"
+        aria-label="Mobile navigation">
+
+        <ul class="mobile-nav-list">
+
+            <li>
+                <a
+                    class="mobile-nav-link"
+                    href="index.html">
+
+                    Home
+
+                </a>
+            </li>
+
+            <li>
+                <a
+                    class="mobile-nav-link"
+                    href="discover.html">
+
+                    Discover
+
+                </a>
+            </li>
+
+            <li>
+                <a
+                    class="mobile-nav-link"
+                    href="explore.html">
+
+                    Explore
+
+                </a>
+            </li>
+
+            <li>
+                <a
+                    class="mobile-nav-link"
+                    href="create.html">
+
+                    Create
+
+                </a>
+            </li>
+
+            <li>
+                <a
+                    class="mobile-nav-link"
+                    href="connect.html">
+
+                    Connect
+
+                </a>
+            </li>
+
+        </ul>
+
+        <div class="mobile-nav-footer">
+
+            <a
+                class="button button-primary"
+                href="favorites.html">
+
+                Open My Passport
+
+            </a>
+
+            <a
+                class="button button-secondary"
+                href="../community.html">
+
+                Future Ready Live
+
+            </a>
+
+        </div>
+
+    </nav>
+
+    <!-- ==================================================
+         MAIN WORLD CONTENT
+    =================================================== -->
+
+    <main
+        id="main"
+        class="page-main">
+
+        <!-- ==============================================
+             LOADING STATE
+        =============================================== -->
+
+        <section
+            id="world-loading"
+            class="world-loading"
+            aria-live="polite">
+
+            <div class="world-loading-symbol">
+                ✦
+            </div>
+
+            <p>
+                Preparing your world...
+            </p>
+
+        </section>
+
+        <!-- ==============================================
+             ERROR STATE
+        =============================================== -->
+
+        <section
+            id="world-error"
+            class="world-error hidden">
+
+            <div class="container">
+
+                <div class="world-error-card glass-panel">
+
+                    <p class="eyebrow">
+                        World Not Found
+                    </p>
+
+                    <h1>
+                        We could not find that destination.
+                    </h1>
+
+                    <p>
+
+                        The world may still be under construction,
+                        or the address may be incorrect.
+
+                    </p>
+
+                    <a
+                        class="button button-primary"
+                        href="explore.html">
+
+                        Return to Explore
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ==============================================
+             GENERATED WORLD
+        =============================================== -->
+
+        <article
+            id="world-content"
+            class="world-content hidden">
+
+            <!-- ==========================================
+                 HERO
+            =========================================== -->
+
+            <section
+                id="world-hero"
+                class="world-hero">
+
+                <div class="world-hero-atmosphere"></div>
+
+                <div class="container world-hero-layout">
+
+                    <div class="world-hero-copy">
+
+                        <a
+                            id="world-back-link"
+                            class="world-back-link"
+                            href="explore.html">
+
+                            <span aria-hidden="true">←</span>
+
+                            <span id="world-back-label">
+                                Back to Explore
+                            </span>
+
+                        </a>
+
+                        <p
+                            id="world-eyebrow"
+                            class="eyebrow">
+
+                            World
+
+                        </p>
+
+                        <h1 id="world-title">
+                            World Title
+                        </h1>
+
+                        <p
+                            id="world-subtitle"
+                            class="world-hero-subtitle">
+
+                        </p>
+
+                        <div
+                            id="world-meta"
+                            class="world-meta">
+
+                        </div>
+
+                        <div class="cluster mobile-stack">
+
+                            <a
+                                id="world-primary-action"
+                                class="button button-primary"
+                                href="#world-overview">
+
+                                Begin Exploring
+
+                            </a>
+
+                            <button
+                                id="world-favorite-button"
+                                class="button button-secondary"
+                                type="button"
+                                aria-pressed="false">
+
+                                ♡ Save This World
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="world-hero-visual">
+
+                        <div
+                            id="world-hero-icon"
+                            class="world-hero-icon"
+                            aria-hidden="true">
+
+                            ✦
+
+                        </div>
+
+                        <img
+                            id="world-hero-image"
+                            class="world-hero-image hidden"
+                            src=""
+                            alt="">
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ==========================================
+                 OVERVIEW
+            =========================================== -->
+
+            <section
+                id="world-overview"
+                class="section world-overview">
+
+                <div class="container world-overview-layout">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            Overview
+                        </p>
+
+                        <h2 id="world-overview-title">
+                            Enter the World
+                        </h2>
+
+                    </div>
+
+                    <div
+                        id="world-overview-copy"
+                        class="world-overview-copy">
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ==========================================
+                 QUICK FACTS
+            =========================================== -->
+
+            <section
+                id="world-facts-section"
+                class="section-compact world-facts-section">
+
+                <div class="container">
+
+                    <div class="section-header">
+
+                        <p class="eyebrow">
+                            Quick Discoveries
+                        </p>
+
+                        <h2>
+                            Things worth knowing
+                        </h2>
+
+                    </div>
+
+                    <div
+                        id="world-facts"
+                        class="world-facts-grid">
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ==========================================
+                 EXPERIENCES
+            =========================================== -->
+
+            <section
+                id="world-experiences-section"
+                class="section world-experiences-section">
+
+                <div class="container">
+
+                    <div class="section-header">
+
+                        <p class="eyebrow">
+                            Try Something
+                        </p>
+
+                        <h2 id="world-experiences-title">
+                            Explore this world
+                        </h2>
+
+                        <p
+                            id="world-experiences-intro"
+                            class="text-muted">
+
+                        </p>
+
+                    </div>
+
+                    <div
+                        id="world-experiences"
+                        class="discovery-grid">
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ==========================================
+                 FEATURED CHALLENGE
+            =========================================== -->
+
+            <section
+                id="world-challenge-section"
+                class="section world-challenge-section">
+
+                <div class="container">
+
+                    <div class="world-challenge-card">
+
+                        <div class="world-challenge-copy">
+
+                            <p class="eyebrow">
+                                Featured Challenge
+                            </p>
+
+                            <h2 id="world-challenge-title">
+
+                            </h2>
+
+                            <p id="world-challenge-description">
+
+                            </p>
+
+                            <div
+                                id="world-challenge-meta"
+                                class="world-meta">
+
+                            </div>
+
+                            <a
+                                id="world-challenge-link"
+                                class="button button-primary"
+                                href="#">
+
+                                Begin Challenge
+
+                            </a>
+
+                        </div>
+
+                        <div
+                            id="world-challenge-visual"
+                            class="world-challenge-visual"
+                            aria-hidden="true">
+
+                            ⚙
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ==========================================
+                 RESOURCES
+            =========================================== -->
+
+            <section
+                id="world-resources-section"
+                class="section world-resources-section">
+
+                <div class="container">
+
+                    <div class="section-header">
+
+                        <p class="eyebrow">
+                            Keep Learning
+                        </p>
+
+                        <h2>
+                            Resources for your journey
+                        </h2>
+
+                    </div>
+
+                    <div
+                        id="world-resources"
+                        class="world-resource-grid">
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ==========================================
+                 RELATED WORLDS
+            =========================================== -->
+
+            <section
+                id="world-related-section"
+                class="section world-related-section">
+
+                <div class="container">
+
+                    <div class="section-header centered">
+
+                        <p class="eyebrow">
+                            Follow Your Curiosity
+                        </p>
+
+                        <h2>
+                            Where will you go next?
+                        </h2>
+
+                    </div>
+
+                    <div
+                        id="world-related"
+                        class="discovery-grid">
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </article>
+
+    </main>
+
+    <!-- ==================================================
+         FOOTER
+    =================================================== -->
+
+    <footer class="world-footer">
+
+        <div class="container world-footer-inner">
+
+            <div>
+
+                <p class="nav-brand-title">
+                    FUTURE READY EXPLORE
+                </p>
+
+                <p class="text-muted">
+                    Discover. Explore. Create. Connect.
+                </p>
+
+            </div>
+
+            <a
+                class="button button-secondary"
+                href="explore.html">
+
+                Explore More Worlds
+
+            </a>
+
+        </div>
+
+    </footer>
+
+  <!-- ==================================================
+     JAVASCRIPT
+=================================================== -->
+
+<script src="js/ui/tiles.js"></script>
+
+<script src="js/core/navigation.js"></script>
+
+<script src="js/data/worlds.js"></script>
+
+
+
+<script src="js/engines/atmosphere/atmosphere-engine.js"></script>
+
+<script src="js/engines/atmosphere/space.js"></script>
+
+<script src="js/engines/atmosphere/chemistry.js"></script>
+
+<script src="js/engines/atmosphere/biology.js"></script>
+
+<script src="js/engines/atmosphere/earth-science.js"></script>
+
+<script src="js/engines/world-engine.js"></script>
+
+</body>
+
+</html>

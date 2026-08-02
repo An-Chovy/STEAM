@@ -1,0 +1,853 @@
+/*
+==========================================================
+ FUTURE READY EXPLORE
+ Biology Atmosphere
+ Living Systems Environment
+ Version 1.0.0
+==========================================================
+*/
+
+
+/* ==================================================
+   ROOT
+================================================== */
+
+#biology-atmosphere{
+
+    --biology-pointer-x:0;
+    --biology-pointer-y:0;
+    --biology-scroll-progress:0;
+    --biology-hero-fade:1;
+
+    position:fixed;
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    isolation:isolate;
+
+    z-index:-1;
+
+    background:
+        linear-gradient(
+            180deg,
+            #07140d 0%,
+            #0b2418 38%,
+            #123523 72%,
+            #08130d 100%
+        );
+
+}
+
+
+/* ==================================================
+   PAGE INTEGRATION
+================================================== */
+
+body.has-biology-atmosphere{
+
+    background:transparent;
+
+}
+
+body.has-biology-atmosphere .site-header,
+body.has-biology-atmosphere .page-main,
+body.has-biology-atmosphere .world-footer{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+/* ==================================================
+   HERO
+================================================== */
+
+body.has-biology-atmosphere .world-hero{
+
+    background:
+
+        radial-gradient(
+            ellipse at 80% 25%,
+            rgba(90,215,110,.18),
+            transparent 42%
+        ),
+
+        radial-gradient(
+            ellipse at 20% 70%,
+            rgba(24,138,196,.14),
+            transparent 44%
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(5,14,10,.94),
+            rgba(5,18,13,.72),
+            rgba(5,22,17,.22),
+            transparent
+        );
+
+}
+
+body[data-world="biology"] .world-hero-icon{
+
+    color:#dfffd9;
+
+    text-shadow:
+
+        0 0 20px rgba(121,255,148,.7),
+
+        0 0 50px rgba(62,170,90,.35);
+
+}
+
+
+/* ==================================================
+   CANOPY LIGHT
+================================================== */
+
+.biology-canopy-light{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        radial-gradient(
+            ellipse at 50% -10%,
+            rgba(183,255,183,.18),
+            transparent 45%
+        );
+
+    opacity:
+
+        var(--biology-hero-fade);
+
+}
+
+
+/* ==================================================
+   ORGANIC GLOWS
+================================================== */
+
+.biology-organic-glow{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(80px);
+
+    mix-blend-mode:screen;
+
+}
+
+.biology-organic-glow-one{
+
+    width:70vw;
+    height:70vw;
+
+    top:-25%;
+    right:-18%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(96,255,143,.20),
+            transparent 70%
+        );
+
+}
+
+.biology-organic-glow-two{
+
+    width:55vw;
+    height:55vw;
+
+    bottom:-18%;
+    left:-18%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(52,188,255,.14),
+            transparent 72%
+        );
+
+}
+
+.biology-organic-glow-three{
+
+    width:45vw;
+    height:45vw;
+
+    top:35%;
+    left:42%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(255,224,96,.10),
+            transparent 75%
+        );
+
+}
+
+
+/* ==================================================
+   MICROSCOPIC HAZE
+================================================== */
+
+.biology-microscopic-haze{
+
+    position:absolute;
+
+    width:70vw;
+
+    height:45vw;
+
+    border-radius:50%;
+
+    filter:blur(55px);
+
+    opacity:.16;
+
+}
+
+.biology-haze-one{
+
+    right:-20%;
+
+    top:8%;
+
+    background:
+
+        radial-gradient(
+            ellipse,
+            rgba(93,214,176,.28),
+            transparent 72%
+        );
+
+}
+
+.biology-haze-two{
+
+    left:-18%;
+
+    bottom:10%;
+
+    background:
+
+        radial-gradient(
+            ellipse,
+            rgba(108,181,255,.18),
+            transparent 72%
+        );
+
+}
+
+
+/* ==================================================
+   CELL LAYERS
+================================================== */
+
+.biology-cell-layer,
+.biology-dna-layer,
+.biology-spore-layer,
+.biology-bioluminescence-layer,
+.biology-pulse-layer{
+
+    position:absolute;
+
+    inset:-5%;
+
+}
+
+.biology-cells-far{
+
+    transform:
+
+        translate3d(
+
+            calc(var(--biology-pointer-x) * -4px),
+
+            calc(var(--biology-pointer-y) * -3px),
+
+            0
+
+        );
+
+}
+
+.biology-cells-middle{
+
+    transform:
+
+        translate3d(
+
+            calc(var(--biology-pointer-x) * -12px),
+
+            calc(var(--biology-pointer-y) * -8px),
+
+            0
+
+        );
+
+}
+
+.biology-cells-near{
+
+    transform:
+
+        translate3d(
+
+            calc(var(--biology-pointer-x) * -22px),
+
+            calc(var(--biology-pointer-y) * -16px),
+
+            0
+
+        );
+
+}
+
+
+/* ==================================================
+   CELLS
+================================================== */
+
+.biology-cell{
+
+    position:absolute;
+
+    left:var(--cell-x);
+
+    top:var(--cell-y);
+
+    width:var(--cell-size);
+
+    height:var(--cell-size);
+
+    opacity:var(--cell-opacity);
+
+    animation:
+
+        biologyCellFloat
+
+        var(--cell-duration)
+
+        ease-in-out
+
+        var(--cell-delay)
+
+        infinite alternate;
+
+}
+
+.biology-cell-round{
+
+    border-radius:50%;
+
+}
+
+.biology-cell-oval{
+
+    border-radius:55% 45% 48% 52%;
+
+}
+
+.biology-cell-organic{
+
+    border-radius:
+
+        43% 57% 61% 39% /
+
+        49% 35% 65% 51%;
+
+}
+
+.biology-cell-membrane{
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:inherit;
+
+    border:2px solid rgba(190,255,207,.22);
+
+    backdrop-filter:blur(3px);
+
+}
+
+.biology-cell-cytoplasm{
+
+    position:absolute;
+
+    inset:8%;
+
+    border-radius:inherit;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(146,255,175,.10),
+
+            rgba(61,141,92,.05)
+
+        );
+
+}
+
+.biology-cell-nucleus{
+
+    position:absolute;
+
+    width:28%;
+
+    height:28%;
+
+    left:36%;
+
+    top:36%;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            #d8ffe6,
+
+            #56b96f
+
+        );
+
+    box-shadow:
+
+        0 0 10px rgba(142,255,170,.45);
+
+}
+
+.biology-organelle{
+
+    position:absolute;
+
+    width:8%;
+
+    height:8%;
+
+    border-radius:50%;
+
+    background:rgba(204,255,214,.45);
+
+}
+
+.biology-organelle-one{left:20%;top:26%;}
+.biology-organelle-two{right:18%;top:28%;}
+.biology-organelle-three{left:28%;bottom:18%;}
+.biology-organelle-four{right:22%;bottom:24%;}
+
+
+/* ==================================================
+   DNA
+================================================== */
+
+.biology-dna-layer{
+
+    opacity:.35;
+
+}
+
+.biology-dna-helix{
+
+    position:absolute;
+
+    left:var(--dna-x);
+
+    top:var(--dna-y);
+
+    width:70px;
+
+    height:240px;
+
+    transform:
+
+        scale(var(--dna-scale))
+
+        rotate(var(--dna-rotation));
+
+    opacity:var(--dna-opacity);
+
+    animation:
+
+        biologyDNAFloat
+
+        var(--dna-duration)
+
+        linear
+
+        var(--dna-delay)
+
+        infinite;
+
+}
+
+.biology-dna-strand{
+
+    position:absolute;
+
+    top:0;
+
+    bottom:0;
+
+    width:3px;
+
+    border-radius:999px;
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            #98ffaf,
+
+            #5ad8ff
+
+        );
+
+}
+
+.biology-dna-strand-left{
+
+    left:20px;
+
+}
+
+.biology-dna-strand-right{
+
+    right:20px;
+
+}
+
+.biology-dna-rung{
+
+    position:absolute;
+
+    left:20px;
+
+    width:30px;
+
+    height:2px;
+
+    top:var(--dna-rung-position);
+
+    background:#dffff0;
+
+}
+
+
+/* ==================================================
+   SPORES
+================================================== */
+
+.biology-spore{
+
+    position:absolute;
+
+    left:var(--spore-x);
+
+    top:var(--spore-y);
+
+    width:var(--spore-size);
+
+    height:var(--spore-size);
+
+    border-radius:50%;
+
+    opacity:var(--spore-opacity);
+
+    background:#dfffd9;
+
+    animation:
+
+        biologySporeFloat
+
+        var(--spore-duration)
+
+        ease-in-out
+
+        var(--spore-delay)
+
+        infinite alternate;
+
+}
+
+.biology-pollen{
+
+    background:#fff0a0;
+
+}
+
+
+/* ==================================================
+   BIOLUMINESCENCE
+================================================== */
+
+.biology-bioluminescent-particle{
+
+    position:absolute;
+
+    left:var(--bio-light-x);
+
+    top:var(--bio-light-y);
+
+    width:var(--bio-light-size);
+
+    height:var(--bio-light-size);
+
+    border-radius:50%;
+
+    opacity:var(--bio-light-opacity);
+
+    animation:
+
+        biologyGlow
+
+        var(--bio-light-duration)
+
+        ease-in-out
+
+        var(--bio-light-delay)
+
+        infinite;
+
+}
+
+.biology-light-green{
+
+    background:#8fff8f;
+
+    box-shadow:0 0 10px #7fff98;
+
+}
+
+.biology-light-cyan{
+
+    background:#7cf8ff;
+
+    box-shadow:0 0 10px #7cf8ff;
+
+}
+
+.biology-light-gold{
+
+    background:#ffe58d;
+
+    box-shadow:0 0 10px #ffe58d;
+
+}
+
+
+/* ==================================================
+   LIGHT RAYS
+================================================== */
+
+.biology-light-rays{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        repeating-linear-gradient(
+
+            104deg,
+
+            transparent 0 8%,
+
+            rgba(255,255,255,.025) 8.4%,
+
+            transparent 10%
+
+        );
+
+    opacity:.28;
+
+}
+
+
+/* ==================================================
+   VIGNETTE
+================================================== */
+
+.biology-vignette{
+
+    position:absolute;
+
+    inset:-2%;
+
+    background:
+
+        radial-gradient(
+
+            ellipse,
+
+            transparent 42%,
+
+            rgba(0,0,0,.48)
+
+        );
+
+}
+
+
+/* ==================================================
+   ANIMATIONS
+================================================== */
+
+@keyframes biologyCellFloat{
+
+    from{
+
+        transform:
+
+            translate3d(0,0,0)
+
+            rotate(0deg);
+
+    }
+
+    to{
+
+        transform:
+
+            translate3d(
+
+                var(--cell-drift-x),
+
+                var(--cell-drift-y),
+
+                0
+
+            )
+
+            rotate(
+
+                var(--cell-rotation)
+
+            );
+
+    }
+
+}
+
+@keyframes biologyDNAFloat{
+
+    from{
+
+        transform:
+
+            translateY(-30px)
+
+            rotate(var(--dna-rotation))
+
+            scale(var(--dna-scale));
+
+    }
+
+    to{
+
+        transform:
+
+            translateY(40px)
+
+            rotate(calc(var(--dna-rotation) + 8deg))
+
+            scale(var(--dna-scale));
+
+    }
+
+}
+
+@keyframes biologySporeFloat{
+
+    from{
+
+        transform:translate3d(0,0,0);
+
+    }
+
+    to{
+
+        transform:
+
+            translate3d(
+
+                var(--spore-drift-x),
+
+                var(--spore-drift-y),
+
+                0
+
+            );
+
+    }
+
+}
+
+@keyframes biologyGlow{
+
+    0%,100%{
+
+        opacity:.2;
+
+        transform:scale(.7);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:scale(1.4);
+
+    }
+
+}
+
+
+/* ==================================================
+   REDUCED MOTION
+================================================== */
+
+@media (prefers-reduced-motion:reduce){
+
+    .biology-cell,
+
+    .biology-spore,
+
+    .biology-dna-helix,
+
+    .biology-bioluminescent-particle{
+
+        animation:none !important;
+
+    }
+
+}

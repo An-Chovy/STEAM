@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wildlife ID | STEAM Discovery Hub</title>
+<link rel="stylesheet" href="../css/hub.css">
+
+<style>
+
+.game-wrap{
+
+    max-width:760px;
+    margin:0 auto;
+    padding:50px 24px 80px;
+
+}
+
+.game-header{
+
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:20px;
+    margin-bottom:8px;
+
+}
+
+.game-header h1{
+
+    color:var(--navy);
+    font-size:2rem;
+    font-weight:800;
+
+}
+
+.game-favorite{
+
+    flex-shrink:0;
+
+    width:48px;
+    height:48px;
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:var(--offwhite);
+    border:none;
+    cursor:pointer;
+    font-size:1.3rem;
+
+    transition:background .2s ease, transform .15s ease;
+
+}
+
+.game-favorite:hover{
+
+    background:rgba(224,49,63,.12);
+    transform:scale(1.08);
+
+}
+
+.game-favorite.active{
+
+    color:var(--red);
+
+}
+
+.game-intro{
+
+    color:#555;
+    max-width:640px;
+    margin-bottom:36px;
+
+}
+
+.quiz-card{
+
+    background:#ffffff;
+    border-radius:20px;
+    padding:40px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.quiz-progress{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:24px;
+
+}
+
+.quiz-progress span{
+
+    font-size:.85rem;
+    font-weight:700;
+    color:#888;
+    text-transform:uppercase;
+    letter-spacing:1px;
+
+}
+
+.progress-track{
+
+    flex:1;
+    height:6px;
+    background:var(--offwhite);
+    border-radius:4px;
+    margin:0 16px;
+    overflow:hidden;
+
+}
+
+.progress-fill{
+
+    height:100%;
+    background:var(--red);
+    border-radius:4px;
+    transition:width .3s ease;
+
+}
+
+.clue-icon{
+
+    font-size:2.4rem;
+    text-align:center;
+    margin-bottom:16px;
+
+}
+
+.clue-text{
+
+    background:var(--offwhite);
+    border-radius:14px;
+    padding:22px 26px;
+    color:#333;
+    font-size:1.05rem;
+    line-height:1.7;
+    margin-bottom:26px;
+}
+
+.answer-grid{
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    margin-bottom:10px;
+
+}
+
+.answer-btn{
+
+    appearance:none;
+    border:2px solid var(--offwhite);
+    background:var(--offwhite);
+    color:var(--navy);
+    font-weight:700;
+    font-size:.95rem;
+    padding:16px;
+    border-radius:12px;
+    cursor:pointer;
+    transition:.15s ease;
+    text-align:left;
+
+}
+
+.answer-btn:hover{
+
+    border-color:var(--navy);
+
+}
+
+.answer-btn.correct{
+
+    background:#e7f5ec;
+    border-color:#1f6b43;
+    color:#1f6b43;
+
+}
+
+.answer-btn.incorrect{
+
+    background:#fbe9e9;
+    border-color:var(--red);
+    color:var(--red-dark);
+
+}
+
+.answer-btn:disabled{
+
+    cursor:default;
+
+}
+
+.feedback{
+
+    min-height:26px;
+    font-weight:700;
+    margin-bottom:18px;
+
+}
+
+.feedback.correct-text{
+
+    color:#1f6b43;
+
+}
+
+.feedback.incorrect-text{
+
+    color:var(--red);
+
+}
+
+.fun-fact{
+
+    display:none;
+    background:#fff4d6;
+    border-radius:12px;
+    padding:16px 20px;
+    font-size:.92rem;
+    color:#6b4e00;
+    margin-bottom:18px;
+    line-height:1.6;
+
+}
+
+.fun-fact.show{
+
+    display:block;
+
+}
+
+.next-btn{
+
+    appearance:none;
+    border:none;
+    background:var(--navy);
+    color:#ffffff;
+    font-weight:700;
+    font-size:.95rem;
+    padding:14px 26px;
+    border-radius:10px;
+    cursor:pointer;
+    display:none;
+
+}
+
+.next-btn.show{
+
+    display:inline-block;
+
+}
+
+.next-btn:hover{
+
+    background:var(--navy-light);
+
+}
+
+.results-view{
+
+    display:none;
+    text-align:center;
+
+}
+
+.results-view.show{
+
+    display:block;
+
+}
+
+.results-view .score-big{
+
+    font-size:3rem;
+    font-weight:800;
+    color:var(--red);
+    margin-bottom:8px;
+
+}
+
+.results-view h3{
+
+    color:var(--navy);
+    font-size:1.4rem;
+    margin-bottom:14px;
+
+}
+
+.results-view p{
+
+    color:#555;
+    margin-bottom:24px;
+
+}
+
+.game-note{
+
+    background:var(--offwhite);
+    border-radius:14px;
+    padding:22px 26px;
+    color:#444;
+    font-size:.95rem;
+    line-height:1.7;
+    margin-top:28px;
+
+}
+
+.game-note strong{
+
+    color:var(--navy);
+
+}
+
+@media screen and (max-width:600px){
+
+    .game-header{
+        flex-direction:column;
+    }
+
+    .quiz-card{
+        padding:26px;
+    }
+
+    .answer-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+
+</head>
+<body>
+
+<nav class="hub-nav">
+
+    <div class="brand">
+        <span class="brand-title">STEAM DISCOVERY HUB</span>
+        <span class="brand-subtitle">Future Ready · Black Hills</span>
+    </div>
+
+    <div class="nav-links">
+
+        <div class="nav-item">
+            <a href="../index.html">Home</a>
+        </div>
+
+        <div class="nav-item">
+            <button type="button">Games <span class="nav-caret">&#9662;</span></button>
+            <div class="dropdown-menu">
+                <a href="../games.html">All Games</a>
+                <a href="circuit-builder.html">Circuit Builder</a>
+                <a href="maze-coder.html">Maze Coder</a>
+                <a href="rock-mineral-id.html">Rock &amp; Mineral ID</a>
+                <a href="wildlife-id.html">Wildlife ID</a>
+            </div>
+        </div>
+
+        <div class="nav-item">
+            <a href="../favorites.html">&#9829; Favorites</a>
+        </div>
+
+    </div>
+
+</nav>
+
+<div class="game-wrap">
+
+    <a href="../games.html" class="back-link">&larr; Back to Games</a>
+
+    <div class="game-header">
+        <h1>Wildlife ID</h1>
+        <button id="favBtn" class="game-favorite"
+            onclick="toggleFavorite('wildlife-id','Wildlife ID','Test what you know about Black Hills animals and plants.','&#129412;','games/wildlife-id.html')">&#9825;</button>
+    </div>
+
+    <p class="game-intro">Field biologists identify species using behavior, habitat, and physical traits, not just a quick glance. Read each clue and make your best guess.</p>
+
+    <div class="quiz-card">
+
+        <div id="quizView">
+
+            <div class="quiz-progress">
+                <span id="questionCount">Question 1 of 6</span>
+                <div class="progress-track"><div class="progress-fill" id="progressFill" style="width:16%;"></div></div>
+                <span id="scoreCount">Score: 0</span>
+            </div>
+
+            <div class="clue-icon" id="clueIcon">&#129412;</div>
+            <div class="clue-text" id="clueText"></div>
+
+            <div class="answer-grid" id="answerGrid"></div>
+
+            <div class="feedback" id="feedback"></div>
+            <div class="fun-fact" id="funFact"></div>
+
+            <button class="next-btn" id="nextBtn" onclick="nextQuestion()">Next Question &rarr;</button>
+
+        </div>
+
+        <div class="results-view" id="resultsView">
+
+            <div class="score-big" id="finalScore">0 / 6</div>
+            <h3 id="resultsHeading">Nice work!</h3>
+            <p id="resultsText"></p>
+            <button class="next-btn show" onclick="restartQuiz()">Play Again</button>
+
+        </div>
+
+    </div>
+
+    <div class="game-note">
+        <strong>Why this matters:</strong> the Black Hills is a rare mix of prairie, forest, and mountain habitat all in one place, which is part of why such a wide range of species can live here side by side.
+    </div>
+
+</div>
+
+<footer class="hub-footer">
+    <p>Part of <a href="../../index.html">Future Ready: Black Hills STEAM Showcase</a></p>
+</footer>
+
+<script src="../js/hub.js"></script>
+<script src="wildlife-id.js"></script>
+
+</body>
+</html>
