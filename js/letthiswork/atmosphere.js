@@ -38,15 +38,15 @@
 
     const ATMOSPHERE_SETTINGS = {
 
-        desktopCloudsPerSection: 5,
-        tabletCloudsPerSection: 4,
-        phoneCloudsPerSection: 3,
+    desktopCloudsPerSection: 6,
+    tabletCloudsPerSection: 6,
+    phoneCloudsPerSection: 5,
 
-        desktopDustPerSection: 24,
-        tabletDustPerSection: 17,
-        phoneDustPerSection: 11
+    desktopDustPerSection: 30,
+    tabletDustPerSection: 26,
+    phoneDustPerSection: 22
 
-    };
+};
 
     // ==================================================
     // SHARED ATMOSPHERE CLOUD
