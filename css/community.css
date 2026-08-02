@@ -2847,205 +2847,16 @@ the shared sky to remain visible throughout the page.
 }
 
 
-/* ==================================================
-   MOBILE HERO TILES — LET THE UNIVERSE SHOW THROUGH
-================================================== */
-
-@media screen and (max-width:900px){
-
-    .community-hero .hero-tiles{
-
-        position:relative;
-
-        z-index:3;
-
-        gap:12px;
-
-    }
-
-
-    /* Base glass tile */
-
-    .community-hero .hero-tile{
-
-        position:relative;
-
-        overflow:hidden;
-
-        min-height:118px;
-
-        padding:18px 10px;
-
-        color:#ffffff;
-
-        background:
-            linear-gradient(
-                145deg,
-                rgba(255,255,255,.17),
-                rgba(255,255,255,.06)
-            ) !important;
-
-        border:
-            1px solid
-            rgba(255,255,255,.30);
-
-        backdrop-filter:
-            blur(5px)
-            saturate(125%);
-
-        -webkit-backdrop-filter:
-            blur(5px)
-            saturate(125%);
-
-        box-shadow:
-            inset 0 1px 0
-            rgba(255,255,255,.22),
-
-            0 8px 22px
-            rgba(0,0,0,.22),
-
-            0 0 18px
-            rgba(255,255,255,.08);
-
-    }
-
-
-    /* Subtle moving reflection */
-
-    .community-hero .hero-tile::before{
-
-        content:"";
-
-        position:absolute;
-
-        inset:0;
-
-        z-index:0;
-
-        pointer-events:none;
-
-        background:
-            linear-gradient(
-                125deg,
-                rgba(255,255,255,.16),
-                transparent 34%,
-                transparent 68%,
-                rgba(255,255,255,.06)
-            );
-
-    }
-
-
-    /* Keep tile content over the reflection */
-
-    .community-hero .hero-tile > *{
-
-        position:relative;
-
-        z-index:1;
-
-    }
-
-
-    /* Labels */
-
-    .community-hero .hero-tile span{
-
-        color:#ffffff !important;
-
-        text-shadow:
-            0 1px 4px
-            rgba(0,0,0,.90),
-
-            0 0 10px
-            rgba(0,0,0,.50);
-
-    }
-
-
-    /* Red-category tiles keep a restrained red tint */
-
-    .community-hero .hero-tile:nth-child(3n+1){
-
-        background:
-            linear-gradient(
-                145deg,
-                rgba(224,49,63,.34),
-                rgba(112,20,34,.13)
-            ) !important;
-
-        border-color:
-            rgba(255,138,151,.48);
-
-    }
-
-
-    /* Navy-category tiles keep a restrained navy tint */
-
-    .community-hero .hero-tile:nth-child(3n+2){
-
-        background:
-            linear-gradient(
-                145deg,
-                rgba(28,49,91,.38),
-                rgba(7,15,35,.16)
-            ) !important;
-
-        border-color:
-            rgba(153,190,255,.35);
-
-    }
-
-
-    /* White-category tiles remain brighter glass */
-
-    .community-hero
-    .hero-tile:not(:nth-child(3n+1)):not(:nth-child(3n+2)){
-
-        background:
-            linear-gradient(
-                145deg,
-                rgba(255,255,255,.23),
-                rgba(255,255,255,.075)
-            ) !important;
-
-    }
-
-}
-
-@media screen and (max-width:900px){
-
-    .community-hero .hero-tile,
-    .community-hero .hero-tile:nth-child(3n+1),
-    .community-hero .hero-tile:nth-child(3n+2),
-    .community-hero
-    .hero-tile:not(:nth-child(3n+1)):not(:nth-child(3n+2)){
-
-        box-shadow:
-            inset 0 1px 0
-            rgba(255,255,255,.22),
-
-            0 8px 22px
-            rgba(0,0,0,.24),
-
-            0 0 14px
-            rgba(255,255,255,.08);
-
-    }
-
-}
-
-
 /* ==========================================================
-   COMMUNITY MOBILE HERO TILES
-   Animated dimensional glass presentation
+   COMMUNITY HERO TILES — MOBILE CINEMATIC VERSION
+   Crisp, transparent, dimensional, and lightweight
 ========================================================== */
 
 @media screen and (max-width:900px){
 
-    /* --------------------------------------------------
-       TILE STAGE
-    -------------------------------------------------- */
+    /* ==================================================
+       TILE GRID
+    ================================================== */
 
     .community-hero .hero-tiles{
 
@@ -3055,35 +2866,27 @@ the shared sky to remain visible throughout the page.
 
         width:100%;
 
-        max-width:520px;
+        max-width:500px;
 
-        margin:
-            6px auto 0;
+        margin:14px auto 0;
+
+        padding:4px;
 
         display:grid;
 
         grid-template-columns:
-            repeat(
-                2,
-                minmax(0, 1fr)
-            );
+            repeat(2, minmax(0, 1fr));
 
-        gap:
-            14px;
+        grid-template-rows:auto;
 
-        padding:
-            8px;
+        gap:12px;
 
-        perspective:
-            900px;
-
-        transform-style:
-            preserve-3d;
+        perspective:1000px;
 
     }
 
 
-    /* Soft glow behind the whole group */
+    /* A restrained glow behind the grid */
 
     .community-hero .hero-tiles::before{
 
@@ -3091,251 +2894,239 @@ the shared sky to remain visible throughout the page.
 
         position:absolute;
 
-        inset:
-            8% 4%;
+        inset:14% 8%;
 
         z-index:-1;
 
         pointer-events:none;
 
-        border-radius:
-            32px;
+        border-radius:40px;
 
         background:
             radial-gradient(
                 ellipse at center,
-                rgba(83,143,255,.16),
-                rgba(224,49,63,.08) 52%,
+                rgba(71,130,224,.14),
+                rgba(224,49,63,.055) 52%,
                 transparent 76%
             );
 
-        filter:
-            blur(26px);
+        filter:blur(30px);
 
-        opacity:.82;
+        opacity:.68;
 
         animation:
-            mobileTileStagePulse
-            5.8s
+            heroTileGridGlow
+            6s
             ease-in-out
             infinite;
 
     }
 
 
-    /* --------------------------------------------------
+    /* ==================================================
        BASE TILE
-    -------------------------------------------------- */
+    ================================================== */
 
     .community-hero .hero-tile{
 
         --tile-delay:0ms;
-        --tile-float-distance:-4px;
-        --tile-tilt:0deg;
+        --tile-rise:-3px;
+        --tile-rotation:0deg;
 
         position:relative;
 
         isolation:isolate;
 
-        min-height:
-            clamp(
-                104px,
-                27vw,
-                128px
-            );
+        min-width:0;
 
-        padding:
-            16px 9px;
+        min-height:112px;
+
+        padding:17px 9px 15px;
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
+
+        justify-content:center;
+
+        gap:10px;
 
         overflow:hidden;
 
+        border-radius:18px;
+
         border:
             1px solid
-            rgba(255,255,255,.31);
-
-        border-radius:
-            18px;
-
-        color:#ffffff;
+            rgba(185,211,255,.30);
 
         background:
             linear-gradient(
                 145deg,
-                rgba(255,255,255,.20),
-                rgba(255,255,255,.075) 48%,
-                rgba(6,15,35,.12)
+                rgba(18,37,73,.68),
+                rgba(7,19,44,.48)
             ) !important;
 
-        -webkit-backdrop-filter:
-            blur(7px)
-            saturate(135%);
+        /*
+        Do not blur the universe behind the cards.
+        This keeps stars and meteors crisp.
+        */
 
-        backdrop-filter:
-            blur(7px)
-            saturate(135%);
+        backdrop-filter:none !important;
+
+        -webkit-backdrop-filter:none !important;
 
         box-shadow:
             inset 0 1px 0
-            rgba(255,255,255,.28),
+            rgba(255,255,255,.18),
 
             inset 0 -1px 0
-            rgba(255,255,255,.07),
+            rgba(255,255,255,.035),
 
-            0 10px 22px
-            rgba(0,0,0,.25),
+            0 9px 20px
+            rgba(0,0,0,.26),
 
-            0 0 16px
-            rgba(114,171,255,.08) !important;
+            0 0 0 1px
+            rgba(38,91,173,.08) !important;
 
         opacity:0;
 
         transform:
             translate3d(
                 0,
-                34px,
-                -70px
+                38px,
+                -90px
             )
-            rotateX(10deg)
+            rotateX(12deg)
             rotateZ(
-                var(--tile-tilt)
+                var(--tile-rotation)
             )
-            scale(.84);
+            scale(.82);
 
-        transform-origin:
-            center center;
-
-        will-change:
-            transform,
-            opacity;
+        transform-origin:center;
 
         animation:
-            mobileTileBurst
-                .78s
-                cubic-bezier(.18,.88,.26,1.18)
-                var(--tile-delay)
-                forwards,
+            heroTileEntrance
+            .72s
+            cubic-bezier(.16,.88,.28,1.16)
+            var(--tile-delay)
+            forwards,
 
-            mobileTileFloat
-                5.8s
-                ease-in-out
-                calc(
-                    var(--tile-delay) +
-                    900ms
-                )
-                infinite;
+            heroTileAmbientMotion
+            6.4s
+            ease-in-out
+            calc(
+                var(--tile-delay) +
+                950ms
+            )
+            infinite;
 
     }
 
 
-    /* --------------------------------------------------
-       STAGGERED ENTRANCE
-    -------------------------------------------------- */
+    /* ==================================================
+       INDIVIDUAL ENTRANCE TIMING
+    ================================================== */
 
     .community-hero .hero-tile:nth-child(1){
 
         --tile-delay:80ms;
-        --tile-tilt:-1.2deg;
-        --tile-float-distance:-5px;
+        --tile-rise:-4px;
+        --tile-rotation:-.45deg;
 
     }
 
     .community-hero .hero-tile:nth-child(2){
 
-        --tile-delay:155ms;
-        --tile-tilt:1deg;
-        --tile-float-distance:-3px;
+        --tile-delay:145ms;
+        --tile-rise:-2px;
+        --tile-rotation:.4deg;
 
     }
 
     .community-hero .hero-tile:nth-child(3){
 
-        --tile-delay:230ms;
-        --tile-tilt:.7deg;
-        --tile-float-distance:-6px;
+        --tile-delay:210ms;
+        --tile-rise:-3px;
+        --tile-rotation:.3deg;
 
     }
 
     .community-hero .hero-tile:nth-child(4){
 
-        --tile-delay:305ms;
-        --tile-tilt:-.8deg;
-        --tile-float-distance:-4px;
+        --tile-delay:275ms;
+        --tile-rise:-5px;
+        --tile-rotation:-.35deg;
 
     }
 
     .community-hero .hero-tile:nth-child(5){
 
-        --tile-delay:380ms;
-        --tile-tilt:-.6deg;
-        --tile-float-distance:-5px;
+        --tile-delay:340ms;
+        --tile-rise:-2px;
+        --tile-rotation:-.25deg;
 
     }
 
     .community-hero .hero-tile:nth-child(6){
 
-        --tile-delay:455ms;
-        --tile-tilt:1.1deg;
-        --tile-float-distance:-3px;
+        --tile-delay:405ms;
+        --tile-rise:-4px;
+        --tile-rotation:.4deg;
 
     }
 
 
-    /* --------------------------------------------------
+    /* ==================================================
        COLOR IDENTITIES
-       Transparent enough to show stars underneath
-    -------------------------------------------------- */
+    ================================================== */
 
-    .community-hero
-    .hero-tile:nth-child(3n+1){
+    /* Red tiles */
 
-        background:
-            linear-gradient(
-                145deg,
-                rgba(224,49,63,.48),
-                rgba(132,22,43,.22) 54%,
-                rgba(35,6,17,.13)
-            ) !important;
-
-        border-color:
-            rgba(255,147,160,.48);
-
-        box-shadow:
-            inset 0 1px 0
-            rgba(255,255,255,.25),
-
-            0 10px 24px
-            rgba(35,5,13,.30),
-
-            0 0 18px
-            rgba(224,49,63,.18) !important;
-
-    }
-
-    .community-hero
-    .hero-tile:nth-child(3n+2){
+    .community-hero .hero-tile:nth-child(3n+1){
 
         background:
             linear-gradient(
                 145deg,
-                rgba(32,56,104,.55),
-                rgba(10,24,55,.28) 57%,
-                rgba(3,9,24,.16)
+                rgba(155,31,54,.62),
+                rgba(62,13,31,.44)
             ) !important;
 
         border-color:
-            rgba(145,186,255,.37);
+            rgba(255,117,139,.38);
 
         box-shadow:
             inset 0 1px 0
-            rgba(255,255,255,.22),
+            rgba(255,255,255,.17),
 
-            0 10px 24px
-            rgba(0,4,17,.32),
+            0 9px 20px
+            rgba(18,2,8,.28),
 
-            0 0 18px
-            rgba(91,148,255,.16) !important;
+            0 0 16px
+            rgba(224,49,63,.10) !important;
 
     }
+
+
+    /* Navy tiles */
+
+    .community-hero .hero-tile:nth-child(3n+2){
+
+        background:
+            linear-gradient(
+                145deg,
+                rgba(23,48,96,.70),
+                rgba(5,16,42,.48)
+            ) !important;
+
+        border-color:
+            rgba(119,167,255,.28);
+
+    }
+
+
+    /* Light-blue tiles */
 
     .community-hero
     .hero-tile:not(:nth-child(3n+1)):not(:nth-child(3n+2)){
@@ -3343,20 +3134,19 @@ the shared sky to remain visible throughout the page.
         background:
             linear-gradient(
                 145deg,
-                rgba(255,255,255,.28),
-                rgba(222,237,255,.12) 52%,
-                rgba(69,101,147,.10)
+                rgba(71,91,137,.68),
+                rgba(19,34,69,.49)
             ) !important;
 
         border-color:
-            rgba(255,255,255,.42);
+            rgba(204,221,255,.34);
 
     }
 
 
-    /* --------------------------------------------------
-       INTERNAL LIGHT AND DEPTH
-    -------------------------------------------------- */
+    /* ==================================================
+       EDGE LIGHT
+    ================================================== */
 
     .community-hero .hero-tile::before{
 
@@ -3366,33 +3156,27 @@ the shared sky to remain visible throughout the page.
 
         inset:0;
 
-        z-index:-1;
+        z-index:0;
 
         pointer-events:none;
 
         border-radius:inherit;
 
         background:
-            radial-gradient(
-                circle at 24% 14%,
-                rgba(255,255,255,.28),
-                transparent 34%
-            ),
-
             linear-gradient(
                 125deg,
-                rgba(255,255,255,.14),
-                transparent 38%,
-                transparent 68%,
-                rgba(255,255,255,.04)
+                rgba(255,255,255,.14) 0%,
+                transparent 27%,
+                transparent 72%,
+                rgba(100,157,255,.055) 100%
             );
 
-        opacity:.82;
+        opacity:.72;
 
     }
 
 
-    /* Occasional light sweep */
+    /* Thin light sweep — no cloudy blob */
 
     .community-hero .hero-tile::after{
 
@@ -3400,135 +3184,151 @@ the shared sky to remain visible throughout the page.
 
         position:absolute;
 
-        top:-35%;
+        top:-30%;
 
-        left:-70%;
+        left:-60%;
 
-        z-index:0;
+        z-index:1;
 
-        width:44%;
+        width:24%;
 
-        height:170%;
+        height:160%;
 
         pointer-events:none;
+
+        opacity:0;
 
         background:
             linear-gradient(
                 90deg,
                 transparent,
-                rgba(255,255,255,.23),
+                rgba(255,255,255,.20),
                 transparent
             );
 
         transform:
-            rotate(18deg);
-
-        opacity:0;
+            rotate(17deg);
 
         animation:
-            mobileTileShimmer
-            7.2s
+            heroTileLightSweep
+            8.5s
             ease-in-out
             calc(
                 var(--tile-delay) +
-                1.5s
+                1.8s
             )
             infinite;
 
     }
 
 
-    /* --------------------------------------------------
-       ICON
-    -------------------------------------------------- */
+    /* ==================================================
+       ICONS
+    ================================================== */
 
     .community-hero .hero-tile{
 
         font-size:
             clamp(
                 1.55rem,
-                6vw,
-                2rem
+                6.2vw,
+                2.05rem
             );
+
+        line-height:1;
 
         text-shadow:
             0 3px 8px
-            rgba(0,0,0,.38),
-
-            0 0 14px
-            rgba(255,255,255,.17);
+            rgba(0,0,0,.42);
 
     }
 
 
-    /* --------------------------------------------------
+    /* ==================================================
        TEXT
-       Fully opaque and readable
-    -------------------------------------------------- */
+    ================================================== */
 
     .community-hero .hero-tile span{
 
         position:relative;
 
-        z-index:2;
+        z-index:3;
+
+        display:block;
+
+        max-width:100%;
 
         color:#ffffff !important;
 
         font-size:
             clamp(
-                .66rem,
-                2.8vw,
-                .79rem
+                .67rem,
+                2.75vw,
+                .78rem
             );
 
-        font-weight:850;
+        font-weight:800;
 
         line-height:1.22;
 
         letter-spacing:.045em;
 
+        text-align:center;
+
         text-wrap:balance;
 
-        text-shadow:
-            0 2px 4px
-            rgba(0,0,0,.96),
+        /*
+        One restrained shadow.
+        No fuzzy glow around the letters.
+        */
 
-            0 0 9px
-            rgba(0,0,0,.60);
+        text-shadow:
+            0 2px 3px
+            rgba(0,0,0,.85);
 
     }
 
 
-    /* --------------------------------------------------
-       TAP RESPONSE
-    -------------------------------------------------- */
+    /* ==================================================
+       TAP FEEDBACK
+    ================================================== */
 
     .community-hero .hero-tile:active{
+
+        animation-play-state:paused;
 
         transform:
             translate3d(
                 0,
                 2px,
-                18px
+                8px
             )
             rotateZ(
-                var(--tile-tilt)
+                var(--tile-rotation)
             )
-            scale(.97);
+            scale(.975);
+
+        box-shadow:
+            inset 0 1px 0
+            rgba(255,255,255,.14),
+
+            0 4px 10px
+            rgba(0,0,0,.28) !important;
 
         transition:
-            transform .12s ease;
+            transform .11s ease,
+            box-shadow .11s ease;
 
     }
 
 }
 
 
-/* ==========================================================
-   MOBILE TILE ANIMATIONS
-========================================================== */
+/* ==================================================
+   ANIMATIONS
+================================================== */
 
-@keyframes mobileTileBurst{
+@keyframes heroTileEntrance{
 
     0%{
 
@@ -3537,21 +3337,18 @@ the shared sky to remain visible throughout the page.
         transform:
             translate3d(
                 0,
-                40px,
-                -90px
+                42px,
+                -100px
             )
-            rotateX(13deg)
+            rotateX(14deg)
             rotateZ(
-                var(--tile-tilt)
+                var(--tile-rotation)
             )
             scale(.80);
 
-        filter:
-            blur(5px);
-
     }
 
-    58%{
+    62%{
 
         opacity:1;
 
@@ -3559,16 +3356,13 @@ the shared sky to remain visible throughout the page.
             translate3d(
                 0,
                 -5px,
-                14px
+                12px
             )
-            rotateX(-1.4deg)
+            rotateX(-1deg)
             rotateZ(
-                var(--tile-tilt)
+                var(--tile-rotation)
             )
             scale(1.025);
-
-        filter:
-            blur(0);
 
     }
 
@@ -3584,19 +3378,16 @@ the shared sky to remain visible throughout the page.
             )
             rotateX(0)
             rotateZ(
-                var(--tile-tilt)
+                var(--tile-rotation)
             )
             scale(1);
-
-        filter:
-            blur(0);
 
     }
 
 }
 
 
-@keyframes mobileTileFloat{
+@keyframes heroTileAmbientMotion{
 
     0%,
     100%{
@@ -3610,7 +3401,7 @@ the shared sky to remain visible throughout the page.
                 0
             )
             rotateZ(
-                var(--tile-tilt)
+                var(--tile-rotation)
             )
             scale(1);
 
@@ -3623,36 +3414,35 @@ the shared sky to remain visible throughout the page.
         transform:
             translate3d(
                 0,
-                var(--tile-float-distance),
-                8px
+                var(--tile-rise),
+                5px
             )
             rotateZ(
                 calc(
-                    var(--tile-tilt) *
-                    -.5
+                    var(--tile-rotation) * -.35
                 )
             )
-            scale(1.012);
+            scale(1.006);
 
     }
 
 }
 
 
-@keyframes mobileTileShimmer{
+@keyframes heroTileLightSweep{
 
     0%,
-    68%{
+    72%{
 
-        left:-70%;
+        left:-60%;
 
         opacity:0;
 
     }
 
-    73%{
+    76%{
 
-        opacity:.55;
+        opacity:.44;
 
     }
 
@@ -3675,33 +3465,31 @@ the shared sky to remain visible throughout the page.
 }
 
 
-@keyframes mobileTileStagePulse{
+@keyframes heroTileGridGlow{
 
     0%,
     100%{
 
-        opacity:.54;
+        opacity:.44;
 
-        transform:
-            scale(.96);
+        transform:scale(.96);
 
     }
 
     50%{
 
-        opacity:.90;
+        opacity:.72;
 
-        transform:
-            scale(1.025);
+        transform:scale(1.015);
 
     }
 
 }
 
 
-/* ==========================================================
-   SMALL PHONES
-========================================================== */
+/* ==================================================
+   VERY SMALL PHONES
+================================================== */
 
 @media screen and (max-width:430px){
 
@@ -3709,26 +3497,26 @@ the shared sky to remain visible throughout the page.
 
         gap:10px;
 
-        padding:4px;
+        padding:2px;
 
     }
 
     .community-hero .hero-tile{
 
-        min-height:102px;
+        min-height:104px;
 
-        padding:14px 7px;
+        padding:15px 7px 13px;
 
-        border-radius:15px;
+        border-radius:16px;
 
     }
 
 }
 
 
-/* ==========================================================
-   ACCESSIBILITY
-========================================================== */
+/* ==================================================
+   REDUCED MOTION
+================================================== */
 
 @media (prefers-reduced-motion:reduce){
 
@@ -3740,8 +3528,6 @@ the shared sky to remain visible throughout the page.
 
         animation:none !important;
 
-        filter:none !important;
-
     }
 
     .community-hero .hero-tile::after,
@@ -3752,5 +3538,4 @@ the shared sky to remain visible throughout the page.
     }
 
 }
-
 
