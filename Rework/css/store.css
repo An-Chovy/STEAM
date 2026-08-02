@@ -1,0 +1,3541 @@
+/* ==========================================================
+   FUTURE READY
+   COMMUNITY PAGE
+   RED / WHITE / BLUE — DOUGLAS SCHOOL DISTRICT COLORS
+   "FUN + MOVABLE" REDESIGN
+========================================================== */
+
+:root{
+
+    --navy:#14213d;
+    --navy-light:#26375c;
+    --red:#e0313f;
+    --red-dark:#b8202c;
+    --white:#ffffff;
+    --offwhite:#f4f6f9;
+    --ink:#1d1d1d;
+
+}
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:"Segoe UI",Arial,sans-serif;
+
+    color:var(--ink);
+
+    background:var(--white);
+
+    line-height:1.7;
+
+    overflow-x:hidden;   /* lets rotated/shifted elements breathe without causing scroll issues */
+
+}
+
+img{
+
+    width:100%;
+
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+/* ==========================================================
+   SECTION STRUCTURE
+   Sections stretch full width; .section-inner keeps content readable
+========================================================== */
+
+section{
+
+    position:relative;
+
+    width:100%;
+
+    padding:110px 40px;
+
+    overflow:hidden;
+
+}
+
+.section-inner{
+
+    max-width:1300px;
+
+    margin:0 auto;
+
+    position:relative;
+
+}
+
+section:not(.community-hero):not(.community-final):nth-child(even){
+
+    background:var(--offwhite);
+
+}
+
+/* ==========================================================
+   HERO SECTION
+========================================================== */
+
+.community-hero{
+
+    position:relative;
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:120px 60px;
+
+    background-color:var(--navy);
+
+    background-image:url("../images/backgrounds/community-hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    overflow:hidden;
+
+}
+
+.community-hero::before,
+.community-hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(60px);
+
+    z-index:0;
+
+    pointer-events:none;
+
+}
+
+.community-hero::before{
+
+    width:420px;
+
+    height:420px;
+
+    background:rgba(224,49,63,.35);
+
+    top:-120px;
+
+    right:-100px;
+
+}
+
+.community-hero::after{
+
+    width:340px;
+
+    height:340px;
+
+    background:rgba(255,255,255,.10);
+
+    bottom:-100px;
+
+    left:-80px;
+
+}
+
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        radial-gradient(circle at 15% 20%, rgba(224,49,63,.35) 0%, transparent 45%),
+
+        radial-gradient(circle at 85% 80%, rgba(224,49,63,.20) 0%, transparent 40%),
+
+        linear-gradient(
+            120deg,
+            rgba(20,33,61,.94) 0%,
+            rgba(20,33,61,.90) 40%,
+            rgba(20,33,61,.82) 75%,
+            rgba(20,33,61,.70) 100%
+        );
+
+}
+
+.hero-overlay::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:radial-gradient(rgba(255,255,255,.10) 1.5px, transparent 1.5px);
+
+    background-size:26px 26px;
+
+    opacity:.5;
+
+}
+
+.hero-flyer{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+
+    max-width:1300px;
+
+    display:grid;
+
+    grid-template-columns:1.3fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.hero-main{
+
+    color:white;
+
+}
+
+.hero-eyebrow{
+
+    color:var(--black);
+
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+    font-size:.9rem;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+}
+
+.hero-main h1{
+
+    color:white;
+
+    font-size:4.6rem;
+
+    line-height:.95;
+
+    margin-bottom:8px;
+
+    font-weight:800;
+
+}
+
+.hero-main h2{
+
+    color:white;
+
+    font-size:1.75rem;
+
+    font-weight:300;
+
+    margin-bottom:0;
+
+}
+
+.hero-divider{
+
+    width:120px;
+
+    height:4px;
+
+    background:var(--red);
+
+    margin:30px 0;
+
+    border-radius:4px;
+
+}
+
+/* ---------- Event Box: WHEN / WHERE / WHAT ---------- */
+
+.hero-event-box{
+
+    background:rgba(255,255,255,.20);
+
+    backdrop-filter:blur(12px);
+
+    -webkit-backdrop-filter:blur(12px);
+
+    border:2px solid rgba(255,255,255,.55);
+
+    border-radius:16px;
+
+    padding:28px 32px;
+
+    margin-bottom:34px;
+
+    box-shadow:
+
+        0 0 0 4px rgba(224,49,63,.18),
+
+        0 0 40px rgba(255,255,255,.12),
+
+        0 12px 30px rgba(0,0,0,.25);
+
+}
+
+.hero-event-row{
+
+    display:grid;
+
+    grid-template-columns:100px 1fr;
+
+    gap:16px;
+
+    padding:14px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.15);
+
+}
+
+.hero-event-row:last-child{
+
+    border-bottom:none;
+
+}
+
+.hero-event-label{
+
+    color:var(--red);
+
+    font-weight:800;
+
+    font-size:.85rem;
+
+    letter-spacing:1.5px;
+
+    align-self:start;
+
+    padding-top:2px;
+
+}
+
+.hero-event-value{
+
+    color:white;
+
+    font-size:1.15rem;
+
+    font-weight:600;
+
+    line-height:1.4;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+/* ---------- 2x3 Tile Grid ---------- */
+
+.hero-tiles{
+
+    position:relative;
+
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:repeat(2, 1fr);
+
+    grid-template-rows:repeat(3, 1fr);
+
+    gap:16px;
+
+}
+
+.hero-tile{
+
+    background:rgba(255,255,255,.96);
+
+    border-radius:16px;
+
+    padding:24px 16px;
+
+    text-align:center;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    font-size:2.4rem;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.20);
+
+    transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
+
+}
+
+.hero-tile span{
+
+    font-size:.78rem;
+
+    font-weight:800;
+
+    letter-spacing:.5px;
+
+    color:var(--navy);
+
+    transition:color .25s ease;
+
+}
+
+.hero-tile:hover{
+
+    transform:translateY(-6px) scale(1.03);
+
+    box-shadow:0 20px 42px rgba(0,0,0,.30);
+
+}
+
+.hero-tile:nth-child(3n+1){
+
+    background:var(--red);
+
+}
+
+.hero-tile:nth-child(3n+1) span{
+
+    color:white;
+
+}
+
+.hero-tile:nth-child(3n+2){
+
+    background:var(--navy);
+
+}
+
+.hero-tile:nth-child(3n+2) span{
+
+    color:white;
+
+}
+
+.button-primary{
+
+    background:var(--red);
+
+    color:#ffffff;
+
+    padding:16px 32px;
+
+    border-radius:18px 6px 18px 6px;
+
+    font-weight:700;
+
+    border:3px solid var(--navy);
+
+    box-shadow:5px 5px 0 var(--navy);
+
+    transition:.15s ease;
+
+}
+
+.button-primary:hover{
+
+    background:white;
+
+    color:var(--red);
+
+    transform:translate(3px, 3px);
+
+    box-shadow:2px 2px 0 var(--navy);
+
+}
+
+.button-secondary{
+
+    background:white;
+
+    color:var(--navy);
+
+    border:3px solid white;
+
+    padding:16px 32px;
+
+    border-radius:6px 18px 6px 18px;
+
+    font-weight:700;
+
+    box-shadow:5px 5px 0 rgba(255,255,255,.4);
+
+    transition:.15s ease;
+
+}
+
+.button-secondary:hover{
+
+    background:var(--red);
+
+    color:white;
+
+    border-color:var(--red);
+
+    transform:translate(3px, 3px);
+
+    box-shadow:2px 2px 0 rgba(255,255,255,.4);
+
+}
+
+/* ==================================================
+   TOP NAVIGATION
+================================================== */
+
+.top-nav{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 50px;
+
+    background:rgba(20,33,61,.92);
+
+    backdrop-filter:blur(10px);
+
+    z-index:1000;
+
+}
+
+.nav-brand{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.brand-title{
+
+    color:#ffffff;
+
+    font-size:1.35rem;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+}
+
+.brand-subtitle{
+
+    color:var(--red);
+
+    font-size:.82rem;
+
+    letter-spacing:1px;
+
+    margin-top:2px;
+
+}
+
+.top-nav nav{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:30px;
+
+}
+
+.top-nav nav a{
+
+    position:relative;
+
+    color:white;
+
+    font-weight:500;
+
+    transition:color .25s ease;
+
+}
+
+.top-nav nav a:not(.partner-link)::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-6px;
+
+    width:0%;
+
+    height:2px;
+
+    background:var(--red);
+
+    transition:width .25s ease;
+
+}
+
+.top-nav nav a:not(.partner-link):hover::after{
+
+    width:100%;
+
+}
+
+.top-nav nav a:hover{
+
+    color:var(--red);
+
+}
+
+.partner-link{
+
+    background:var(--red);
+
+    color:#ffffff !important;
+
+    padding:10px 20px;
+
+    border-radius:14px 4px 14px 4px;
+
+    border:2px solid var(--navy);
+
+    font-weight:700;
+
+    box-shadow:3px 3px 0 var(--navy);
+
+    transition:.15s ease;
+
+}
+
+.partner-link:hover{
+
+    background:white;
+
+    color:var(--navy) !important;
+
+    transform:translate(2px, 2px);
+
+    box-shadow:1px 1px 0 var(--navy);
+
+}
+
+/* ==========================================================
+   HEADINGS + TEXT
+========================================================== */
+
+h1{
+
+    font-size:3.6rem;
+
+    line-height:1.05;
+
+    color:var(--navy);
+
+    margin-bottom:20px;
+
+    font-weight:800;
+
+}
+
+h2{
+
+    font-size:2.4rem;
+
+    color:var(--navy);
+
+    margin-bottom:24px;
+
+    font-weight:700;
+
+}
+
+p{
+
+    margin-bottom:22px;
+
+    font-size:1.15rem;
+
+    line-height:1.85;
+
+    color:#303030;
+
+}
+
+.eyebrow{
+
+    color:var(--red);
+
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+    font-size:.85rem;
+
+    font-weight:700;
+
+    margin-bottom:14px;
+
+}
+
+.section-divider{
+
+    width:140px;
+
+    height:5px;
+
+    background:var(--red);
+
+    margin:35px 0 45px;
+
+    border-radius:3px;
+
+}
+
+.section-header{
+
+    max-width:800px;
+
+    margin-bottom:60px;
+
+}
+
+.section-intro{
+
+    max-width:800px;
+
+}
+
+.gold,
+.highlight{
+
+    color:var(--red);
+
+    font-weight:700;
+
+}
+
+footer{
+
+    background:var(--navy);
+
+    color:white;
+
+    text-align:center;
+
+    padding:50px;
+
+}
+
+/* ==========================================================
+   FLEXIBLE TWO-COLUMN LAYOUT
+   Use this to sit text + image (or any two blocks) side by side.
+   Add "reverse" to flip which side the image is on.
+========================================================== */
+
+.split-layout{
+
+    display:grid;
+
+    grid-template-columns:1.2fr 1fr;
+
+    gap:60px;
+
+    align-items:center;
+
+}
+
+.split-layout.reverse{
+
+    grid-template-columns:1fr 1.2fr;
+
+}
+
+.split-layout.reverse > *:first-child{
+
+    order:2;
+
+}
+
+.split-layout.reverse > *:last-child{
+
+    order:1;
+
+}
+
+@media screen and (max-width:900px){
+
+    .split-layout,
+    .split-layout.reverse{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .split-layout.reverse > *:first-child,
+    .split-layout.reverse > *:last-child{
+
+        order:initial;
+
+    }
+
+}
+
+/* ==========================================================
+   SECTION IMAGE SPOTS
+========================================================== */
+
+.section-image{
+
+    width:100%;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    box-shadow:0 20px 55px rgba(0,0,0,.14);
+
+}
+
+.section-image img{
+
+    width:100%;
+
+    height:420px;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+@media screen and (max-width:900px){
+
+    .section-image img{
+
+        height:240px;
+
+    }
+
+}
+
+/* ==========================================================
+   HIGHLIGHT BOX
+========================================================== */
+
+.highlight-box{
+
+    background:var(--navy);
+
+    color:white;
+
+    padding:34px;
+
+    border-radius:20px;
+
+    margin-top:30px;
+
+    box-shadow:0 18px 40px rgba(20,33,61,.25);
+
+}
+
+.highlight-box h3{
+
+    color:var(--red);
+
+    margin-bottom:16px;
+
+    font-size:1.5rem;
+
+}
+
+.highlight-box p{
+
+    color:white;
+
+    margin-bottom:10px;
+
+    font-size:1.05rem;
+
+}
+
+/* ==========================================================
+   CARD GRIDS
+   (community-grid / experience-grid / partner-grid)
+========================================================== */
+
+.community-grid,
+.experience-grid,
+.partner-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+
+    gap:34px;
+
+    margin-top:20px;
+
+}
+
+.community-card,
+.experience-card,
+.partner-box{
+
+    position:relative;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:36px;
+
+    box-shadow:0 16px 40px rgba(0,0,0,.08);
+
+    border:1px solid rgba(0,0,0,.05);
+
+    transition:.3s ease;
+
+    text-align:left;
+
+    overflow:hidden;
+
+}
+
+/* thin color bar across the top of every card — CSS only, no images */
+
+.community-card::before,
+.experience-card::before,
+.partner-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:6px;
+
+    background:linear-gradient(90deg, var(--red), var(--navy));
+
+}
+
+.community-card:hover,
+.experience-card:hover,
+.partner-box:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 26px 60px rgba(0,0,0,.14);
+
+}
+
+.experience-icon{
+
+    font-size:2.6rem;
+
+    margin-bottom:14px;
+
+}
+
+.partner-box{
+
+    font-size:2.4rem;
+
+    text-align:center;
+
+}
+
+.community-card h3,
+.experience-card h3,
+.partner-box h3{
+
+    color:var(--navy);
+
+    margin-bottom:12px;
+
+    font-size:1.35rem;
+
+}
+
+/* ==========================================================
+   QUOTE / BLOCKQUOTE
+========================================================== */
+
+blockquote {
+    border-left: 6px solid var(--red);
+    padding: 24px 32px;
+    
+    /* 1. Set a maximum width (adjust pixel/percentage value as needed) */
+    max-width: 350px; 
+    
+    /* 2. Choose alignment: */
+    /* Option A: Centered on the page */
+    margin: 36px auto 36px 0;
+    
+    /* Option B: Left-aligned (keep original top/bottom spacing, auto right margin) */
+    /* margin: 36px auto 36px 0; */
+
+    font-size: 2.4rem;
+    font-style: italic;
+    color: var(--navy);
+    background: var(--offwhite);
+    border-radius: 0 16px 16px 0;
+}
+
+/* ==========================================================
+   FINAL SECTION
+========================================================== */
+
+.community-final{
+
+    background:var(--navy);
+
+    color:white;
+
+    text-align:center;
+
+}
+
+.community-final h2{
+
+    color:white;
+
+}
+
+.community-final p{
+
+    color:rgba(255,255,255,.85);
+
+    max-width:700px;
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+}
+
+.community-highlight{
+
+    background:rgba(255,255,255,.10);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    border-radius:20px;
+
+    padding:30px;
+
+    margin:40px auto;
+
+    max-width:500px;
+
+}
+
+.community-highlight p{
+
+    color:white;
+
+}
+
+.community-button{
+
+    display:inline-block;
+
+    background:var(--red);
+
+    color:white;
+
+    padding:18px 38px;
+
+    border-radius:20px 6px 20px 6px;
+
+    border:3px solid white;
+
+    font-weight:700;
+
+    font-size:1.1rem;
+
+    box-shadow:6px 6px 0 rgba(255,255,255,.4);
+
+    transition:.15s ease;
+
+}
+
+.community-button:hover{
+
+    background:white;
+
+    color:var(--red);
+
+    transform:translate(3px, 3px);
+
+    box-shadow:3px 3px 0 rgba(255,255,255,.4);
+
+}
+
+.coming-soon{
+
+    text-align:center;
+
+    font-style:italic;
+
+    color:#666;
+
+    margin-top:30px;
+
+}
+
+/* ==========================================================
+   DECORATIVE SHAPES — PURE CSS, NO IMAGES
+   Drop these <div> elements anywhere as visual accents.
+   They are empty divs styled entirely with CSS.
+========================================================== */
+
+/* Soft organic blob — background accent shape */
+
+.shape-blob{
+
+    position:absolute;
+
+    width:340px;
+
+    height:340px;
+
+    background:var(--red);
+
+    opacity:.08;
+
+    border-radius:62% 38% 55% 45% / 45% 55% 45% 55%;
+
+    z-index:0;
+
+    pointer-events:none;
+
+}
+
+.shape-blob.navy{
+
+    background:var(--navy);
+
+}
+
+/* Solid circle accent */
+
+.shape-circle{
+
+    position:absolute;
+
+    width:120px;
+
+    height:120px;
+
+    border-radius:50%;
+
+    background:var(--red);
+
+    opacity:.10;
+
+    z-index:0;
+
+    pointer-events:none;
+
+}
+
+.shape-circle.navy{
+
+    background:var(--navy);
+
+}
+
+.shape-circle.outline{
+
+    background:none;
+
+    border:6px solid var(--red);
+
+    opacity:.25;
+
+}
+
+/* Rounded square / soft block accent */
+
+.shape-block{
+
+    position:absolute;
+
+    width:160px;
+
+    height:160px;
+
+    border-radius:32px;
+
+    background:var(--navy);
+
+    opacity:.08;
+
+    z-index:0;
+
+    pointer-events:none;
+
+}
+
+.shape-block.red{
+
+    background:var(--red);
+
+}
+
+/* Zigzag divider between sections — pure CSS, no image */
+
+.zigzag-divider{
+
+    width:100%;
+
+    height:24px;
+
+    background:
+
+        linear-gradient(135deg, var(--offwhite) 25%, transparent 25%) -12px 0,
+
+        linear-gradient(225deg, var(--offwhite) 25%, transparent 25%) -12px 0,
+
+        linear-gradient(315deg, var(--offwhite) 25%, transparent 25%),
+
+        linear-gradient(45deg, var(--offwhite) 25%, transparent 25%);
+
+    background-size:24px 24px;
+
+    background-color:var(--navy);
+
+}
+
+/* Dotted accent row — simple, clean, no imagery */
+
+.dot-row{
+
+    display:flex;
+
+    gap:10px;
+
+    margin:20px 0;
+
+}
+
+.dot-row span{
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:var(--red);
+
+    display:inline-block;
+
+}
+
+.dot-row span:nth-child(2){ background:var(--navy); }
+.dot-row span:nth-child(3){ background:var(--red); opacity:.5; }
+
+/* ==========================================================
+   MOVABLE UTILITY CLASSES
+   Add any of these to a box's class list to nudge it around.
+   Combine multiple classes freely, e.g.:
+   class="community-card shift-up-20 rotate-2 shift-right-30"
+========================================================== */
+
+/* ---------- Nudge Up/Down ---------- */
+
+.shift-up-10{ transform:translateY(-10px); }
+.shift-up-20{ transform:translateY(-20px); }
+.shift-up-40{ transform:translateY(-40px); }
+.shift-up-60{ transform:translateY(-60px); }
+
+.shift-down-10{ transform:translateY(10px); }
+.shift-down-20{ transform:translateY(20px); }
+.shift-down-40{ transform:translateY(40px); }
+.shift-down-60{ transform:translateY(60px); }
+
+/* ---------- Nudge Left/Right ---------- */
+
+.shift-left-10{ transform:translateX(-10px); }
+.shift-left-20{ transform:translateX(-20px); }
+.shift-left-40{ transform:translateX(-40px); }
+.shift-left-60{ transform:translateX(-60px); }
+
+.shift-right-10{ transform:translateX(10px); }
+.shift-right-20{ transform:translateX(20px); }
+.shift-right-40{ transform:translateX(40px); }
+.shift-right-60{ transform:translateX(60px); }
+
+/* ---------- Rotation ---------- */
+
+.rotate-1{ transform:rotate(1deg); }
+.rotate-2{ transform:rotate(2deg); }
+.rotate-3{ transform:rotate(3deg); }
+.rotate-5{ transform:rotate(5deg); }
+
+.rotate-neg-1{ transform:rotate(-1deg); }
+.rotate-neg-2{ transform:rotate(-2deg); }
+.rotate-neg-3{ transform:rotate(-3deg); }
+.rotate-neg-5{ transform:rotate(-5deg); }
+
+/* ---------- Size ---------- */
+
+.size-small{ max-width:320px; }
+.size-medium{ max-width:480px; }
+.size-large{ max-width:640px; }
+.size-full{ max-width:100%; }
+
+/* ---------- Alignment within a section ---------- */
+
+.align-left{ margin-right:auto; margin-left:0; }
+.align-center{ margin-left:auto; margin-right:auto; }
+.align-right{ margin-left:auto; margin-right:0; }
+
+/* ---------- Free positioning (advanced) ----------
+   Use ONLY if you want an element pulled completely out of
+   normal flow to sit at an exact spot. Parent needs
+   position:relative (section-inner already has this).
+   Adjust top/left/right/bottom values as needed.
+--------------------------------------------------- */
+
+.float-box{
+
+    position:absolute;
+
+}
+
+.top-0{ top:0; }
+.top-20{ top:20px; }
+.top-50{ top:50px; }
+.top-100{ top:100px; }
+
+.bottom-0{ bottom:0; }
+.bottom-20{ bottom:20px; }
+.bottom-50{ bottom:50px; }
+
+.left-0{ left:0; }
+.left-20{ left:20px; }
+.left-50{ left:50px; }
+
+.right-0{ right:0; }
+.right-20{ right:20px; }
+.right-50{ right:50px; }
+
+/* ==========================================================
+   MOBILE
+   Resets rotation/floating tricks so everything is
+   simple, stacked, and easy to read on small screens.
+========================================================== */
+
+@media screen and (max-width:900px){
+
+/* ---------- Navigation ---------- */
+
+.top-nav{
+
+    position:relative; /* Changed from fixed so it scrolls with the page and stops overlaying content */
+
+    flex-direction:column;
+
+    align-items:center;
+
+    padding:14px 18px;
+
+    gap:12px;
+
+}
+
+.nav-brand{
+
+    text-align:center;
+
+}
+
+.brand-title{
+
+    font-size:1.2rem;
+
+}
+
+.brand-subtitle{
+
+    font-size:.75rem;
+
+}
+
+.top-nav nav{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:10px 14px;
+
+    width:100%;
+
+}
+
+.top-nav nav a{
+
+    font-size:.9rem;
+
+}
+
+.partner-link{
+
+    width:100%;
+
+    max-width:320px;
+
+    text-align:center;
+
+}
+
+/* ---------- General ---------- */
+
+section{
+
+    padding:50px 24px;
+
+}
+
+h1{
+
+    font-size:2.5rem;
+
+    text-align:center;
+
+    line-height:1.05;
+
+}
+
+h2{
+
+    font-size:1.75rem;
+
+    text-align:center;
+
+}
+
+.section-header{
+
+    text-align:center;
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+}
+
+.section-divider{
+
+    margin:25px auto 35px;
+
+}
+
+p{
+
+    font-size:1rem;
+
+    line-height:1.75;
+
+}
+
+/* ---------- Hero ---------- */
+
+.community-hero{
+
+    min-height:auto;
+
+    padding:40px 24px 60px; /* Reduced top padding since navigation is no longer fixed above it */
+
+    text-align:center;
+
+    background-position:center;
+
+}
+
+.hero-flyer{
+
+    grid-template-columns:1fr;
+
+    gap:40px;
+
+    text-align:center;
+
+}
+
+.hero-eyebrow{
+
+    font-size:.8rem;
+
+    letter-spacing:2px;
+
+}
+
+.hero-main h1{
+
+    font-size:3rem;
+
+}
+
+.hero-main h2{
+
+    font-size:1.4rem;
+
+}
+
+.hero-divider{
+
+    margin:24px auto;
+
+}
+
+.hero-event-box{
+
+    width:100%;
+
+    padding:22px;
+
+    text-align:left;
+
+}
+
+.hero-event-row{
+
+    grid-template-columns:80px 1fr;
+
+}
+
+.hero-event-value{
+
+    font-size:1rem;
+
+}
+
+.hero-buttons{
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.button-primary,
+.button-secondary{
+
+    width:100%;
+
+    max-width:340px;
+
+    text-align:center;
+
+}
+
+.hero-tiles{
+
+    grid-template-columns:repeat(2, 1fr);
+
+    grid-template-rows:auto;
+
+}
+
+.hero-tile{
+
+    padding:18px 10px;
+
+    font-size:1.6rem;
+
+}
+
+/* ---------- Cards: remove tilt/rotation on mobile for readability ---------- */
+
+.community-card,
+.experience-card,
+.partner-box{
+
+    padding:28px;
+
+    transform:none !important;
+
+}
+
+/* ---------- Neutralize all movable utility classes on mobile ---------- */
+
+.shift-up-10, .shift-up-20, .shift-up-40, .shift-up-60,
+.shift-down-10, .shift-down-20, .shift-down-40, .shift-down-60,
+.shift-left-10, .shift-left-20, .shift-left-40, .shift-left-60,
+.shift-right-10, .shift-right-20, .shift-right-40, .shift-right-60,
+.rotate-1, .rotate-2, .rotate-3, .rotate-5,
+.rotate-neg-1, .rotate-neg-2, .rotate-neg-3, .rotate-neg-5{
+
+    transform:none;
+
+}
+
+.float-box{
+
+    position:relative;
+
+    top:auto;
+
+    left:auto;
+
+    right:auto;
+
+    bottom:auto;
+
+    margin:20px auto;
+
+}
+
+}
+/* ==========================================
+   FEATURED PARTNER CARDS
+========================================== */
+
+.partner-preview-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill, minmax(320px, 1fr));
+
+    gap:32px;
+
+    margin:50px 0;
+
+}
+
+.partner-preview-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:40px 32px;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    color:#333;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    transition:transform .3s ease, box-shadow .3s ease;
+
+}
+
+/* Red / Navy accent bar */
+
+.partner-preview-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:6px;
+
+    background:linear-gradient(90deg,var(--red),var(--navy));
+
+}
+
+.partner-preview-card:hover{
+
+    transform:translateY(-8px) scale(1.02);
+
+    box-shadow:0 22px 50px rgba(0,0,0,.16);
+
+}
+
+.partner-preview-card img{
+
+    width:240px;
+
+    height:160px;
+
+    object-fit:contain;
+
+    display:block;
+
+    margin:15px auto 20px;
+
+    background:#f5f5f7;
+
+    border-radius:12px;
+
+    padding:16px;
+
+    transition:transform .3s ease;
+
+}
+
+.partner-preview-card.dark-logo img{
+
+    background:var(--navy);
+
+}
+
+.partner-preview-card:hover img{
+
+    transform:scale(1.05);
+
+}
+
+.partner-preview-card h3{
+
+    position:relative;
+
+    margin:0;
+
+    font-size:1.15rem;
+
+    font-weight:800;
+
+    letter-spacing:-.01em;
+
+    color:var(--navy);
+
+    padding-top:24px;
+
+}
+
+.partner-preview-card h3::before{
+
+    content:"";
+    position:absolute;
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
+    width:36px;
+    height:3px;
+    background:var(--red);
+    border-radius:2px;
+
+}
+
+.partner-preview-card p{
+
+    margin-top:12px;
+
+    font-size:.95rem;
+
+    color:#666;
+
+    line-height:1.5;
+
+}
+
+/* ==========================================
+   VIEW ALL CARD
+========================================== */
+
+.partner-more{
+
+    background:var(--red);
+
+    color:#fff;
+
+}
+
+.partner-more::before{
+
+    background:var(--navy);
+
+}
+
+.partner-more h3,
+.partner-more p{
+
+    color:#fff;
+
+}
+
+.partner-more:hover{
+
+    background:var(--red-dark);
+
+}
+
+.plus-icon{
+
+    width:80px;
+
+    height:80px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.18);
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:3rem;
+
+    font-weight:700;
+
+    margin:15px auto 20px;
+
+    transition:transform .3s ease;
+
+}
+
+.partner-more:hover .plus-icon{
+
+    transform:rotate(90deg) scale(1.1);
+
+}
+
+/* ==========================================
+   STUDENT & FAMILY GUIDE NAV BUTTON
+========================================== */
+
+.family-link{
+
+    background:rgba(255,255,255,.12);
+
+    color:#fff;
+
+    padding:10px 18px;
+
+    border-radius:30px;
+
+    border:1px solid rgba(255,255,255,.25);
+
+    font-weight:600;
+
+    transition:.3s ease;
+
+}
+
+.family-link:hover{
+
+    background:#ffffff;
+
+    color:var(--red);
+
+}
+
+/* ==========================================
+   FEATURED PARTNER CARDS — MOBILE
+========================================== */
+
+@media (max-width:900px){
+
+    .partner-preview-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media (max-width:600px){
+
+    .partner-preview-grid{
+
+        grid-template-columns:1fr;
+
+        gap:18px;
+
+    }
+
+    .partner-preview-card{
+
+        padding:24px;
+
+    }
+
+    .partner-preview-card img{
+
+        width:160px;
+
+        height:105px;
+
+    }
+
+    .plus-icon{
+
+        width:70px;
+
+        height:70px;
+
+        font-size:2.5rem;
+
+    }
+
+}
+
+/* ==========================================================
+   CYBERPUNK NEON GLOW — FIRST PAGE ONLY
+   White glow for navy
+   Red glow for white
+   Navy glow for red
+========================================================== */
+
+.community-hero .community-card,
+.community-hero .experience-card,
+.community-hero .partner-box,
+.community-hero .partner-preview-card,
+.community-hero .hero-tile {
+
+    transition: box-shadow .35s ease, transform .35s ease;
+
+}
+
+/* ==========================================================
+   NAVY BOXES → WHITE GLOW
+========================================================== */
+
+.community-hero .community-card[style*="background:var(--navy)"],
+.community-hero .experience-card[style*="background:var(--navy)"],
+.community-hero .partner-box[style*="background:var(--navy)"],
+.community-hero .partner-preview-card[style*="background:var(--navy)"],
+.community-hero .hero-tile:nth-child(3n+2) {
+
+    box-shadow:
+
+        0 0 14px rgba(255,255,255,.85),
+
+        0 0 32px rgba(255,255,255,.75),
+
+        0 0 64px rgba(255,255,255,.65),
+
+        0 0 90px rgba(255,255,255,.45);
+
+}
+
+/* ==========================================================
+   RED BOXES → NAVY GLOW
+========================================================== */
+
+.community-hero .community-card[style*="background:var(--red)"],
+.community-hero .experience-card[style*="background:var(--red)"],
+.community-hero .partner-box[style*="background:var(--red)"],
+.community-hero .partner-preview-card[style*="background:var(--red)"],
+.community-hero .hero-tile:nth-child(3n+1) {
+
+    box-shadow:
+
+        0 0 14px rgba(255,255,255,.85),
+
+        0 0 32px rgba(255,255,255,.75),
+
+        0 0 64px rgba(255,255,255,.65),
+
+        0 0 90px rgba(255,255,255,.45);
+
+}
+
+/* ==========================================================
+   WHITE BOXES → RED GLOW
+========================================================== */
+
+.community-hero .community-card:not([style*="background:var(--navy)"]):not([style*="background:var(--red)"]),
+.community-hero .experience-card:not([style*="background:var(--navy)"]):not([style*="background:var(--red)"]),
+.community-hero .partner-box:not([style*="background:var(--navy)"]):not([style*="background:var(--red)"]),
+.community-hero .partner-preview-card:not([style*="background:var(--navy)"]):not([style*="background:var(--red)"]),
+.community-hero .hero-tile:not(:nth-child(3n+1)):not(:nth-child(3n+2)) {
+
+    box-shadow:
+
+        0 0 14px rgba(224,49,63,.85),
+
+        0 0 32px rgba(224,49,63,.75),
+
+        0 0 64px rgba(224,49,63,.65),
+
+        0 0 90px rgba(224,49,63,.45);
+
+}
+
+/* ==========================================================
+   HOVER — CYBERPUNK PULSE
+========================================================== */
+
+.community-hero .community-card:hover,
+.community-hero .experience-card:hover,
+.community-hero .partner-box:hover,
+.community-hero .partner-preview-card:hover,
+.community-hero .hero-tile:hover {
+
+    transform:translateY(-10px) scale(1.05);
+
+}
+
+/* Navy → white pulse */
+
+.community-hero .community-card[style*="background:var(--navy)"]:hover,
+.community-hero .experience-card[style*="background:var(--navy)"]:hover,
+.community-hero .partner-box[style*="background:var(--navy)"]:hover,
+.community-hero .partner-preview-card[style*="background:var(--navy)"]:hover,
+.community-hero .hero-tile:nth-child(3n+2):hover {
+
+    box-shadow:
+
+        0 0 22px rgba(255,255,255,1),
+
+        0 0 48px rgba(255,255,255,.85),
+
+        0 0 90px rgba(255,255,255,.75);
+
+}
+
+/* Red → navy pulse */
+
+.community-hero .community-card[style*="background:var(--red)"]:hover,
+.community-hero .experience-card[style*="background:var(--red)"]:hover,
+.community-hero .partner-box[style*="background:var(--red)"]:hover,
+.community-hero .partner-preview-card[style*="background:var(--red)"]:hover,
+.community-hero .hero-tile:nth-child(3n+1):hover {
+
+    box-shadow:
+
+        0 0 22px rgba(255,255,255,1),
+
+        0 0 48px rgba(255,255,255,.85),
+
+        0 0 90px rgba(255,255,255,.75);
+
+}
+
+/* White → red pulse */
+
+.community-hero .community-card:not([style*="background:var(--navy)"]):not([style*="background:var(--red)"]):hover,
+.community-hero .experience-card:not([style*="background:var(--navy)"]):not([style*="background:var(--red)"]):hover,
+.community-hero .partner-box:not([style*="background:var(--navy)"]):not([style*="background:var(--red)"]):hover,
+.community-hero .partner-preview-card:not([style*="background:var(--navy)"]):not([style*="background:var(--red)"]):hover,
+.community-hero .hero-tile:not(:nth-child(3n+1)):not(:nth-child(3n+2)):hover {
+
+    box-shadow:
+
+        0 0 22px rgba(224,49,63,1),
+
+        0 0 48px rgba(224,49,63,.85),
+
+        0 0 90px rgba(224,49,63,.75);
+
+}
+
+.community-photo2 img {
+  object-fit: cover;
+  object-position: 50% 60%;
+}
+
+.community-photo3 img {
+  object-fit: cover;
+  object-position: 50% 00%;
+}
+
+
+.community-photo img {
+  object-fit: cover;
+  object-position: 50% 51%;
+}
+
+.community-photo4 img {
+  object-fit: cover;
+  object-position: 50% 63%;
+}
+
+/* ==================================================
+   MOBILE NAVIGATION FIXES
+================================================== */
+@media (max-width: 768px) {
+
+  /* 1. Reduce side padding from 50px to 15px to free up 70px of screen space */
+  .top-nav {
+    padding: 12px 15px;
+  }
+
+  /* 2. Scale down the brand title slightly so it fits small screens */
+  .brand-title {
+    font-size: 1.05rem;
+    letter-spacing: 1px;
+    white-space: nowrap; /* Prevents brand title from wrapping */
+  }
+
+  .brand-subtitle {
+    font-size: 0.72rem;
+    white-space: nowrap;
+  }
+
+  /* 3. Reduce gap between nav items from 30px to 10px-12px */
+  .top-nav nav {
+    gap: 10px;
+  }
+
+  .top-nav nav a {
+    font-size: 0.85rem;
+  }
+
+  /* 4. Prevent "Partner" button text from splitting to 2 lines & trim padding */
+  .partner-link {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+    white-space: nowrap; /* Keeps "Become a Partner" or "Partner" on 1 line */
+  }
+}
+
+#The-Why p {
+  /* Add your specific paragraph styles here */
+  font-size: 1.40rem;
+  line-height: 1.6;
+  color: var(--navy);
+  max-width: 1080px;
+}
+
+.hero-tagline {
+    display: inline-block;
+    background: var(--red);
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+}
+
+/* --- HERO SECTION TWO-COLUMN LAYOUT FIX --- */
+.hero-flyer {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Splits hero evenly into 2 side-by-side columns */
+    gap: 40px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.hero-main {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Fix text contrast & overlapping */
+.hero-title {
+    color: #ffffff !important;
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 10px 0;
+}
+
+.hero-subtitle {
+    color: #e2e8f0 !important; /* Makes description text bright & crisp */
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Ensure tiles stay on the right column */
+.hero-tiles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+/* Mobile responsive fix */
+@media (max-width: 850px) {
+    .hero-flyer {
+        grid-template-columns: 1fr; /* Stacks vertically on small screens */
+    }
+}
+
+/* ==========================================================
+   DIRECTIONS BUTTON
+========================================================== */
+
+.directions-button{
+
+    appearance:none;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+
+    border:3px solid var(--navy);
+    border-radius:30px;
+    background:var(--red);
+    color:#ffffff;
+
+    padding:16px 34px;
+    margin:24px auto 0;
+    display:block;
+
+    font-size:1rem;
+    font-weight:700;
+    letter-spacing:.05em;
+    cursor:pointer;
+
+    box-shadow:5px 5px 0 var(--navy);
+
+    transition:
+        transform .15s ease,
+        box-shadow .15s ease,
+        background .15s ease,
+        color .15s ease;
+
+}
+
+.directions-button:hover{
+
+    background:#ffffff;
+    color:var(--red);
+    transform:translate(3px, 3px);
+    box-shadow:2px 2px 0 var(--navy);
+
+}
+
+/* ==========================================================
+   ADDRESS LINK
+========================================================== */
+
+.address-link{
+
+    cursor:pointer;
+    text-decoration:underline;
+    text-decoration-color:var(--red);
+    text-underline-offset:4px;
+    transition:color .2s ease;
+
+}
+
+.address-link:hover{
+
+    color:var(--red);
+
+}
+
+/* ==========================================================
+   DIRECTIONS MODAL — SET YOUR COURSE FOR DISCOVERY
+========================================================== */
+
+#directionsModal.modal{
+
+    background:rgba(15,15,25,.85);
+
+}
+
+.directions-window.course-style{
+
+    background:
+        radial-gradient(circle at 20% 15%, rgba(255,255,255,.06) 0%, transparent 45%),
+        radial-gradient(circle at 85% 85%, rgba(224,49,63,.35) 0%, transparent 50%),
+        linear-gradient(160deg, var(--navy) 0%, var(--navy-light) 45%, var(--red-dark) 100%);
+
+    border:none;
+    border-radius:28px;
+
+    box-shadow:
+        0 2px 6px rgba(0,0,0,.2),
+        0 40px 90px rgba(0,0,0,.5);
+
+    padding:44px 36px;
+
+    max-width:460px;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.directions-window.course-style::before{
+
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:radial-gradient(rgba(255,255,255,.18) 1px, transparent 1px);
+    background-size:22px 22px;
+    opacity:.35;
+    pointer-events:none;
+
+}
+
+.directions-window.course-style .close-modal{
+
+    width:32px;
+    height:32px;
+    border-radius:50%;
+    background:rgba(255,255,255,.15);
+    color:#ffffff;
+    font-size:1.2rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    top:18px;
+    right:18px;
+    z-index:2;
+    transition:background .2s ease;
+
+}
+
+.directions-window.course-style .close-modal:hover{
+
+    background:rgba(255,255,255,.28);
+
+}
+
+.directions-window.course-style .directions-eyebrow{
+
+    position:relative;
+    z-index:1;
+
+    font-size:.78rem;
+    font-weight:800;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--red);
+    margin-bottom:14px;
+
+}
+
+.directions-window.course-style h2{
+
+    position:relative;
+    z-index:1;
+
+    font-weight:800;
+    font-size:2.3rem;
+    line-height:1.08;
+    color:#ffffff;
+    letter-spacing:-.01em;
+    margin-bottom:24px;
+
+}
+
+.directions-window.course-style .directions-divider{
+
+    display:none;
+
+}
+
+.directions-window.course-style .directions-info{
+
+    position:relative;
+    z-index:1;
+
+    background:rgba(255,255,255,.10);
+    backdrop-filter:blur(6px);
+    -webkit-backdrop-filter:blur(6px);
+    border:1px solid rgba(255,255,255,.18);
+    border-radius:18px;
+    padding:22px 24px;
+    text-align:left;
+    margin-bottom:28px;
+
+}
+
+.directions-window.course-style .directions-label{
+
+    font-size:.68rem;
+    font-weight:700;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:#ff9daa;
+    margin-top:16px;
+    margin-bottom:4px;
+
+}
+
+.directions-window.course-style .directions-label:first-child{
+
+    margin-top:0;
+
+}
+
+.directions-window.course-style .directions-venue{
+
+    font-weight:700;
+    font-size:1.15rem;
+    color:#ffffff;
+    margin:0;
+
+}
+
+.directions-window.course-style .directions-address{
+
+    font-size:1rem;
+    line-height:1.6;
+    color:#f1e4e8;
+
+}
+
+.directions-window.course-style .directions-cta{
+
+    position:relative;
+    z-index:1;
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    text-decoration:none;
+    width:100%;
+    box-sizing:border-box;
+
+    background:var(--red);
+    color:#ffffff;
+
+    border:2px solid rgba(255,255,255,.4);
+    border-radius:40px;
+    padding:17px 34px;
+    font-size:1.05rem;
+    font-weight:800;
+
+    box-shadow:0 12px 26px rgba(224,49,63,.45);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        background .2s ease;
+
+}
+
+.directions-window.course-style .directions-cta:hover{
+
+    background:var(--red-dark);
+    transform:translateY(-3px);
+    box-shadow:0 16px 34px rgba(224,49,63,.55);
+
+}
+
+/* ---------- MOBILE (directions modal only) ---------- */
+
+@media screen and (max-width:900px){
+
+    #directionsModal.modal{
+
+        padding:0;
+        align-items:flex-start;
+
+    }
+
+    .directions-window.course-style{
+
+        width:100%;
+        max-width:none;
+        min-height:100vh;
+        border-radius:0;
+        padding:70px 24px 50px;
+
+    }
+
+    .directions-window.course-style h2{
+
+        font-size:1.9rem;
+
+    }
+
+    .directions-button{
+
+        width:100%;
+
+    }
+
+}
+
+@media screen and (min-width:901px){
+
+    .wide-section .section-header{
+
+        max-width:1400px;
+
+    }
+
+}
+
+/* ==========================================================
+   FUTURE READY V2
+   TRANSLUCENT SECTION BACKGROUNDS
+========================================================== */
+
+/*
+The animated canvases sit behind each section.
+These translucent layers preserve readability while allowing
+the shared sky to remain visible throughout the page.
+*/
+
+.future-ready-v2-section{
+
+    position:relative;
+
+    background-color:#101a32 !important;
+
+}
+
+/* Middle content sections */
+
+.future-ready-v2-section.community-section,
+.future-ready-v2-section.purpose-section,
+.future-ready-v2-section.experience-section{
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(18,31,57,.82),
+            rgba(31,49,79,.72)
+        ) !important;
+
+    color:#ffffff;
+
+}
+
+/* Keep headings and paragraphs readable */
+
+.future-ready-v2-section.community-section h2,
+.future-ready-v2-section.community-section h3,
+.future-ready-v2-section.community-section p,
+
+
+
+
+.future-ready-v2-section.experience-section h2,
+.future-ready-v2-section.experience-section h3,
+.future-ready-v2-section.experience-section p{
+
+    color:#ffffff;
+
+}
+
+.future-ready-v2-section.purpose-section h2,
+.future-ready-v2-section.purpose-section h3,
+.future-ready-v2-section.purpose-section p{
+
+    color:#ffffff !important;
+
+}
+
+/* Preserve the red eyebrow branding */
+
+.future-ready-v2-section .eyebrow{
+
+    color:var(--red);
+
+}
+
+/* Images and cards remain clear above the sky */
+
+.future-ready-v2-section .community-card,
+.future-ready-v2-section .experience-card,
+
+
+/* Restore dark text inside light cards */
+
+.future-ready-v2-section .community-card h3,
+.future-ready-v2-section .community-card p,
+.future-ready-v2-section .experience-card h3,
+.future-ready-v2-section .experience-card p{
+
+    color:var(--ink);
+
+}
+
+/* Images receive a subtle frame against the sky */
+
+.future-ready-v2-section .section-image{
+
+    position:relative;
+
+    background:
+        rgba(255,255,255,.10);
+
+    border:
+        1px solid rgba(255,255,255,.16);
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.22);
+
+}
+
+/* Keep the final section dark and immersive */
+
+.future-ready-v2-section.community-final{
+
+    background:
+        linear-gradient(
+            155deg,
+            rgba(8,17,37,.88),
+            rgba(20,33,61,.82)
+        ) !important;
+
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media screen and (max-width:900px){
+
+    /*
+    Mobile receives a slightly stronger overlay so text stays
+    readable over moving stars and atmosphere.
+    */
+
+    .future-ready-v2-section.community-section,
+    .future-ready-v2-section.purpose-section,
+    .future-ready-v2-section.experience-section{
+
+        background:
+            linear-gradient(
+                155deg,
+                rgba(16,28,52,.90),
+                rgba(29,46,75,.84)
+            ) !important;
+
+    }
+
+    .future-ready-v2-section .community-card,
+    .future-ready-v2-section .experience-card,
+    .future-ready-v2-section .highlight-box{
+
+        backdrop-filter:
+            none;
+
+        -webkit-backdrop-filter:
+            none;
+
+    }
+
+}
+
+/* ==========================================================
+   FIX — RESTORE THE WELCOME BOX
+========================================================== */
+
+.future-ready-v2-section .highlight-box{
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(10,22,45,.92),
+            rgba(22,40,70,.86)
+        ) !important;
+
+    color:#ffffff !important;
+
+    border:
+        1px solid rgba(255,255,255,.16);
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.25);
+
+    backdrop-filter:
+        blur(8px);
+
+    -webkit-backdrop-filter:
+        blur(8px);
+
+}
+
+.future-ready-v2-section .highlight-box h3,
+.future-ready-v2-section .highlight-box p{
+
+    color:#ffffff !important;
+
+}
+
+#about-head{
+
+    font-size:3.6rem;
+
+}
+
+
+#about-head1{
+
+    font-size:3.4rem;
+    color:var(--red)!important;
+
+}
+
+
+#about-main{
+
+    font-size:1.6rem;
+
+}
+
+#about-sub{
+
+    font-size:1.2rem;
+
+}
+
+
+#Who-head{
+
+    font-size:3.4rem;
+
+}
+
+#Why-head{
+
+    font-size:3.4rem;
+
+}
+
+#experience-head{
+
+    font-size:3.4rem;
+    width: max-content;
+
+}
+
+#partners-head{
+
+    font-size:3.4rem;
+
+}
+
+#Why-sub{
+
+    font-size:1.4rem;
+
+}
+
+/* ==========================================================
+   MOBILE HEADING FIX
+========================================================== */
+
+@media screen and (max-width:600px){
+
+    .future-ready-v2-section{
+
+        overflow:hidden;
+
+    }
+
+    .future-ready-v2-section .section-inner{
+
+        width:100%;
+        max-width:100%;
+
+        padding-left:20px;
+        padding-right:20px;
+
+        box-sizing:border-box;
+
+    }
+
+    .future-ready-v2-section h1,
+    .future-ready-v2-section h2{
+
+        max-width:100%;
+
+        font-size:clamp(
+            2.15rem,
+            10vw,
+            3.25rem
+        ) !important;
+
+        line-height:1.05;
+
+        overflow-wrap:normal;
+        word-break:normal;
+
+    }
+
+    .experience-section h2{
+
+        font-size:clamp(
+            2rem,
+            9vw,
+            3rem
+        ) !important;
+
+    }
+
+}
+
+
+/* ==========================================================
+   COMMUNITY HERO TILES — MOBILE CINEMATIC VERSION
+   Crisp, transparent, dimensional, and lightweight
+========================================================== */
+
+@media screen and (max-width:900px){
+
+    /* ==================================================
+       TILE GRID
+    ================================================== */
+
+    .community-hero .hero-tiles{
+
+        position:relative;
+
+        z-index:4;
+
+        width:100%;
+
+        max-width:500px;
+
+        margin:14px auto 0;
+
+        padding:4px;
+
+        display:grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        grid-template-rows:auto;
+
+        gap:12px;
+
+        perspective:1000px;
+
+    }
+
+
+    /* A restrained glow behind the grid */
+
+    .community-hero .hero-tiles::before{
+
+        content:"";
+
+        position:absolute;
+
+        inset:14% 8%;
+
+        z-index:-1;
+
+        pointer-events:none;
+
+        border-radius:40px;
+
+        background:
+            radial-gradient(
+                ellipse at center,
+                rgba(71,130,224,.14),
+                rgba(224,49,63,.055) 52%,
+                transparent 76%
+            );
+
+        filter:blur(30px);
+
+        opacity:.68;
+
+        animation:
+            heroTileGridGlow
+            6s
+            ease-in-out
+            infinite;
+
+    }
+
+
+    /* ==================================================
+       BASE TILE
+    ================================================== */
+
+    .community-hero .hero-tile{
+
+        --tile-delay:0ms;
+        --tile-rise:-3px;
+        --tile-rotation:0deg;
+
+        position:relative;
+
+        isolation:isolate;
+
+        min-width:0;
+
+        min-height:112px;
+
+        padding:17px 9px 15px;
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
+
+        justify-content:center;
+
+        gap:10px;
+
+        overflow:hidden;
+
+        border-radius:18px;
+
+        border:
+            1px solid
+            rgba(185,211,255,.30);
+
+        background:
+            linear-gradient(
+                145deg,
+                rgba(18,37,73,.68),
+                rgba(7,19,44,.48)
+            ) !important;
+
+        /*
+        Do not blur the universe behind the cards.
+        This keeps stars and meteors crisp.
+        */
+
+        backdrop-filter:none !important;
+
+        -webkit-backdrop-filter:none !important;
+
+        box-shadow:
+            inset 0 1px 0
+            rgba(255,255,255,.18),
+
+            inset 0 -1px 0
+            rgba(255,255,255,.035),
+
+            0 9px 20px
+            rgba(0,0,0,.26),
+
+            0 0 0 1px
+            rgba(38,91,173,.08) !important;
+
+        opacity:0;
+
+        transform:
+            translate3d(
+                0,
+                38px,
+                -90px
+            )
+            rotateX(12deg)
+            rotateZ(
+                var(--tile-rotation)
+            )
+            scale(.82);
+
+        transform-origin:center;
+
+        animation:
+            heroTileEntrance
+            .72s
+            cubic-bezier(.16,.88,.28,1.16)
+            var(--tile-delay)
+            forwards,
+
+            heroTileAmbientMotion
+            6.4s
+            ease-in-out
+            calc(
+                var(--tile-delay) +
+                950ms
+            )
+            infinite;
+
+    }
+
+
+    /* ==================================================
+       INDIVIDUAL ENTRANCE TIMING
+    ================================================== */
+
+    .community-hero .hero-tile:nth-child(1){
+
+        --tile-delay:80ms;
+        --tile-rise:-4px;
+        --tile-rotation:-.45deg;
+
+    }
+
+    .community-hero .hero-tile:nth-child(2){
+
+        --tile-delay:145ms;
+        --tile-rise:-2px;
+        --tile-rotation:.4deg;
+
+    }
+
+    .community-hero .hero-tile:nth-child(3){
+
+        --tile-delay:210ms;
+        --tile-rise:-3px;
+        --tile-rotation:.3deg;
+
+    }
+
+    .community-hero .hero-tile:nth-child(4){
+
+        --tile-delay:275ms;
+        --tile-rise:-5px;
+        --tile-rotation:-.35deg;
+
+    }
+
+    .community-hero .hero-tile:nth-child(5){
+
+        --tile-delay:340ms;
+        --tile-rise:-2px;
+        --tile-rotation:-.25deg;
+
+    }
+
+    .community-hero .hero-tile:nth-child(6){
+
+        --tile-delay:405ms;
+        --tile-rise:-4px;
+        --tile-rotation:.4deg;
+
+    }
+
+
+    /* ==================================================
+       COLOR IDENTITIES
+    ================================================== */
+
+    /* Red tiles */
+
+    .community-hero .hero-tile:nth-child(3n+1){
+
+        background:
+            linear-gradient(
+                145deg,
+                rgba(155,31,54,.62),
+                rgba(62,13,31,.44)
+            ) !important;
+
+        border-color:
+            rgba(255,117,139,.38);
+
+        box-shadow:
+            inset 0 1px 0
+            rgba(255,255,255,.17),
+
+            0 9px 20px
+            rgba(18,2,8,.28),
+
+            0 0 16px
+            rgba(224,49,63,.10) !important;
+
+    }
+
+
+    /* Navy tiles */
+
+    .community-hero .hero-tile:nth-child(3n+2){
+
+        background:
+            linear-gradient(
+                145deg,
+                rgba(23,48,96,.70),
+                rgba(5,16,42,.48)
+            ) !important;
+
+        border-color:
+            rgba(119,167,255,.28);
+
+    }
+
+
+    /* Light-blue tiles */
+
+    .community-hero
+    .hero-tile:not(:nth-child(3n+1)):not(:nth-child(3n+2)){
+
+        background:
+            linear-gradient(
+                145deg,
+                rgba(71,91,137,.68),
+                rgba(19,34,69,.49)
+            ) !important;
+
+        border-color:
+            rgba(204,221,255,.34);
+
+    }
+
+
+    /* ==================================================
+       EDGE LIGHT
+    ================================================== */
+
+    .community-hero .hero-tile::before{
+
+        content:"";
+
+        position:absolute;
+
+        inset:0;
+
+        z-index:0;
+
+        pointer-events:none;
+
+        border-radius:inherit;
+
+        background:
+            linear-gradient(
+                125deg,
+                rgba(255,255,255,.14) 0%,
+                transparent 27%,
+                transparent 72%,
+                rgba(100,157,255,.055) 100%
+            );
+
+        opacity:.72;
+
+    }
+
+
+    /* Thin light sweep — no cloudy blob */
+
+    .community-hero .hero-tile::after{
+
+        content:"";
+
+        position:absolute;
+
+        top:-30%;
+
+        left:-60%;
+
+        z-index:1;
+
+        width:24%;
+
+        height:160%;
+
+        pointer-events:none;
+
+        opacity:0;
+
+        background:
+            linear-gradient(
+                90deg,
+                transparent,
+                rgba(255,255,255,.20),
+                transparent
+            );
+
+        transform:
+            rotate(17deg);
+
+        animation:
+            heroTileLightSweep
+            8.5s
+            ease-in-out
+            calc(
+                var(--tile-delay) +
+                1.8s
+            )
+            infinite;
+
+    }
+
+
+    /* ==================================================
+       ICONS
+    ================================================== */
+
+    .community-hero .hero-tile{
+
+        font-size:
+            clamp(
+                1.55rem,
+                6.2vw,
+                2.05rem
+            );
+
+        line-height:1;
+
+        text-shadow:
+            0 3px 8px
+            rgba(0,0,0,.42);
+
+    }
+
+
+    /* ==================================================
+       TEXT
+    ================================================== */
+
+    .community-hero .hero-tile span{
+
+        position:relative;
+
+        z-index:3;
+
+        display:block;
+
+        max-width:100%;
+
+        color:#ffffff !important;
+
+        font-size:
+            clamp(
+                .67rem,
+                2.75vw,
+                .78rem
+            );
+
+        font-weight:800;
+
+        line-height:1.22;
+
+        letter-spacing:.045em;
+
+        text-align:center;
+
+        text-wrap:balance;
+
+        /*
+        One restrained shadow.
+        No fuzzy glow around the letters.
+        */
+
+        text-shadow:
+            0 2px 3px
+            rgba(0,0,0,.85);
+
+    }
+
+
+    /* ==================================================
+       TAP FEEDBACK
+    ================================================== */
+
+    .community-hero .hero-tile:active{
+
+        animation-play-state:paused;
+
+        transform:
+            translate3d(
+                0,
+                2px,
+                8px
+            )
+            rotateZ(
+                var(--tile-rotation)
+            )
+            scale(.975);
+
+        box-shadow:
+            inset 0 1px 0
+            rgba(255,255,255,.14),
+
+            0 4px 10px
+            rgba(0,0,0,.28) !important;
+
+        transition:
+            transform .11s ease,
+            box-shadow .11s ease;
+
+    }
+
+}
+
+
+/* ==================================================
+   ANIMATIONS
+================================================== */
+
+@keyframes heroTileEntrance{
+
+    0%{
+
+        opacity:0;
+
+        transform:
+            translate3d(
+                0,
+                42px,
+                -100px
+            )
+            rotateX(14deg)
+            rotateZ(
+                var(--tile-rotation)
+            )
+            scale(.80);
+
+    }
+
+    62%{
+
+        opacity:1;
+
+        transform:
+            translate3d(
+                0,
+                -5px,
+                12px
+            )
+            rotateX(-1deg)
+            rotateZ(
+                var(--tile-rotation)
+            )
+            scale(1.025);
+
+    }
+
+    100%{
+
+        opacity:1;
+
+        transform:
+            translate3d(
+                0,
+                0,
+                0
+            )
+            rotateX(0)
+            rotateZ(
+                var(--tile-rotation)
+            )
+            scale(1);
+
+    }
+
+}
+
+
+@keyframes heroTileAmbientMotion{
+
+    0%,
+    100%{
+
+        opacity:1;
+
+        transform:
+            translate3d(
+                0,
+                0,
+                0
+            )
+            rotateZ(
+                var(--tile-rotation)
+            )
+            scale(1);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:
+            translate3d(
+                0,
+                var(--tile-rise),
+                5px
+            )
+            rotateZ(
+                calc(
+                    var(--tile-rotation) * -.35
+                )
+            )
+            scale(1.006);
+
+    }
+
+}
+
+
+@keyframes heroTileLightSweep{
+
+    0%,
+    72%{
+
+        left:-60%;
+
+        opacity:0;
+
+    }
+
+    76%{
+
+        opacity:.44;
+
+    }
+
+    84%{
+
+        left:135%;
+
+        opacity:0;
+
+    }
+
+    100%{
+
+        left:135%;
+
+        opacity:0;
+
+    }
+
+}
+
+
+@keyframes heroTileGridGlow{
+
+    0%,
+    100%{
+
+        opacity:.44;
+
+        transform:scale(.96);
+
+    }
+
+    50%{
+
+        opacity:.72;
+
+        transform:scale(1.015);
+
+    }
+
+}
+
+
+/* ==================================================
+   VERY SMALL PHONES
+================================================== */
+
+@media screen and (max-width:430px){
+
+    .community-hero .hero-tiles{
+
+        gap:10px;
+
+        padding:2px;
+
+    }
+
+    .community-hero .hero-tile{
+
+        min-height:104px;
+
+        padding:15px 7px 13px;
+
+        border-radius:16px;
+
+    }
+
+}
+
+
+/* ==================================================
+   REDUCED MOTION
+================================================== */
+
+@media (prefers-reduced-motion:reduce){
+
+    .community-hero .hero-tile{
+
+        opacity:1 !important;
+
+        transform:none !important;
+
+        animation:none !important;
+
+    }
+
+    .community-hero .hero-tile::after,
+    .community-hero .hero-tiles::before{
+
+        animation:none !important;
+
+    }
+
+}
+
