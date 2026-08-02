@@ -2845,3 +2845,193 @@ the shared sky to remain visible throughout the page.
     }
 
 }
+
+
+/* ==================================================
+   MOBILE HERO TILES — LET THE UNIVERSE SHOW THROUGH
+================================================== */
+
+@media screen and (max-width:900px){
+
+    .community-hero .hero-tiles{
+
+        position:relative;
+
+        z-index:3;
+
+        gap:12px;
+
+    }
+
+
+    /* Base glass tile */
+
+    .community-hero .hero-tile{
+
+        position:relative;
+
+        overflow:hidden;
+
+        min-height:118px;
+
+        padding:18px 10px;
+
+        color:#ffffff;
+
+        background:
+            linear-gradient(
+                145deg,
+                rgba(255,255,255,.17),
+                rgba(255,255,255,.06)
+            ) !important;
+
+        border:
+            1px solid
+            rgba(255,255,255,.30);
+
+        backdrop-filter:
+            blur(5px)
+            saturate(125%);
+
+        -webkit-backdrop-filter:
+            blur(5px)
+            saturate(125%);
+
+        box-shadow:
+            inset 0 1px 0
+            rgba(255,255,255,.22),
+
+            0 8px 22px
+            rgba(0,0,0,.22),
+
+            0 0 18px
+            rgba(255,255,255,.08);
+
+    }
+
+
+    /* Subtle moving reflection */
+
+    .community-hero .hero-tile::before{
+
+        content:"";
+
+        position:absolute;
+
+        inset:0;
+
+        z-index:0;
+
+        pointer-events:none;
+
+        background:
+            linear-gradient(
+                125deg,
+                rgba(255,255,255,.16),
+                transparent 34%,
+                transparent 68%,
+                rgba(255,255,255,.06)
+            );
+
+    }
+
+
+    /* Keep tile content over the reflection */
+
+    .community-hero .hero-tile > *{
+
+        position:relative;
+
+        z-index:1;
+
+    }
+
+
+    /* Labels */
+
+    .community-hero .hero-tile span{
+
+        color:#ffffff !important;
+
+        text-shadow:
+            0 1px 4px
+            rgba(0,0,0,.90),
+
+            0 0 10px
+            rgba(0,0,0,.50);
+
+    }
+
+
+    /* Red-category tiles keep a restrained red tint */
+
+    .community-hero .hero-tile:nth-child(3n+1){
+
+        background:
+            linear-gradient(
+                145deg,
+                rgba(224,49,63,.34),
+                rgba(112,20,34,.13)
+            ) !important;
+
+        border-color:
+            rgba(255,138,151,.48);
+
+    }
+
+
+    /* Navy-category tiles keep a restrained navy tint */
+
+    .community-hero .hero-tile:nth-child(3n+2){
+
+        background:
+            linear-gradient(
+                145deg,
+                rgba(28,49,91,.38),
+                rgba(7,15,35,.16)
+            ) !important;
+
+        border-color:
+            rgba(153,190,255,.35);
+
+    }
+
+
+    /* White-category tiles remain brighter glass */
+
+    .community-hero
+    .hero-tile:not(:nth-child(3n+1)):not(:nth-child(3n+2)){
+
+        background:
+            linear-gradient(
+                145deg,
+                rgba(255,255,255,.23),
+                rgba(255,255,255,.075)
+            ) !important;
+
+    }
+
+}
+
+@media screen and (max-width:900px){
+
+    .community-hero .hero-tile,
+    .community-hero .hero-tile:nth-child(3n+1),
+    .community-hero .hero-tile:nth-child(3n+2),
+    .community-hero
+    .hero-tile:not(:nth-child(3n+1)):not(:nth-child(3n+2)){
+
+        box-shadow:
+            inset 0 1px 0
+            rgba(255,255,255,.22),
+
+            0 8px 22px
+            rgba(0,0,0,.24),
+
+            0 0 14px
+            rgba(255,255,255,.08);
+
+    }
+
+}
+
