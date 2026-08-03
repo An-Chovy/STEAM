@@ -21,7 +21,6 @@
   'use strict';
 
   document.documentElement.classList.add('motion-ready');
-  const PHOTO_VERSION = '20260803-1'; 
 
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const canvas = document.querySelector('#universe');
@@ -66,10 +65,8 @@
      This keeps image paths reliable in VS Code previews and GitHub Pages,
      including sites published inside a repository subfolder. */
   function versionedPhotoUrl(path) {
-    const url = new URL(path, document.baseURI);
-    url.searchParams.set('v', PHOTO_VERSION);
-    return url.href;
-  }
+    return new URL(path, document.baseURI).href;
+}
 
   function testPhoto(path) {
     return new Promise(resolve => {
@@ -138,10 +135,32 @@
   }
 
   function chooseRandomPhoto(exclude = '') {
-    const choices = availablePhotos.filter(path => path !== exclude);
-    const pool = choices.length ? choices : availablePhotos;
-    return pool[Math.floor(Math.random() * pool.length)];
-  }
+    const previousPhoto =
+        sessionStorage.getItem('previousSpacePhoto');
+
+    const choices = availablePhotos.filter(
+        path => path !== exclude && path !== previousPhoto
+    );
+
+    const fallbackChoices = availablePhotos.filter(
+        path => path !== exclude
+    );
+
+    const pool =
+        choices.length ? choices :
+        fallbackChoices.length ? fallbackChoices :
+        availablePhotos;
+
+    const selectedPhoto =
+        pool[Math.floor(Math.random() * pool.length)];
+
+    sessionStorage.setItem(
+        'previousSpacePhoto',
+        selectedPhoto
+    );
+
+    return selectedPhoto;
+}
 
   function setBackground(path) {
     currentPhoto = path;
