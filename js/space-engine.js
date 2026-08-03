@@ -21,6 +21,7 @@
   'use strict';
 
   document.documentElement.classList.add('motion-ready');
+  const PHOTO_VERSION = '20260803-1'; 
 
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const canvas = document.querySelector('#universe');
@@ -66,7 +67,7 @@
      including sites published inside a repository subfolder. */
   function versionedPhotoUrl(path) {
     const url = new URL(path, document.baseURI);
-    url.searchParams.set('v', Date.now());
+    url.searchParams.set('v', PHOTO_VERSION);
     return url.href;
   }
 
