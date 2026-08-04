@@ -1,6 +1,6 @@
 Nebula NGC 6357
 
-Contains Pismis 24, a young cluster of stars about 5,500 light-years from Earth. This stellar landscape is reminiscent of a winter vista in a view from NASA’s James Webb Space Telescope (red, green, and blue). Chandra data (red, green and blue) punctuate the scene with bursts of colored lights representing high-energy activity from the active stars.
+Nebula NGC 6357 that contains Pismis 24, a young cluster of stars about 5,500 light-years from Earth. This stellar landscape is reminiscent of a winter vista in a view from NASA’s James Webb Space Telescope (red, green, and blue). Chandra data (red, green and blue) punctuate the scene with bursts of colored lights representing high-energy activity from the active stars. 
 
 See more: chandra.harvard.edu/photo/2025/holidays/
 

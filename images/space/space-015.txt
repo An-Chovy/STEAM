@@ -1,0 +1,13 @@
+Star cluster NGC 602
+
+Since antiquity, wreaths have symbolized the cycle of life, death, and rebirth. It is fitting then that one of the best places for astronomers to learn more about the stellar lifecycle resembles a giant holiday wreath itself.
+
+The star cluster NGC 602 lies on the outskirts of the Small Magellanic Cloud, which is one of the closest galaxies to the Milky Way, about 200,000 light-years from Earth. The stars in NGC 602 have fewer heavier elements compared to the Sun and most of the rest of the galaxy. Instead, the conditions within NGC 602 mimic those for stars found billions of years ago when the universe was much younger.
+
+This new image combines data from NASA’s Chandra X-ray Observatory with a previously released image from the agency’s James Webb Space Telescope. The dark ring-like outline of the wreath seen in Webb data (represented as orange, yellow, green, and blue) is made up of dense clouds of filled dust.
+
+Meanwhile, X-rays from Chandra (red) show young, massive stars that are illuminating the wreath, sending high-energy light into interstellar space. These X-rays are powered by winds flowing from the young, massive stars that are sprinkled throughout the cluster. The extended cloud in the Chandra data likely comes from the overlapping X-ray glow of thousands of young, low-mass stars in the cluster.
+
+Image credit: X-ray: NASA/CXC; Infrared: ESA/Webb, NASA & CSA, P. Zeilder, E.Sabbi, A. Nota, M. Zamani; Image Processing: NASA/CXC/SAO/L. Frattare and K. Arcand
+
+Image description: A star cluster is shown inside a large nebula of many-colored gas and dust. The material forms dark ridges and peaks of gas and dust surrounding the cluster, lit on the inner side, while layers of diffuse, translucent clouds blanket over them. Around and within the gas, a huge number of distant galaxies can be seen, some quite large, as well as a few stars nearer to us which are very large and bright
