@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000" role="img" aria-label="Future Ready orbital mark">
+  <defs>
+    <filter id="cyanGlow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="26" result="b"/><feFlood flood-color="#72e8ff" flood-opacity=".38"/><feComposite in2="b" operator="in"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="sunGlow" x="-160%" y="-160%" width="420%" height="420%"><feGaussianBlur stdDeviation="21" result="b"/><feFlood flood-color="#ffd36a" flood-opacity=".55"/><feComposite in2="b" operator="in"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <linearGradient id="orbit"><stop stop-color="#72e8ff"/><stop offset=".54" stop-color="#ff4f72"/><stop offset="1" stop-color="#ffd36a"/></linearGradient>
+  </defs>
+  <g transform="translate(500 500)">
+    <circle r="305" fill="#060a20" fill-opacity=".82" stroke="#72e8ff" stroke-width="20" filter="url(#cyanGlow)"/>
+    <circle r="218" fill="none" stroke="#72e8ff" stroke-opacity=".2" stroke-width="7"/>
+    <ellipse rx="384" ry="122" fill="none" stroke="url(#orbit)" stroke-width="23" transform="rotate(-24)"/>
+    <circle cx="-348" cy="143" r="18" fill="#ff4f72"/><circle cx="348" cy="-143" r="16" fill="#ffd36a"/>
+    <circle r="106" fill="#ffd36a" filter="url(#sunGlow)"/>
+    <path d="M-72 25C-28-37 32-62 81-39C53 25-12 69-72 25Z" fill="#ff8759" opacity=".72"/>
+    <circle cx="-32" cy="-37" r="23" fill="#fff7ce" opacity=".82"/>
+  </g>
+</svg>
