@@ -1,0 +1,27 @@
+.discover-page { --discover:#ff6b57; }
+.discover-hero { min-height:690px; display:grid; grid-template-columns:1fr 1fr; align-items:center; gap:7vw; padding:70px clamp(24px,7vw,110px) 90px; overflow:hidden; border-bottom:1px solid rgba(16,35,63,.14); }
+.discover-hero-copy { max-width:700px; }
+.back-link { display:inline-block; margin-bottom:45px; font:500 12px 'DM Mono',monospace; letter-spacing:.08em; text-transform:uppercase; }
+.back-link:hover { color:var(--discover); }
+.discover-hero h1 { font-size:clamp(56px,6.5vw,96px); }
+.discover-hero h1 em { display:inline-block; margin-top:8px; }
+.discover-hero-copy>p:not(.kicker) { max-width:620px; margin:30px 0; color:#4d5d73; font-size:18px; line-height:1.7; }
+.discover-hero-art { width:min(43vw,590px); aspect-ratio:1; justify-self:end; overflow:hidden; border-radius:50%; box-shadow:0 24px 60px rgba(16,35,63,.16); }
+.discover-hero-art img { display:block; width:200%; max-width:none; height:100%; object-fit:cover; transform:translateX(-50%); }
+.realm-section { padding:105px clamp(24px,5vw,76px) 120px; }
+.realm-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+.realm-card { min-height:440px; display:flex; flex-direction:column; padding:26px; border:1px solid rgba(16,35,63,.14); background:#fff; transition:transform .2s,box-shadow .2s; }
+.realm-card:hover,.realm-card.featured { transform:translateY(-7px); box-shadow:0 18px 38px rgba(16,35,63,.13); }
+.realm-number { display:flex; justify-content:space-between; font:500 11px 'DM Mono',monospace; letter-spacing:.12em; }
+.realm-number span { padding:7px 9px; border:1px solid currentColor; border-radius:99px; }
+.realm-card h3 { margin:65px 0 20px; font-size:clamp(28px,2.5vw,42px); letter-spacing:-.05em; line-height:.95; }
+.realm-card>p { color:#536176; font-size:14px; line-height:1.6; }
+.realm-card .realm-question { margin-top:auto; color:var(--ink); font-family:Georgia,serif; font-size:18px; font-style:italic; }
+.realm-card>a { display:flex; justify-content:space-between; margin-top:20px; padding-top:15px; border-top:1px solid currentColor; font-size:13px; font-weight:800; }
+.realm-card>a:hover { opacity:.62; }
+.biology{border-top:7px solid #37a97b}.chemistry{border-top:7px solid #7d64c7}.physics{border-top:7px solid #2f7ee6}.computing{border-top:7px solid #10233f}.engineering{border-top:7px solid #f08a3c}.mathematics{border-top:7px solid #f6c843}.art{border-top:7px solid #ff6b57}.space{border-top:7px solid #264784}.earth{border-top:7px solid #789846}
+.discover-note { padding:105px clamp(24px,12vw,190px); color:#fff; background:var(--ink); }
+.discover-note h2 { max-width:850px; margin:0; font-size:clamp(48px,7vw,92px); letter-spacing:-.06em; line-height:.93; }
+.discover-note>p:not(.kicker) { max-width:700px; margin:28px 0 35px; color:#bdc6d3; line-height:1.7; }
+@media(max-width:950px){.discover-hero{grid-template-columns:1fr}.discover-hero-art{width:min(80vw,590px);justify-self:center}.realm-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.discover-hero{padding:55px 22px 70px}.back-link{margin-bottom:35px}.discover-hero-copy>p:not(.kicker){font-size:16px}.discover-hero-art{width:90vw}.realm-grid{grid-template-columns:1fr}.realm-card{min-height:390px}.realm-section{padding-block:75px}}
