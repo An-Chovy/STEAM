@@ -59,15 +59,7 @@
 .capsule-copy small{color:var(--gold);font:500 9px "IBM Plex Mono",monospace;letter-spacing:.12em}
 .capsule-copy strong{margin-top:17px;font-size:clamp(1.18rem,1.55vw,1.55rem);line-height:1.25}
 .capsule-copy b{margin-top:auto;padding-top:28px;color:var(--cyan);font:500 10px "IBM Plex Mono",monospace;letter-spacing:.06em}
-.dark-logo .capsule-port {
-    background-image: url("../images/logos/future-ready-mark-3d.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    border-radius: 50%;
-    overflow: hidden;
-}@media(max-width:980px){.partner-capsules{grid-template-columns:1fr 1fr}.partner-capsule:last-child{grid-column:1/-1;max-width:calc(50% - 11px)} }
+@media(max-width:980px){.partner-capsules{grid-template-columns:1fr 1fr}.partner-capsule:last-child{grid-column:1/-1;max-width:calc(50% - 11px)}}
 @media(max-width:820px){body{padding-bottom:66px}.mission-actions{left:8px;right:8px;bottom:8px;border-radius:13px}.mission-actions a,.mission-actions button{min-width:0;padding:10px 13px}.mission-actions strong{font-size:11px}.partner-capsules{grid-template-columns:1fr;gap:16px;margin-top:55px}.partner-capsule,.partner-capsule:last-child{display:grid;grid-template-columns:118px 1fr;min-height:0;max-width:none;border-radius:26px}.capsule-port{height:118px;padding:17px;border-radius:20px}.capsule-port:before{inset:7px;border-radius:15px}.capsule-copy{padding:12px 14px}.capsule-copy strong{margin-top:9px;font-size:1rem}.capsule-copy b{padding-top:14px;font-size:8px}}
 @media(max-width:430px){.partner-capsule,.partner-capsule:last-child{grid-template-columns:96px 1fr}.capsule-port{height:104px}.capsule-copy small{font-size:7px}.capsule-copy b{display:none}}
 
@@ -232,3 +224,83 @@ input,textarea{cursor:text}select{cursor:default}
         drop-shadow(0 5px 8px rgba(0,0,0,.45));
 }
 
+/* ==========================================================
+   MOBILE PARTNER CARDS
+========================================================== */
+
+@media (max-width: 820px) {
+    .partner-capsule,
+    .partner-capsule:last-child {
+        display: grid;
+        grid-template-columns: 132px minmax(0, 1fr);
+        align-items: center;
+        min-height: 170px;
+        max-width: none;
+        padding: 12px;
+        border-radius: 30px;
+    }
+
+    .partner-capsule .capsule-port {
+        width: 132px;
+        height: 132px;
+        padding: 8px;
+        border-radius: 26px;
+    }
+
+    .partner-capsule .capsule-port::before {
+        inset: 7px;
+        border-radius: 20px;
+    }
+
+    .partner-capsule .capsule-port img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+        transform: scale(1.08);
+    }
+
+    .partner-capsule .capsule-copy {
+        min-width: 0;
+        padding: 10px 12px 10px 18px;
+    }
+
+    .partner-capsule .capsule-copy small {
+        font-size: 8px;
+    }
+
+    .partner-capsule .capsule-copy strong {
+        margin-top: 10px;
+        font-size: clamp(1rem, 4.7vw, 1.3rem);
+        line-height: 1.18;
+        overflow-wrap: anywhere;
+    }
+
+    .partner-capsule .capsule-copy b {
+        display: none;
+    }
+}
+
+@media (max-width: 430px) {
+    .partner-capsule,
+    .partner-capsule:last-child {
+        grid-template-columns: 108px minmax(0, 1fr);
+        min-height: 148px;
+        padding: 10px;
+    }
+
+    .partner-capsule .capsule-port {
+        width: 108px;
+        height: 108px;
+        padding: 7px;
+    }
+
+    .partner-capsule .capsule-copy {
+        padding-left: 14px;
+    }
+
+    .partner-capsule .capsule-copy strong {
+        font-size: 1rem;
+    }
+}

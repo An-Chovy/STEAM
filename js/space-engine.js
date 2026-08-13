@@ -42,15 +42,12 @@
      PHOTO LIBRARY
   ----------------------------------------------------------------- */
 
-  const MAX_SPACE_PHOTOS = 60;
+  const MAX_SPACE_PHOTOS = 25;
   const PHOTO_FOLDER = 'images/space/';
 
   const PHOTO_EXTENSIONS = [
     'webp',
-    'jpg',
-    'jpeg',
-    'png',
-    'avif'
+    
   ];
 
   const starterPhotos = [
